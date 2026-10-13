@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI.Views.Partials.LoadingOverlay"
+             x:Name="Root"
+             InputTransparent="True">
+
+    <!-- Spinner centriran preko sadrzaja stranice dok traje ucitavanje (IsLoading). Providan je za dodir
+         (InputTransparent) pa nikad ne blokira ono sto je ispod njega - stavlja se kao poslednje dete
+         u Grid-u stranice, iznad ScrollView-a. -->
+    <ActivityIndicator IsRunning="{Binding IsLoading, Source={x:Reference Root}}"
+                       IsVisible="{Binding IsLoading, Source={x:Reference Root}}"
+                       Color="#1A1A2E"
+                       HeightRequest="44"
+                       WidthRequest="44"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+</ContentView>

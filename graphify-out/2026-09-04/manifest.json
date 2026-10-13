@@ -1,0 +1,962 @@
+{
+  "DataAccess/Class1.cs": {
+    "mtime": 1784013939.8696764,
+    "seen": 1788453050.4167309,
+    "ast_hash": "35bfa00a4b7cf344a3fc5a1cfd1e7ef1",
+    "semantic_hash": "35bfa00a4b7cf344a3fc5a1cfd1e7ef1"
+  },
+  "DataAccess/Configurations/BaseConfiguration/BaseConfiguration.cs": {
+    "mtime": 1787582228.1438642,
+    "seen": 1788453050.416737,
+    "ast_hash": "4c6b6cc3597e4895683e68ed613f3b51",
+    "semantic_hash": "4c6b6cc3597e4895683e68ed613f3b51"
+  },
+  "DataAccess/Configurations/EventLineupConfiguration.cs": {
+    "mtime": 1787309192.1197238,
+    "seen": 1788453050.4167435,
+    "ast_hash": "30f82aa905637f819fbdc42b854cd1a1",
+    "semantic_hash": "30f82aa905637f819fbdc42b854cd1a1"
+  },
+  "DataAccess/Configurations/EventStatisticsConfiguration.cs": {
+    "mtime": 1787308977.0335412,
+    "seen": 1788453050.4167492,
+    "ast_hash": "0a9b045300565df11542289c987dc4f1",
+    "semantic_hash": "0a9b045300565df11542289c987dc4f1"
+  },
+  "DataAccess/Configurations/FavoriteTeamConfiguration.cs": {
+    "mtime": 1786552557.581956,
+    "seen": 1788453050.4167562,
+    "ast_hash": "49deedaa530868a4c87c5eed3cb0e286",
+    "semantic_hash": "49deedaa530868a4c87c5eed3cb0e286"
+  },
+  "DataAccess/Configurations/JwtConfiguration.cs": {
+    "mtime": 1786547798.8464718,
+    "seen": 1788453050.416762,
+    "ast_hash": "eb3711e54bba7dbebaf9b9284638fa76",
+    "semantic_hash": "eb3711e54bba7dbebaf9b9284638fa76"
+  },
+  "DataAccess/Configurations/LeagueConfiguration.cs": {
+    "mtime": 1784553931.0550802,
+    "seen": 1788453050.4167671,
+    "ast_hash": "7eda62246bd3c077827615aff5e7c6c8",
+    "semantic_hash": "7eda62246bd3c077827615aff5e7c6c8"
+  },
+  "DataAccess/Configurations/LogConfiguration.cs": {
+    "mtime": 1786547599.613102,
+    "seen": 1788453050.4167726,
+    "ast_hash": "891eba1c47d0efafb173f0d3fd18acce",
+    "semantic_hash": "891eba1c47d0efafb173f0d3fd18acce"
+  },
+  "DataAccess/Configurations/MatchConfiguration.cs": {
+    "mtime": 1786553034.7792614,
+    "seen": 1788453050.4167776,
+    "ast_hash": "694a7b441ab6c3736375d0e49e16bda1",
+    "semantic_hash": "694a7b441ab6c3736375d0e49e16bda1"
+  },
+  "DataAccess/Configurations/PlayerConfiguration.cs": {
+    "mtime": 1786547625.0990987,
+    "seen": 1788453050.4167838,
+    "ast_hash": "dd9bfa990ffa8c46780a502c9cbb2be1",
+    "semantic_hash": "dd9bfa990ffa8c46780a502c9cbb2be1"
+  },
+  "DataAccess/Configurations/PlayerFormerTeamConfiguration.cs": {
+    "mtime": 1787311458.533445,
+    "seen": 1788453050.4167893,
+    "ast_hash": "bd00b40d44d4565bc62425d1f6889927",
+    "semantic_hash": "bd00b40d44d4565bc62425d1f6889927"
+  },
+  "DataAccess/Configurations/PlayerHonourConfiguration.cs": {
+    "mtime": 1787311463.7339807,
+    "seen": 1788453050.4167945,
+    "ast_hash": "1dbd3989aded584ed8594ca0f0c43758",
+    "semantic_hash": "1dbd3989aded584ed8594ca0f0c43758"
+  },
+  "DataAccess/Configurations/PlayerMilestoneConfiguration.cs": {
+    "mtime": 1787311469.2401109,
+    "seen": 1788453050.4167993,
+    "ast_hash": "8b1e623eca0b057d2182da6e03dd089e",
+    "semantic_hash": "8b1e623eca0b057d2182da6e03dd089e"
+  },
+  "DataAccess/Configurations/PlayerStatisticConfiguration.cs": {
+    "mtime": 1787311453.5754898,
+    "seen": 1788453050.416804,
+    "ast_hash": "4fa509a1c5ad587ffa3948000792ba9b",
+    "semantic_hash": "4fa509a1c5ad587ffa3948000792ba9b"
+  },
+  "DataAccess/Configurations/PredictionConfiguration.cs": {
+    "mtime": 1786552863.14992,
+    "seen": 1788453050.4168088,
+    "ast_hash": "e06f73923c0e04947d264c10391d770e",
+    "semantic_hash": "e06f73923c0e04947d264c10391d770e"
+  },
+  "DataAccess/Configurations/SportConfiguration.cs": {
+    "mtime": 1786363554.6488755,
+    "seen": 1788453050.416814,
+    "ast_hash": "2b64f8a05645c4f125237fcd7eed7356",
+    "semantic_hash": "2b64f8a05645c4f125237fcd7eed7356"
+  },
+  "DataAccess/Configurations/TeamConfiguration.cs": {
+    "mtime": 1786730654.3413298,
+    "seen": 1788453050.416819,
+    "ast_hash": "f8702a275e08951ab0b6bd5aa3abf61d",
+    "semantic_hash": "f8702a275e08951ab0b6bd5aa3abf61d"
+  },
+  "DataAccess/Configurations/TeamEquipmentConfiguration.cs": {
+    "mtime": 1787308984.7603197,
+    "seen": 1788453050.416824,
+    "ast_hash": "79002b48c7a9741b0fd499e7be783945",
+    "semantic_hash": "79002b48c7a9741b0fd499e7be783945"
+  },
+  "DataAccess/Configurations/UserConfiguration.cs": {
+    "mtime": 1786547463.028923,
+    "seen": 1788453050.416829,
+    "ast_hash": "bece661555b27c69ce909ccdbc934318",
+    "semantic_hash": "bece661555b27c69ce909ccdbc934318"
+  },
+  "DataAccess/Configurations/UserRoleConfiguration.cs": {
+    "mtime": 1786553091.7899969,
+    "seen": 1788453050.4168344,
+    "ast_hash": "f9cf96445e354b19142452ee202d0ffa",
+    "semantic_hash": "f9cf96445e354b19142452ee202d0ffa"
+  },
+  "DataAccess/Configurations/VenueConfiguration.cs": {
+    "mtime": 1787393637.6784437,
+    "seen": 1788453050.4168413,
+    "ast_hash": "d5386f003bad5a3446a1491463d4bfc8",
+    "semantic_hash": "d5386f003bad5a3446a1491463d4bfc8"
+  },
+  "DataAccess/DataAccess.csproj": {
+    "mtime": 1784286439.7968132,
+    "seen": 1788453050.4168465,
+    "ast_hash": "fcd1228ac01b5491f7dcdfac2df336b2",
+    "semantic_hash": "fcd1228ac01b5491f7dcdfac2df336b2"
+  },
+  "DataAccess/Migrations/20260825135105_InitialCreate.Designer.cs": {
+    "mtime": 1787665866.0249946,
+    "seen": 1788453050.4168513,
+    "ast_hash": "1e482c2d3eefda2acc8e6aab711642f9",
+    "semantic_hash": "1e482c2d3eefda2acc8e6aab711642f9"
+  },
+  "DataAccess/Migrations/20260825135105_InitialCreate.cs": {
+    "mtime": 1787665866.0169663,
+    "seen": 1788453050.4168565,
+    "ast_hash": "103a4c15ffbdf49560aef3a17f55ea32",
+    "semantic_hash": "103a4c15ffbdf49560aef3a17f55ea32"
+  },
+  "DataAccess/Migrations/ScoreHubDbContextModelSnapshot.cs": {
+    "mtime": 1787665866.0270216,
+    "seen": 1788453050.416862,
+    "ast_hash": "1a57e014d6da23e0f1409c18eeebaee9",
+    "semantic_hash": "1a57e014d6da23e0f1409c18eeebaee9"
+  },
+  "DataAccess/ScoreHubDbContext.cs": {
+    "mtime": 1787311478.842113,
+    "seen": 1788453050.4168673,
+    "ast_hash": "b6034e26dff3859a5f083ec42a57c1e2",
+    "semantic_hash": "b6034e26dff3859a5f083ec42a57c1e2"
+  },
+  "Domain/Class1.cs": {
+    "mtime": 1784013959.318396,
+    "seen": 1788453050.4169014,
+    "ast_hash": "e0e941b67224993caf7bc9fec7d02314",
+    "semantic_hash": "e0e941b67224993caf7bc9fec7d02314"
+  },
+  "Domain/Domain.csproj": {
+    "mtime": 1784026627.1959548,
+    "seen": 1788453050.4169066,
+    "ast_hash": "4258e11a2b535b27f62d0cc8ecdeccc5",
+    "semantic_hash": "4258e11a2b535b27f62d0cc8ecdeccc5"
+  },
+  "Domain/Entities/BaseEntity/BaseEntity.cs": {
+    "mtime": 1784025266.1639202,
+    "seen": 1788453050.4169116,
+    "ast_hash": "9709d135798d018724f587fd00d39f79",
+    "semantic_hash": "9709d135798d018724f587fd00d39f79"
+  },
+  "Domain/Entities/EventLineup.cs": {
+    "mtime": 1787308940.8007045,
+    "seen": 1788453050.4169161,
+    "ast_hash": "2fff3943dc79db3683526b030ef461e3",
+    "semantic_hash": "2fff3943dc79db3683526b030ef461e3"
+  },
+  "Domain/Entities/EventStatistic.cs": {
+    "mtime": 1787307816.9527617,
+    "seen": 1788453050.4169211,
+    "ast_hash": "65dab03ce9f28face1e9c731dfbc285c",
+    "semantic_hash": "65dab03ce9f28face1e9c731dfbc285c"
+  },
+  "Domain/Entities/FavoriteTeam.cs": {
+    "mtime": 1786552441.8292854,
+    "seen": 1788453050.4169261,
+    "ast_hash": "93d5d6196c25104150b077005d857e6a",
+    "semantic_hash": "93d5d6196c25104150b077005d857e6a"
+  },
+  "Domain/Entities/Jwt.cs": {
+    "mtime": 1786547419.0262878,
+    "seen": 1788453050.416932,
+    "ast_hash": "e6c98d0aaff2d856ddaede8fcae86b5c",
+    "semantic_hash": "e6c98d0aaff2d856ddaede8fcae86b5c"
+  },
+  "Domain/Entities/League.cs": {
+    "mtime": 1784553514.6750956,
+    "seen": 1788453050.4169366,
+    "ast_hash": "e572f3e14a4f65815b4d51ac6bc77ed3",
+    "semantic_hash": "e572f3e14a4f65815b4d51ac6bc77ed3"
+  },
+  "Domain/Entities/Log.cs": {
+    "mtime": 1786361542.7400765,
+    "seen": 1788453050.4169414,
+    "ast_hash": "70c7fff585649f3ce43961ceb428e8a7",
+    "semantic_hash": "70c7fff585649f3ce43961ceb428e8a7"
+  },
+  "Domain/Entities/Match.cs": {
+    "mtime": 1787406247.4433296,
+    "seen": 1788453050.4169486,
+    "ast_hash": "d2815f52e169c850f8c4e068cafed4da",
+    "semantic_hash": "d2815f52e169c850f8c4e068cafed4da"
+  },
+  "Domain/Entities/Player.cs": {
+    "mtime": 1787393242.3452506,
+    "seen": 1788453050.416953,
+    "ast_hash": "567ffba878d5d2af43597cf5cd57583e",
+    "semantic_hash": "567ffba878d5d2af43597cf5cd57583e"
+  },
+  "Domain/Entities/PlayerFormerTeam.cs": {
+    "mtime": 1787311427.8711681,
+    "seen": 1788453050.4169576,
+    "ast_hash": "3e296df6f4e4a862f7653d59f7e90c81",
+    "semantic_hash": "3e296df6f4e4a862f7653d59f7e90c81"
+  },
+  "Domain/Entities/PlayerHonour.cs": {
+    "mtime": 1787311436.0511947,
+    "seen": 1788453050.4169626,
+    "ast_hash": "0cab0c075f57ae085e186cff946ac76c",
+    "semantic_hash": "0cab0c075f57ae085e186cff946ac76c"
+  },
+  "Domain/Entities/PlayerMilestone.cs": {
+    "mtime": 1787311441.3226535,
+    "seen": 1788453050.4169676,
+    "ast_hash": "67f8c9ca1514648f83519b9ec089adc0",
+    "semantic_hash": "67f8c9ca1514648f83519b9ec089adc0"
+  },
+  "Domain/Entities/PlayerStatistic.cs": {
+    "mtime": 1787311422.5969045,
+    "seen": 1788453050.4169729,
+    "ast_hash": "756496776267170fabf4c65269d90fe3",
+    "semantic_hash": "756496776267170fabf4c65269d90fe3"
+  },
+  "Domain/Entities/Prediction.cs": {
+    "mtime": 1786552745.0362887,
+    "seen": 1788453050.4169774,
+    "ast_hash": "4d1a17911c138d4f5433c03b116fac44",
+    "semantic_hash": "4d1a17911c138d4f5433c03b116fac44"
+  },
+  "Domain/Entities/Sport.cs": {
+    "mtime": 1786363502.3560684,
+    "seen": 1788453050.4169822,
+    "ast_hash": "2e8fd5ae881eddb7e4075d08701aa107",
+    "semantic_hash": "2e8fd5ae881eddb7e4075d08701aa107"
+  },
+  "Domain/Entities/SyncedEntity/SyncedEntity.cs": {
+    "mtime": 1784016730.8294508,
+    "seen": 1788453050.4169872,
+    "ast_hash": "6b900b551c4d5d812de0852e863da2e5",
+    "semantic_hash": "6b900b551c4d5d812de0852e863da2e5"
+  },
+  "Domain/Entities/Team.cs": {
+    "mtime": 1787304626.8808322,
+    "seen": 1788453050.4169915,
+    "ast_hash": "e26a1c9c0aadef9d03dbc75817ba9675",
+    "semantic_hash": "e26a1c9c0aadef9d03dbc75817ba9675"
+  },
+  "Domain/Entities/TeamEquipment.cs": {
+    "mtime": 1787304367.4051738,
+    "seen": 1788453050.416996,
+    "ast_hash": "886027a5344c65e4e6ab543063844d2f",
+    "semantic_hash": "886027a5344c65e4e6ab543063844d2f"
+  },
+  "Domain/Entities/User.cs": {
+    "mtime": 1786547178.0061772,
+    "seen": 1788453050.417001,
+    "ast_hash": "d3f0f682e730323321f68688ad0ed1f8",
+    "semantic_hash": "d3f0f682e730323321f68688ad0ed1f8"
+  },
+  "Domain/Entities/UserRole.cs": {
+    "mtime": 1786361954.6968098,
+    "seen": 1788453050.4170055,
+    "ast_hash": "c08bdfdf380d968ed64939f11039e4f4",
+    "semantic_hash": "c08bdfdf380d968ed64939f11039e4f4"
+  },
+  "Domain/Entities/Venue.cs": {
+    "mtime": 1787394535.4357324,
+    "seen": 1788453050.41701,
+    "ast_hash": "4789c62f7f4f8dc038acd75edb11d0fe",
+    "semantic_hash": "4789c62f7f4f8dc038acd75edb11d0fe"
+  },
+  "Infrastructure/Class1.cs": {
+    "mtime": 1784541125.400763,
+    "seen": 1788453050.4170437,
+    "ast_hash": "2981c8ec9308859d0001d1f52597bf3e",
+    "semantic_hash": "2981c8ec9308859d0001d1f52597bf3e"
+  },
+  "Infrastructure/Infrastructure.csproj": {
+    "mtime": 1786553109.768699,
+    "seen": 1788453050.4170482,
+    "ast_hash": "792af26b4fd3f49d3077698b5af49636",
+    "semantic_hash": "792af26b4fd3f49d3077698b5af49636"
+  },
+  "Infrastructure/Integrations/DTO/SportsDbEventLineup.cs": {
+    "mtime": 1787392902.1418593,
+    "seen": 1788453050.4170532,
+    "ast_hash": "b57206bb98bce12ecb2a65f78dab345b",
+    "semantic_hash": "b57206bb98bce12ecb2a65f78dab345b"
+  },
+  "Infrastructure/Integrations/DTO/SportsDbEventStatistic.cs": {
+    "mtime": 1787308994.2768655,
+    "seen": 1788453050.417058,
+    "ast_hash": "47b120d760826eef4d487a0451557c97",
+    "semantic_hash": "47b120d760826eef4d487a0451557c97"
+  },
+  "Infrastructure/Integrations/DTO/SportsDbLeague.cs": {
+    "mtime": 1784546376.343252,
+    "seen": 1788453050.417063,
+    "ast_hash": "b7f1d935ed823980590bd67a1bbc2640",
+    "semantic_hash": "b7f1d935ed823980590bd67a1bbc2640"
+  },
+  "Infrastructure/Integrations/DTO/SportsDbMatch.cs": {
+    "mtime": 1786965510.2866387,
+    "seen": 1788453050.4170675,
+    "ast_hash": "b317400091a1f334bb4f119125f7e51c",
+    "semantic_hash": "b317400091a1f334bb4f119125f7e51c"
+  },
+  "Infrastructure/Integrations/DTO/SportsDbPlayer.cs": {
+    "mtime": 1786965497.8695781,
+    "seen": 1788453050.417072,
+    "ast_hash": "b2d2e79fb3d300d2c54e2638f31c847d",
+    "semantic_hash": "b2d2e79fb3d300d2c54e2638f31c847d"
+  },
+  "Infrastructure/Integrations/DTO/SportsDbPlayerFormerTeam.cs": {
+    "mtime": 1787311493.2877126,
+    "seen": 1788453050.417077,
+    "ast_hash": "87130fc3fcc3e884ddbdfd90c0610142",
+    "semantic_hash": "87130fc3fcc3e884ddbdfd90c0610142"
+  },
+  "Infrastructure/Integrations/DTO/SportsDbPlayerHonour.cs": {
+    "mtime": 1787311498.933171,
+    "seen": 1788453050.417082,
+    "ast_hash": "a67af8b49e09c576508d6d8b48032d51",
+    "semantic_hash": "a67af8b49e09c576508d6d8b48032d51"
+  },
+  "Infrastructure/Integrations/DTO/SportsDbPlayerMilestone.cs": {
+    "mtime": 1787311506.287359,
+    "seen": 1788453050.417087,
+    "ast_hash": "45fe5d6b0fc6e73b687ae33840b13ef8",
+    "semantic_hash": "45fe5d6b0fc6e73b687ae33840b13ef8"
+  },
+  "Infrastructure/Integrations/DTO/SportsDbPlayerStatistic.cs": {
+    "mtime": 1787311484.2101877,
+    "seen": 1788453050.4170918,
+    "ast_hash": "fc44eb9f2102665d02e26029d6835bba",
+    "semantic_hash": "fc44eb9f2102665d02e26029d6835bba"
+  },
+  "Infrastructure/Integrations/DTO/SportsDbSport.cs": {
+    "mtime": 1786726034.1453958,
+    "seen": 1788453050.4170969,
+    "ast_hash": "ccb8f7dcaf41cccf081d2f99e7c3fac0",
+    "semantic_hash": "ccb8f7dcaf41cccf081d2f99e7c3fac0"
+  },
+  "Infrastructure/Integrations/DTO/SportsDbTeam.cs": {
+    "mtime": 1784546731.8385963,
+    "seen": 1788453050.4171016,
+    "ast_hash": "a3a267899148aa707335b8fc3d5a1a97",
+    "semantic_hash": "a3a267899148aa707335b8fc3d5a1a97"
+  },
+  "Infrastructure/Integrations/DTO/SportsDbTeamEquipment.cs": {
+    "mtime": 1787309009.5969913,
+    "seen": 1788453050.417106,
+    "ast_hash": "8d33ca67f088c5058d19fc5825e51952",
+    "semantic_hash": "8d33ca67f088c5058d19fc5825e51952"
+  },
+  "Infrastructure/Integrations/DTO/SportsDbVenue.cs": {
+    "mtime": 1786962696.233577,
+    "seen": 1788453050.4171104,
+    "ast_hash": "d63511b1ac77bb8dd9c79c6cd92db8db",
+    "semantic_hash": "d63511b1ac77bb8dd9c79c6cd92db8db"
+  },
+  "Infrastructure/Integrations/Exceptions/SportsDbApiException.cs": {
+    "mtime": 1786730830.9412658,
+    "seen": 1788453050.4171154,
+    "ast_hash": "63b21406bf3e3f37bbd9f35c8dd98baa",
+    "semantic_hash": "63b21406bf3e3f37bbd9f35c8dd98baa"
+  },
+  "Infrastructure/Integrations/ISportsDbClient.cs": {
+    "mtime": 1787311519.5653405,
+    "seen": 1788453050.4171205,
+    "ast_hash": "757fc9fe7ae49d5eda1700197f613885",
+    "semantic_hash": "757fc9fe7ae49d5eda1700197f613885"
+  },
+  "Infrastructure/Integrations/SportsDB/SportOptions.cs": {
+    "mtime": 1785669961.9430852,
+    "seen": 1788453050.4171252,
+    "ast_hash": "0df18cd869ce8a49cd7454d95dcbe18c",
+    "semantic_hash": "0df18cd869ce8a49cd7454d95dcbe18c"
+  },
+  "Infrastructure/SportsDbClient.cs": {
+    "mtime": 1787311533.1564524,
+    "seen": 1788453050.4171302,
+    "ast_hash": "036f856a1c151de50e46f8d98d53849f",
+    "semantic_hash": "036f856a1c151de50e46f8d98d53849f"
+  },
+  "Infrastructure/Sync/ISportsDbSyncService.cs": {
+    "mtime": 1787582326.662947,
+    "seen": 1788453050.417135,
+    "ast_hash": "af9aa4883a938bcfd6a331c48eaaa860",
+    "semantic_hash": "af9aa4883a938bcfd6a331c48eaaa860"
+  },
+  "Infrastructure/Sync/MatchScheduleBackgroundService.cs": {
+    "mtime": 1787226301.9289443,
+    "seen": 1788453050.41714,
+    "ast_hash": "490a0245ad73df0b5225d07309bb739d",
+    "semantic_hash": "490a0245ad73df0b5225d07309bb739d"
+  },
+  "Infrastructure/Sync/MatchStatisticsTrackerService.cs": {
+    "mtime": 1787422026.8593142,
+    "seen": 1788453050.4171445,
+    "ast_hash": "5f5753ea65a9ca73af85b7135306086a",
+    "semantic_hash": "5f5753ea65a9ca73af85b7135306086a"
+  },
+  "Infrastructure/Sync/PlayerFormerTeamBackgroundService.cs": {
+    "mtime": 1787395810.932817,
+    "seen": 1788453050.4171495,
+    "ast_hash": "6a18b6311d432937aacfad43e665d72a",
+    "semantic_hash": "6a18b6311d432937aacfad43e665d72a"
+  },
+  "Infrastructure/Sync/PlayerSyncBackgroundService.cs": {
+    "mtime": 1787226282.413799,
+    "seen": 1788453050.417158,
+    "ast_hash": "604d81220e0b5b0ef782592e01e3e90c",
+    "semantic_hash": "604d81220e0b5b0ef782592e01e3e90c"
+  },
+  "Infrastructure/Sync/PreMatchLineupBackgroundService.cs": {
+    "mtime": 1787422047.3912833,
+    "seen": 1788453050.4171627,
+    "ast_hash": "df1220e50a3855039893c9b72ab8f179",
+    "semantic_hash": "df1220e50a3855039893c9b72ab8f179"
+  },
+  "Infrastructure/Sync/SportsDbStartupSyncService.cs": {
+    "mtime": 1787392460.8340023,
+    "seen": 1788453050.4171674,
+    "ast_hash": "f3859960018e5d2e50a30293e966d329",
+    "semantic_hash": "f3859960018e5d2e50a30293e966d329"
+  },
+  "Infrastructure/Sync/SportsDbSyncService.cs": {
+    "mtime": 1787669505.7780585,
+    "seen": 1788453050.4171724,
+    "ast_hash": "0202a36284fc9ed8030ee18586b8a91e",
+    "semantic_hash": "0202a36284fc9ed8030ee18586b8a91e"
+  },
+  "MAUI/App.xaml": {
+    "mtime": 1787751859.0205836,
+    "seen": 1788453050.4172072,
+    "ast_hash": "d108cfbba2936aafccb904ee8d731d2a",
+    "semantic_hash": "d108cfbba2936aafccb904ee8d731d2a"
+  },
+  "MAUI/App.xaml.cs": {
+    "mtime": 1788254577.3307736,
+    "seen": 1788453050.4172125,
+    "ast_hash": "c83a33c24f83c699bd0dccf985ed097c",
+    "semantic_hash": "c83a33c24f83c699bd0dccf985ed097c"
+  },
+  "MAUI/AppShell.xaml": {
+    "mtime": 1788457692.132419,
+    "seen": 1788465802.7226784,
+    "ast_hash": "60e860b01bd1dcc2a4d29f6f3e78ee33",
+    "semantic_hash": "60e860b01bd1dcc2a4d29f6f3e78ee33"
+  },
+  "MAUI/AppShell.xaml.cs": {
+    "mtime": 1788385471.230098,
+    "seen": 1788453050.4172232,
+    "ast_hash": "3ef502e984c492b1402b727580d99db5",
+    "semantic_hash": "3ef502e984c492b1402b727580d99db5"
+  },
+  "MAUI/DTO/Input/AuthResponseDTO.cs": {
+    "mtime": 1788276660.4486806,
+    "seen": 1788453050.4172285,
+    "ast_hash": "b7c0cddda6f39e7efe6bf28d18ea3bae",
+    "semantic_hash": "b7c0cddda6f39e7efe6bf28d18ea3bae"
+  },
+  "MAUI/DTO/Input/SportsDTO.cs": {
+    "mtime": 1788276105.5171273,
+    "seen": 1788453050.4172337,
+    "ast_hash": "a58944716c69ae5908d35f5d3b528b75",
+    "semantic_hash": "a58944716c69ae5908d35f5d3b528b75"
+  },
+  "MAUI/DTO/Output/LoginRequestDTO.cs": {
+    "mtime": 1788276522.4396393,
+    "seen": 1788453050.4172387,
+    "ast_hash": "085313b245a98a3df2fb0d567cafe7fa",
+    "semantic_hash": "085313b245a98a3df2fb0d567cafe7fa"
+  },
+  "MAUI/DTO/Output/RefreshRequestDTO.cs": {
+    "mtime": 1788386043.6967218,
+    "seen": 1788453050.417244,
+    "ast_hash": "a62b09bda8bf66447ab93cb1511f9a53",
+    "semantic_hash": "a62b09bda8bf66447ab93cb1511f9a53"
+  },
+  "MAUI/DTO/Output/RegisterRequestDTO.cs": {
+    "mtime": 1788276515.5032198,
+    "seen": 1788453050.4172497,
+    "ast_hash": "6a9193fc5ff31316435e5f5599a09255",
+    "semantic_hash": "6a9193fc5ff31316435e5f5599a09255"
+  },
+  "MAUI/Helpers/Icons.cs": {
+    "mtime": 1788258630.466224,
+    "seen": 1788453050.4172552,
+    "ast_hash": "2ff4422a86b2a9249684490a42f6ea5b",
+    "semantic_hash": "2ff4422a86b2a9249684490a42f6ea5b"
+  },
+  "MAUI/Helpers/MauiExtensions.cs": {
+    "mtime": 1788432858.0803902,
+    "seen": 1788453050.4172606,
+    "ast_hash": "831198090bfe0ebbf4d93964672c1849",
+    "semantic_hash": "831198090bfe0ebbf4d93964672c1849"
+  },
+  "MAUI/Helpers/RefreshTokenHelper.cs": {
+    "mtime": 1788387124.3817492,
+    "seen": 1788453050.4172654,
+    "ast_hash": "ac3d9e470964f99d76f10defea7ef86a",
+    "semantic_hash": "ac3d9e470964f99d76f10defea7ef86a"
+  },
+  "MAUI/Helpers/SportIcon.cs": {
+    "mtime": 1788257942.665489,
+    "seen": 1788453050.4172702,
+    "ast_hash": "f8fca46174b895a1b2742688808f0cda",
+    "semantic_hash": "f8fca46174b895a1b2742688808f0cda"
+  },
+  "MAUI/Helpers/SportIconMap.cs": {
+    "mtime": 1788260245.427058,
+    "seen": 1788453050.417275,
+    "ast_hash": "878cb28076b1d78d6227202a199fa9b5",
+    "semantic_hash": "878cb28076b1d78d6227202a199fa9b5"
+  },
+  "MAUI/MAUI.csproj": {
+    "mtime": 1788432511.9417698,
+    "seen": 1788453050.4172797,
+    "ast_hash": "0570575335fec6e86a0929b262987b28",
+    "semantic_hash": "0570575335fec6e86a0929b262987b28"
+  },
+  "MAUI/MauiProgram.cs": {
+    "mtime": 1788433308.218999,
+    "seen": 1788453050.4172843,
+    "ast_hash": "3decc57b8de77185e397da3e4b9b78c1",
+    "semantic_hash": "3decc57b8de77185e397da3e4b9b78c1"
+  },
+  "MAUI/Platforms/Android/MainActivity.cs": {
+    "mtime": 1787751863.9983242,
+    "seen": 1788453050.4172895,
+    "ast_hash": "10b4a3834e2fca7cbe6ceca2488e01d8",
+    "semantic_hash": "10b4a3834e2fca7cbe6ceca2488e01d8"
+  },
+  "MAUI/Platforms/Android/MainApplication.cs": {
+    "mtime": 1787761143.7842743,
+    "seen": 1788453050.4172943,
+    "ast_hash": "44c8111abbef754c7f086eaf0311f05f",
+    "semantic_hash": "44c8111abbef754c7f086eaf0311f05f"
+  },
+  "MAUI/Platforms/MacCatalyst/AppDelegate.cs": {
+    "mtime": 1787751865.2261727,
+    "seen": 1788453050.4172997,
+    "ast_hash": "e2548aec395242da1295ea46c3fa228d",
+    "semantic_hash": "e2548aec395242da1295ea46c3fa228d"
+  },
+  "MAUI/Platforms/MacCatalyst/Program.cs": {
+    "mtime": 1787751864.6545002,
+    "seen": 1788453050.417305,
+    "ast_hash": "1c05b05c62b3a5c223f94e869cdf1730",
+    "semantic_hash": "1c05b05c62b3a5c223f94e869cdf1730"
+  },
+  "MAUI/Platforms/Windows/App.xaml": {
+    "mtime": 1787751859.3683887,
+    "seen": 1788453050.4173102,
+    "ast_hash": "c59f2056ebbd022135a0e411ce3cf5c8",
+    "semantic_hash": "c59f2056ebbd022135a0e411ce3cf5c8"
+  },
+  "MAUI/Platforms/Windows/App.xaml.cs": {
+    "mtime": 1787751863.703014,
+    "seen": 1788453050.4173152,
+    "ast_hash": "1baafd09d653c2151edae84b1f204b55",
+    "semantic_hash": "1baafd09d653c2151edae84b1f204b55"
+  },
+  "MAUI/Platforms/iOS/AppDelegate.cs": {
+    "mtime": 1787751863.6680372,
+    "seen": 1788453050.41732,
+    "ast_hash": "e2548aec395242da1295ea46c3fa228d",
+    "semantic_hash": "e2548aec395242da1295ea46c3fa228d"
+  },
+  "MAUI/Platforms/iOS/Program.cs": {
+    "mtime": 1787751864.6355088,
+    "seen": 1788453050.417325,
+    "ast_hash": "1c05b05c62b3a5c223f94e869cdf1730",
+    "semantic_hash": "1c05b05c62b3a5c223f94e869cdf1730"
+  },
+  "MAUI/Properties/launchSettings.json": {
+    "mtime": 1788208345.771128,
+    "seen": 1788453050.4173303,
+    "ast_hash": "f7142c13ff4980614ce1c5d6134e1f08",
+    "semantic_hash": "f7142c13ff4980614ce1c5d6134e1f08"
+  },
+  "MAUI/Resources/Raw/appsettings.json": {
+    "mtime": 1788211685.3893974,
+    "seen": 1788453050.4173357,
+    "ast_hash": "1102ceaab7ce6dc8e779c5503a1c64f3",
+    "semantic_hash": "1102ceaab7ce6dc8e779c5503a1c64f3"
+  },
+  "MAUI/Resources/Styles/Colors.xaml": {
+    "mtime": 1787751859.4013722,
+    "seen": 1788453050.4173415,
+    "ast_hash": "c574260a92de815c35d74e0e0a3d69e6",
+    "semantic_hash": "c574260a92de815c35d74e0e0a3d69e6"
+  },
+  "MAUI/Resources/Styles/Styles.xaml": {
+    "mtime": 1787751859.4153633,
+    "seen": 1788453050.4173465,
+    "ast_hash": "c75e830dac11f65b6640bcbc8bfcd3e8",
+    "semantic_hash": "c75e830dac11f65b6640bcbc8bfcd3e8"
+  },
+  "MAUI/Services/AuthAPIService.cs": {
+    "mtime": 1788455205.7238922,
+    "seen": 1788465802.7227416,
+    "ast_hash": "d97cc8cd7db856e1786437e65f920a40",
+    "semantic_hash": "d97cc8cd7db856e1786437e65f920a40"
+  },
+  "MAUI/Services/AuthService.cs": {
+    "mtime": 1788386578.724197,
+    "seen": 1788453050.417357,
+    "ast_hash": "d598d2ae837901b2f78ea9bba9924219",
+    "semantic_hash": "d598d2ae837901b2f78ea9bba9924219"
+  },
+  "MAUI/Services/Interfaces/IAuthAPIService.cs": {
+    "mtime": 1788455217.4921045,
+    "seen": 1788465802.7227464,
+    "ast_hash": "8ea97ffccca222b629c653fc211e14d1",
+    "semantic_hash": "8ea97ffccca222b629c653fc211e14d1"
+  },
+  "MAUI/Services/Interfaces/IAuthService.cs": {
+    "mtime": 1788386463.5901127,
+    "seen": 1788453050.4173677,
+    "ast_hash": "ad21cee3b02a8e3d2643f79462043af5",
+    "semantic_hash": "ad21cee3b02a8e3d2643f79462043af5"
+  },
+  "MAUI/Services/Interfaces/ISportCacheService.cs": {
+    "mtime": 1788191610.8601468,
+    "seen": 1788453050.4173727,
+    "ast_hash": "78cd0403dc4e314688939c20346db311",
+    "semantic_hash": "78cd0403dc4e314688939c20346db311"
+  },
+  "MAUI/Services/Interfaces/ISportsApiService.cs": {
+    "mtime": 1788191607.1297994,
+    "seen": 1788453050.4173777,
+    "ast_hash": "0946e50b418efba210bc67097107fe96",
+    "semantic_hash": "0946e50b418efba210bc67097107fe96"
+  },
+  "MAUI/Services/SportMenuItem.cs": {
+    "mtime": 1788257961.929424,
+    "seen": 1788453050.4173827,
+    "ast_hash": "4b39761a5792349a2a4cbc05f06ba10f",
+    "semantic_hash": "4b39761a5792349a2a4cbc05f06ba10f"
+  },
+  "MAUI/Services/SportsApiService.cs": {
+    "mtime": 1788256881.382347,
+    "seen": 1788453050.4173872,
+    "ast_hash": "d86f4bf2c0fedafb2711a385cd9dbed2",
+    "semantic_hash": "d86f4bf2c0fedafb2711a385cd9dbed2"
+  },
+  "MAUI/Services/SportsCacheService.cs": {
+    "mtime": 1788191616.4724524,
+    "seen": 1788453050.417392,
+    "ast_hash": "a7ab4d52848cdb4bbc2595b8bf9f6061",
+    "semantic_hash": "a7ab4d52848cdb4bbc2595b8bf9f6061"
+  },
+  "MAUI/ViewModel/HomeViewModel.cs": {
+    "mtime": 1788454039.6883135,
+    "seen": 1788465802.722763,
+    "ast_hash": "46a9f6460f6a22639c7363684e9303a7",
+    "semantic_hash": "46a9f6460f6a22639c7363684e9303a7"
+  },
+  "MAUI/ViewModel/LoginViewModel.cs": {
+    "mtime": 1788430642.1849556,
+    "seen": 1788453050.4174016,
+    "ast_hash": "509ff36bd33f9245c8721a49ac6a406d",
+    "semantic_hash": "509ff36bd33f9245c8721a49ac6a406d"
+  },
+  "MAUI/ViewModel/NavMenuViewModelBase.cs": {
+    "mtime": 1788465017.712302,
+    "seen": 1788465802.7227674,
+    "ast_hash": "61336102024b45a146910ee6e318f0dd",
+    "semantic_hash": "61336102024b45a146910ee6e318f0dd"
+  },
+  "MAUI/ViewModel/RegisterViewModel.cs": {
+    "mtime": 1788430747.58551,
+    "seen": 1788453050.417411,
+    "ast_hash": "d01396a9464db1bc70396efba5ba6aac",
+    "semantic_hash": "d01396a9464db1bc70396efba5ba6aac"
+  },
+  "MAUI/Views/HomePage.xaml": {
+    "mtime": 1788431149.6933072,
+    "seen": 1788453050.4174159,
+    "ast_hash": "8e54e0fd079928001a650fe7cd2013a5",
+    "semantic_hash": "8e54e0fd079928001a650fe7cd2013a5"
+  },
+  "MAUI/Views/HomePage.xaml.cs": {
+    "mtime": 1788190042.4009547,
+    "seen": 1788453050.4174213,
+    "ast_hash": "0c85f904e533f56c78ad8114862383b7",
+    "semantic_hash": "0c85f904e533f56c78ad8114862383b7"
+  },
+  "MAUI/Views/LoginPage.xaml": {
+    "mtime": 1788275151.5229368,
+    "seen": 1788453050.4174263,
+    "ast_hash": "551f01a69d09674dd8659e643efd5f34",
+    "semantic_hash": "551f01a69d09674dd8659e643efd5f34"
+  },
+  "MAUI/Views/LoginPage.xaml.cs": {
+    "mtime": 1788262572.7724447,
+    "seen": 1788453050.4174316,
+    "ast_hash": "9cbfc494db58873562964c9e1215f4be",
+    "semantic_hash": "9cbfc494db58873562964c9e1215f4be"
+  },
+  "MAUI/Views/Partials/NavMenu.xaml": {
+    "mtime": 1788457694.422762,
+    "seen": 1788465802.7227812,
+    "ast_hash": "b25c21da8c3eef9d8d2ca53ce45c553c",
+    "semantic_hash": "b25c21da8c3eef9d8d2ca53ce45c553c"
+  },
+  "MAUI/Views/Partials/NavMenu.xaml.cs": {
+    "mtime": 1788430849.8481803,
+    "seen": 1788453050.4174411,
+    "ast_hash": "bf8ddfad615abc8fa9eace1ad1fc40cd",
+    "semantic_hash": "bf8ddfad615abc8fa9eace1ad1fc40cd"
+  },
+  "MAUI/Views/ProfilePage.xaml": {
+    "mtime": 1788385205.9877567,
+    "seen": 1788453050.4174457,
+    "ast_hash": "b0506a1782de83107c609c1f8baca4a0",
+    "semantic_hash": "b0506a1782de83107c609c1f8baca4a0"
+  },
+  "MAUI/Views/ProfilePage.xaml.cs": {
+    "mtime": 1788385142.267502,
+    "seen": 1788453050.4174504,
+    "ast_hash": "362bd95deb77a051ef3a27ff00ce141a",
+    "semantic_hash": "362bd95deb77a051ef3a27ff00ce141a"
+  },
+  "MAUI/Views/RegisterPage.xaml": {
+    "mtime": 1788275159.1048217,
+    "seen": 1788453050.4174554,
+    "ast_hash": "953050c38638e00ecc9b33540db0d5e9",
+    "semantic_hash": "953050c38638e00ecc9b33540db0d5e9"
+  },
+  "MAUI/Views/RegisterPage.xaml.cs": {
+    "mtime": 1788262593.3252523,
+    "seen": 1788453050.4174604,
+    "ast_hash": "efcf0058be638666e6a2e5172c5c8e7a",
+    "semantic_hash": "efcf0058be638666e6a2e5172c5c8e7a"
+  },
+  "ScoreHub.slnx": {
+    "mtime": 1787751889.1969461,
+    "seen": 1788453050.4193726,
+    "ast_hash": "a3d191f228bf3f43dd77efcc954f85d4",
+    "semantic_hash": "a3d191f228bf3f43dd77efcc954f85d4"
+  },
+  "WebAPI/Controllers/AdminSyncController.cs": {
+    "mtime": 1787582340.937624,
+    "seen": 1788453050.4193778,
+    "ast_hash": "f4eb0679116c2d7f8519093b3bb97815",
+    "semantic_hash": "f4eb0679116c2d7f8519093b3bb97815"
+  },
+  "WebAPI/Controllers/AuthController.cs": {
+    "mtime": 1788457315.9779534,
+    "seen": 1788465802.7228,
+    "ast_hash": "5aa03eaf844aeac21f3777553b9ce5ba",
+    "semantic_hash": "5aa03eaf844aeac21f3777553b9ce5ba"
+  },
+  "WebAPI/Controllers/SportsController.cs": {
+    "mtime": 1788187081.2992694,
+    "seen": 1788453050.419388,
+    "ast_hash": "8664f0c9ae5cb5538455551c1b1cc3d7",
+    "semantic_hash": "8664f0c9ae5cb5538455551c1b1cc3d7"
+  },
+  "WebAPI/Controllers/WeatherForecastController.cs": {
+    "mtime": 1784013920.4209163,
+    "seen": 1788453050.419393,
+    "ast_hash": "b0b9a5239515748f8338bf2d809bcd85",
+    "semantic_hash": "b0b9a5239515748f8338bf2d809bcd85"
+  },
+  "WebAPI/DTO/Input/LoginRequestDTO.cs": {
+    "mtime": 1788276461.3299315,
+    "seen": 1788453050.4193976,
+    "ast_hash": "58bbbf440ff4dbfd200b760227eb0644",
+    "semantic_hash": "58bbbf440ff4dbfd200b760227eb0644"
+  },
+  "WebAPI/DTO/Input/RefreshRequestDTO.cs": {
+    "mtime": 1788378850.7014778,
+    "seen": 1788453050.4194026,
+    "ast_hash": "915eb7a52659785ce5ce6cb971e6a712",
+    "semantic_hash": "915eb7a52659785ce5ce6cb971e6a712"
+  },
+  "WebAPI/DTO/Input/RegisterRequestDTO.cs": {
+    "mtime": 1788276529.0071912,
+    "seen": 1788453050.4194076,
+    "ast_hash": "1d5d07778f00c2c5cce6cf85070e908b",
+    "semantic_hash": "1d5d07778f00c2c5cce6cf85070e908b"
+  },
+  "WebAPI/DTO/Output/AuthResponseDTO.cs": {
+    "mtime": 1788379162.662024,
+    "seen": 1788453050.4194121,
+    "ast_hash": "b96efa7ae4bcb169e7e25bae4300473b",
+    "semantic_hash": "b96efa7ae4bcb169e7e25bae4300473b"
+  },
+  "WebAPI/DTO/Output/ErrorResponseDTO.cs": {
+    "mtime": 1788379223.9064436,
+    "seen": 1788453050.4194171,
+    "ast_hash": "69016cefbdd4013215ccb24fb4a90776",
+    "semantic_hash": "69016cefbdd4013215ccb24fb4a90776"
+  },
+  "WebAPI/DTO/Output/NavMenuSportsDTO.cs": {
+    "mtime": 1788185976.1745167,
+    "seen": 1788453050.4194224,
+    "ast_hash": "24ec5786d6c045f2589e1b10b6db0d67",
+    "semantic_hash": "24ec5786d6c045f2589e1b10b6db0d67"
+  },
+  "WebAPI/Extensions.cs": {
+    "mtime": 1788431927.4584508,
+    "seen": 1788453050.4194276,
+    "ast_hash": "ed1e087e9af5af2c9ecf51e400a968b8",
+    "semantic_hash": "ed1e087e9af5af2c9ecf51e400a968b8"
+  },
+  "WebAPI/JWT/JwtOptions.cs": {
+    "mtime": 1788432211.497167,
+    "seen": 1788453050.4194329,
+    "ast_hash": "2faed16fc75561f3b8cb86bf0844fe5f",
+    "semantic_hash": "2faed16fc75561f3b8cb86bf0844fe5f"
+  },
+  "WebAPI/Middleware/GlobalExceptionHandler.cs": {
+    "mtime": 1788186568.4075737,
+    "seen": 1788453050.4194386,
+    "ast_hash": "1637b3b3f8d92662a058bc046ef628e6",
+    "semantic_hash": "1637b3b3f8d92662a058bc046ef628e6"
+  },
+  "WebAPI/Program.cs": {
+    "mtime": 1788381703.0989335,
+    "seen": 1788453050.4194443,
+    "ast_hash": "98030432efca4ee121d9a319666be6cb",
+    "semantic_hash": "98030432efca4ee121d9a319666be6cb"
+  },
+  "WebAPI/Properties/launchSettings.json": {
+    "mtime": 1788254333.0002353,
+    "seen": 1788453050.419449,
+    "ast_hash": "51eb0b9e2471210aa2136789a1bd997d",
+    "semantic_hash": "51eb0b9e2471210aa2136789a1bd997d"
+  },
+  "WebAPI/Services/Interfaces/IJwtService.cs": {
+    "mtime": 1788380347.2363296,
+    "seen": 1788453050.4194546,
+    "ast_hash": "3b4421b26d06bc0e0dcf049ddf18d153",
+    "semantic_hash": "3b4421b26d06bc0e0dcf049ddf18d153"
+  },
+  "WebAPI/Services/JwtService.cs": {
+    "mtime": 1788432136.631722,
+    "seen": 1788453050.4194598,
+    "ast_hash": "0c87ab440a6506243f332b17a8654722",
+    "semantic_hash": "0c87ab440a6506243f332b17a8654722"
+  },
+  "WebAPI/WeatherForecast.cs": {
+    "mtime": 1784013920.3031073,
+    "seen": 1788453050.419465,
+    "ast_hash": "ad9f4005104bebb11115e0211b8867c1",
+    "semantic_hash": "ad9f4005104bebb11115e0211b8867c1"
+  },
+  "WebAPI/WebAPI.csproj": {
+    "mtime": 1788431723.1671855,
+    "seen": 1788453050.4194698,
+    "ast_hash": "2115c828f4dbd1e861cdd469cef619a3",
+    "semantic_hash": "2115c828f4dbd1e861cdd469cef619a3"
+  },
+  "WebAPI/appsettings.Development.json": {
+    "mtime": 1784013918.9490404,
+    "seen": 1788453050.4194748,
+    "ast_hash": "804b473502a4c415cf75db61c56c32aa",
+    "semantic_hash": "804b473502a4c415cf75db61c56c32aa"
+  },
+  "WebAPI/appsettings.json": {
+    "mtime": 1788378463.8247106,
+    "seen": 1788453050.41948,
+    "ast_hash": "44f81a61454f3c2202fc790a7219450e",
+    "semantic_hash": "44f81a61454f3c2202fc790a7219450e"
+  },
+  ".claude/settings.json": {
+    "mtime": 1788456640.0936556,
+    "seen": 1788465802.7224665,
+    "ast_hash": "4f1750b8204c98e9049753ed4a6ef210",
+    "semantic_hash": "4f1750b8204c98e9049753ed4a6ef210"
+  },
+  "CLAUDE.md": {
+    "mtime": 1788456640.072669,
+    "seen": 1788465802.7228496,
+    "ast_hash": "8a6643a420fdad6bfb583523bc6cef16",
+    "semantic_hash": "8a6643a420fdad6bfb583523bc6cef16"
+  },
+  "MAUI/Resources/Raw/AboutAssets.txt": {
+    "mtime": 1787751859.3953745,
+    "seen": 1788465802.7228525,
+    "ast_hash": "f2a9b40b175b413ea2fc7421ee26c6a5",
+    "semantic_hash": "f2a9b40b175b413ea2fc7421ee26c6a5"
+  },
+  "MAUI/Resources/AppIcon/appicon.svg": {
+    "mtime": 1787751859.3783844,
+    "seen": 1788465802.7228553,
+    "ast_hash": "5c7fce998bd02a44ecccee4b477919f8",
+    "semantic_hash": "5c7fce998bd02a44ecccee4b477919f8"
+  },
+  "MAUI/Resources/AppIcon/appiconfg.svg": {
+    "mtime": 1787751859.3803823,
+    "seen": 1788465802.7228577,
+    "ast_hash": "f90b41ec7837716bd7ed08c88114e060",
+    "semantic_hash": "f90b41ec7837716bd7ed08c88114e060"
+  },
+  "MAUI/Resources/Images/scorehub_160x160px.png": {
+    "mtime": 1787678608.8773744,
+    "seen": 1788465802.7228603,
+    "ast_hash": "d0e3a4cb5d1ecb601a157122938177f3",
+    "semantic_hash": "d0e3a4cb5d1ecb601a157122938177f3"
+  },
+  "MAUI/Resources/Images/scorehub_160x90px.png": {
+    "mtime": 1787678731.083816,
+    "seen": 1788465802.7228625,
+    "ast_hash": "1684979645438dae1dc809c46216ce73",
+    "semantic_hash": "1684979645438dae1dc809c46216ce73"
+  },
+  "MAUI/Resources/Images/scorehub_160x90px_v2.png": {
+    "mtime": 1788182693.3350635,
+    "seen": 1788465802.7228649,
+    "ast_hash": "848765087501bfd769f001bbc60140ec",
+    "semantic_hash": "848765087501bfd769f001bbc60140ec"
+  },
+  "MAUI/Resources/Images/scorehub_64x36px.png": {
+    "mtime": 1787678816.4698534,
+    "seen": 1788465802.7228673,
+    "ast_hash": "10f33a10a4e73b4b87a9b8047bda0df9",
+    "semantic_hash": "10f33a10a4e73b4b87a9b8047bda0df9"
+  },
+  "MAUI/Resources/Images/scorehub_64x64px.png": {
+    "mtime": 1787678780.39377,
+    "seen": 1788465802.72287,
+    "ast_hash": "4a443297bd3d767224dc42a440c7fc3c",
+    "semantic_hash": "4a443297bd3d767224dc42a440c7fc3c"
+  },
+  "MAUI/Resources/Splash/splash.svg": {
+    "mtime": 1787751859.3973734,
+    "seen": 1788465802.722872,
+    "ast_hash": "f90b41ec7837716bd7ed08c88114e060",
+    "semantic_hash": "f90b41ec7837716bd7ed08c88114e060"
+  }
+}

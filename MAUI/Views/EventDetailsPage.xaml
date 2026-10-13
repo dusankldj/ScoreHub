@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dto="clr-namespace:MAUI.DTO.Input"
+             xmlns:helpers="clr-namespace:MAUI.Helpers"
+             xmlns:partials="clr-namespace:MAUI.Views.Partials"
+             x:Class="MAUI.Views.EventDetailsPage">
+
+    <Grid>
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="0">
+
+            <Label Text="{Binding ErrorMessage}"
+                   TextColor="Red"
+                   FontSize="12"
+                   HorizontalOptions="Center" />
+
+            <!-- Status ili datum+vreme za Upcoming (centrirano po x osi), a za Live ispod jos
+                 detaljniji status (1H/2H/HT...) i progress, ako postoji -->
+            <Grid ColumnDefinitions="*,Auto,*" Margin="0,0,0,16">
+                <VerticalStackLayout Grid.Column="1" HorizontalOptions="Center" Spacing="2">
+                    <Label Text="{Binding HeaderRightText}"
+                           FontAttributes="Bold"
+                           TextColor="#8A8A8A"
+                           HorizontalOptions="Center">
+                        <Label.Triggers>
+                            <DataTrigger TargetType="Label" Binding="{Binding IsLive}" Value="True">
+                                <Setter Property="TextColor" Value="#D32F2F" />
+                            </DataTrigger>
+                        </Label.Triggers>
+                    </Label>
+
+                    <Label Text="{Binding DetailedStatusDisplay}"
+                           IsVisible="{Binding ShowDetailedStatus}"
+                           FontSize="12"
+                           TextColor="#D32F2F"
+                           HorizontalOptions="Center" />
+                </VerticalStackLayout>
+            </Grid>
+
+            <!-- Grbovi timova + rezultat. Srca na SPOLJASNJIM ivicama (levo od home, desno od
+                 away) - klik prazno->puno srce sa animacijom (vidi code-behind), redirect na
+                 Login ako korisnik nije ulogovan. SAMO lokalno stanje za sada, ne cuva se jos. -->
+            <Grid ColumnDefinitions="Auto,*,Auto,*,Auto" Margin="0,0,0,8">
+
+                <Grid Grid.Column="0" WidthRequest="34" HeightRequest="34" VerticalOptions="Center">
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnHomeFavoriteHeartTapped" />
+                    </Grid.GestureRecognizers>
+                    <Label Text="{x:Static helpers:Icons.EmptyHearthIcon}"
+                           IsVisible="{Binding IsHomeTeamNotFavorited}"
+                           FontFamily="FA7Regular"
+                           FontSize="22"
+                           TextColor="#D32F2F"
+                           HorizontalTextAlignment="Center" />
+                    <Label Text="{x:Static helpers:Icons.FullHearthIcon}"
+                           IsVisible="{Binding IsHomeTeamFavorited}"
+                           FontFamily="FA7Solid"
+                           FontSize="22"
+                           TextColor="#D32F2F"
+                           HorizontalTextAlignment="Center" />
+                </Grid>
+
+                <VerticalStackLayout Grid.Column="1" HorizontalOptions="Center" Spacing="8">
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding TeamSelectedCommand}" CommandParameter="{Binding Details.HomeTeamId}" />
+                    </VerticalStackLayout.GestureRecognizers>
+                    <Image Source="{Binding Details.HomeTeamBadge}" HeightRequest="64" WidthRequest="64" />
+                    <HorizontalStackLayout HorizontalOptions="Center" Spacing="4">
+                        <Label Text="{x:Static helpers:Icons.CardIcon}"
+                               IsVisible="{Binding HasHomeRedCard}"
+                               FontFamily="MDI"
+                               Rotation="90"
+                               TextColor="#D32F2F"
+                               VerticalOptions="Center" />
+                        <Label Text="{Binding Details.HomeTeamName}"
+                               FontAttributes="Bold"
+                               TextColor="#1A1A2E"
+                               HorizontalTextAlignment="Center" />
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+
+                <HorizontalStackLayout Grid.Column="2" VerticalOptions="Center" Spacing="6">
+                    <Label Text="{Binding Details.HomeTeamScore}"
+                           FontSize="28"
+                           FontAttributes="Bold"
+                           TextColor="#1A1A2E" />
+                    <Label Text="-"
+                           FontSize="28"
+                           FontAttributes="Bold"
+                           TextColor="#1A1A2E" />
+                    <Label Text="{Binding Details.AwayTeamScore}"
+                           FontSize="28"
+                           FontAttributes="Bold"
+                           TextColor="#1A1A2E" />
+                </HorizontalStackLayout>
+
+                <VerticalStackLayout Grid.Column="3" HorizontalOptions="Center" Spacing="8">
+                    <VerticalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding TeamSelectedCommand}" CommandParameter="{Binding Details.AwayTeamId}" />
+                    </VerticalStackLayout.GestureRecognizers>
+                    <Image Source="{Binding Details.AwayTeamBadge}" HeightRequest="64" WidthRequest="64" />
+                    <HorizontalStackLayout HorizontalOptions="Center" Spacing="4">
+                        <Label Text="{Binding Details.AwayTeamName}"
+                               FontAttributes="Bold"
+                               TextColor="#1A1A2E"
+                               HorizontalTextAlignment="Center" />
+                        <Label Text="{x:Static helpers:Icons.CardIcon}"
+                               IsVisible="{Binding HasAwayRedCard}"
+                               FontFamily="MDI"
+                               Rotation="90"
+                               TextColor="#D32F2F"
+                               VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+
+                <Grid Grid.Column="4" WidthRequest="34" HeightRequest="34" VerticalOptions="Center">
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnAwayFavoriteHeartTapped" />
+                    </Grid.GestureRecognizers>
+                    <Label Text="{x:Static helpers:Icons.EmptyHearthIcon}"
+                           IsVisible="{Binding IsAwayTeamNotFavorited}"
+                           FontFamily="FA7Regular"
+                           FontSize="22"
+                           TextColor="#D32F2F"
+                           HorizontalTextAlignment="Center" />
+                    <Label Text="{x:Static helpers:Icons.FullHearthIcon}"
+                           IsVisible="{Binding IsAwayTeamFavorited}"
+                           FontFamily="FA7Solid"
+                           FontSize="22"
+                           TextColor="#D32F2F"
+                           HorizontalTextAlignment="Center" />
+                </Grid>
+            </Grid>
+
+            <!-- Prognoza tacnog rezultata: ikonica + "Predict score" (samo dok je mec Upcoming);
+                 klik otvara unos rezultata, a neulogovan korisnik se salje na Login (vidi
+                 TogglePredictionEditorCommand). Sacuvana prognoza se prikazuje ispod - kad je mec
+                 zavrsen, zelena je ako je pogodjen tacan rezultat, crvena ako nije. -->
+            <VerticalStackLayout Margin="0,16,0,0" Spacing="8" HorizontalOptions="Center">
+                <HorizontalStackLayout Spacing="6" HorizontalOptions="Center" IsVisible="{Binding CanPredict}">
+                    <HorizontalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding TogglePredictionEditorCommand}" />
+                    </HorizontalStackLayout.GestureRecognizers>
+                    <Label Text="{x:Static helpers:Icons.ScoreboardIcon}"
+                           FontFamily="MDI"
+                           FontSize="22"
+                           TextColor="#1A1A2E"
+                           VerticalOptions="Center" />
+                    <Label Text="Predict score"
+                           FontAttributes="Bold"
+                           TextColor="#1A1A2E"
+                           VerticalOptions="Center" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="8" HorizontalOptions="Center" IsVisible="{Binding IsPredictionEditorOpen}">
+                    <Entry Text="{Binding PredictionHomeInput}"
+                           Keyboard="Numeric"
+                           MaxLength="3"
+                           WidthRequest="56"
+                           HorizontalTextAlignment="Center"
+                           TextColor="#1A1A2E" />
+                    <Label Text="-" FontSize="22" FontAttributes="Bold" TextColor="#1A1A2E" VerticalOptions="Center" />
+                    <Entry Text="{Binding PredictionAwayInput}"
+                           Keyboard="Numeric"
+                           MaxLength="3"
+                           WidthRequest="56"
+                           HorizontalTextAlignment="Center"
+                           TextColor="#1A1A2E" />
+                    <Button Text="Save"
+                            Command="{Binding SavePredictionCommand}"
+                            BackgroundColor="#1A1A2E"
+                            TextColor="White" />
+                </HorizontalStackLayout>
+
+                <Label Text="{Binding PredictionDisplay}"
+                       IsVisible="{Binding HasPrediction}"
+                       TextColor="{Binding PredictionColor}"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center" />
+            </VerticalStackLayout>
+
+            <!-- Season / Liga / Round / Venue - svaki red se sakriva ako je vrednost null/prazna -->
+            <VerticalStackLayout Margin="0,24,0,0" Spacing="4">
+                <Label Text="{Binding Details.Season, StringFormat='Season: {0}'}"
+                       IsVisible="{Binding HasSeason}"
+                       TextColor="#1A1A2E" />
+                <Label Text="{Binding Details.LeagueName, StringFormat='League: {0}'}"
+                       IsVisible="{Binding HasLeagueName}"
+                       TextColor="#1A1A2E" />
+                <Label Text="{Binding Details.Round, StringFormat='Round: {0}'}"
+                       IsVisible="{Binding HasRound}"
+                       TextColor="#1A1A2E" />
+                <Label Text="{Binding Details.Venue, StringFormat='Venue: {0}'}"
+                       IsVisible="{Binding HasVenue}"
+                       TextColor="#1A1A2E" />
+            </VerticalStackLayout>
+
+            <!-- Ista linija kao ona ispod (Margin="0,20,0,0" dole) - razdvaja osnovne info o mecu od
+                 Timeline sekcije. Vidljiva samo kad Timeline postoji, inace bi dve linije bile zalepljene. -->
+            <BoxView HeightRequest="1" BackgroundColor="#E0E0E0" Margin="0,20,0,0" IsVisible="{Binding HasTimeline}" />
+
+            <!-- Timeline (golovi i kartoni) - domacin levo, gost desno, minut u sredini uz svaki unos.
+                 Cela sekcija se sakriva ako nema podataka (HasTimeline). Wrapper Grid-ovi nose IsVisible
+                 (isti razlog kao kod Broadcasts: nikad IsVisible i BindingContext na istom elementu). -->
+            <VerticalStackLayout Margin="0,16,0,0"
+                                 Spacing="0"
+                                 IsVisible="{Binding HasTimeline}"
+                                 BindableLayout.ItemsSource="{Binding Details.Timeline}">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate x:DataType="dto:EventTimelineDTO">
+                        <Grid ColumnDefinitions="*,44,*" ColumnSpacing="6" Padding="0,5">
+                            <Grid Grid.Column="0" IsVisible="{Binding Home}">
+                                <partials:TimelineCell HorizontalOptions="End" />
+                            </Grid>
+
+                            <Label Grid.Column="1"
+                                   Text="{Binding MinuteDisplay}"
+                                   FontSize="12"
+                                   FontAttributes="Bold"
+                                   TextColor="#8A8A8A"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalOptions="Center" />
+
+                            <Grid Grid.Column="2" IsVisible="{Binding IsAway}">
+                                <partials:TimelineCell HorizontalOptions="Start" />
+                            </Grid>
+                        </Grid>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </VerticalStackLayout>
+
+            <BoxView HeightRequest="1" BackgroundColor="#E0E0E0" Margin="0,20,0,0" />
+
+            <!-- Lineup/Statistics/Broadcasts/Full timeline tabovi - prikazuje se samo tab za koji
+                 STVARNO ima podataka; ceo blok se sakriva ako nema nijednog. Klik prebacuje
+                 SelectedTab u ViewModel-u, a code-behind (On*TabTapped) oko toga radi fade. -->
+            <VerticalStackLayout Margin="-20,20,-20,0" IsVisible="{Binding HasAnyDetailData}">
+
+                <!-- Horizontalni scroll - sa sva 4 taba (isti razlog kao PlayerPage: red ume da
+                     bude sira od ekrana, pa bi poslednji tab ispao van vidljivog dela). -->
+                <ScrollView Orientation="Horizontal" Margin="0,0,0,8">
+                <HorizontalStackLayout HorizontalOptions="Center" Spacing="32" Margin="20,0,20,0">
+                    <VerticalStackLayout Spacing="4" IsVisible="{Binding HasLineups}">
+                        <Label Text="Lineup"
+                               FontAttributes="Bold"
+                               TextColor="#1A1A2E"
+                               HorizontalOptions="Center">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnLineupTabTapped" />
+                            </Label.GestureRecognizers>
+                            <Label.Triggers>
+                                <DataTrigger TargetType="Label" Binding="{Binding IsLineupSelected}" Value="False">
+                                    <Setter Property="TextColor" Value="#8A8A8A" />
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
+                        <BoxView HeightRequest="2" WidthRequest="60" BackgroundColor="#1A1A2E" IsVisible="{Binding IsLineupSelected}" />
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Spacing="4" IsVisible="{Binding HasStatistics}">
+                        <Label Text="Statistics"
+                               FontAttributes="Bold"
+                               TextColor="#1A1A2E"
+                               HorizontalOptions="Center">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnStatisticsTabTapped" />
+                            </Label.GestureRecognizers>
+                            <Label.Triggers>
+                                <DataTrigger TargetType="Label" Binding="{Binding IsStatisticsSelected}" Value="False">
+                                    <Setter Property="TextColor" Value="#8A8A8A" />
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
+                        <BoxView HeightRequest="2" WidthRequest="80" BackgroundColor="#1A1A2E" IsVisible="{Binding IsStatisticsSelected}" />
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Spacing="4" IsVisible="{Binding HasBroadcasts}">
+                        <Label Text="Broadcasts"
+                               FontAttributes="Bold"
+                               TextColor="#1A1A2E"
+                               HorizontalOptions="Center">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnBroadcastsTabTapped" />
+                            </Label.GestureRecognizers>
+                            <Label.Triggers>
+                                <DataTrigger TargetType="Label" Binding="{Binding IsBroadcastsSelected}" Value="False">
+                                    <Setter Property="TextColor" Value="#8A8A8A" />
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
+                        <BoxView HeightRequest="2" WidthRequest="90" BackgroundColor="#1A1A2E" IsVisible="{Binding IsBroadcastsSelected}" />
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Spacing="4" IsVisible="{Binding HasFullTimeline}">
+                        <Label Text="Full timeline"
+                               FontAttributes="Bold"
+                               TextColor="#1A1A2E"
+                               HorizontalOptions="Center">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnFullTimelineTabTapped" />
+                            </Label.GestureRecognizers>
+                            <Label.Triggers>
+                                <DataTrigger TargetType="Label" Binding="{Binding IsFullTimelineSelected}" Value="False">
+                                    <Setter Property="TextColor" Value="#8A8A8A" />
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
+                        <BoxView HeightRequest="2" WidthRequest="100" BackgroundColor="#1A1A2E" IsVisible="{Binding IsFullTimelineSelected}" />
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+                </ScrollView>
+
+                <Grid x:Name="TabContentContainer">
+
+                    <!-- Lineup -->
+                    <Grid ColumnDefinitions="*,*"
+                          ColumnSpacing="8"
+                          BackgroundColor="#1A1A2E"
+                          Padding="16"
+                          IsVisible="{Binding IsLineupSelected}">
+
+                        <VerticalStackLayout Grid.Column="0"
+                                             BindableLayout.ItemsSource="{Binding HomeLineup}">
+                            <BindableLayout.ItemTemplate>
+                                <DataTemplate x:DataType="dto:EventLineupDTO">
+                                    <VerticalStackLayout>
+                                        <VerticalStackLayout.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="OnPlayerRowTapped" />
+                                        </VerticalStackLayout.GestureRecognizers>
+                                        <HorizontalStackLayout Spacing="8" Margin="0,8">
+                                            <Label Text="{Binding SquadNumber, StringFormat='#{0}'}"
+                                                   TextColor="White"
+                                                   WidthRequest="28"
+                                                   VerticalOptions="Center" />
+
+                                            <Image Source="{Binding ImageUrl}"
+                                                   IsVisible="{Binding HasImage}"
+                                                   HeightRequest="40"
+                                                   WidthRequest="40">
+                                                <Image.GestureRecognizers>
+                                                    <TapGestureRecognizer Tapped="OnPlayerImageTapped" />
+                                                </Image.GestureRecognizers>
+                                            </Image>
+
+                                            <Label Text="{x:Static helpers:Icons.UserIcon}"
+                                                   IsVisible="{Binding NoImage}"
+                                                   FontFamily="FA7Solid"
+                                                   FontSize="28"
+                                                   TextColor="White"
+                                                   WidthRequest="40"
+                                                   HorizontalTextAlignment="Center"
+                                                   VerticalOptions="Center" />
+
+                                            <Label Text="{Binding PlayerDisplay}"
+                                                   TextColor="White"
+                                                   FontSize="12"
+                                                   VerticalOptions="Center"
+                                                   LineBreakMode="TailTruncation" />
+                                        </HorizontalStackLayout>
+                                        <BoxView HeightRequest="1" BackgroundColor="#33FFFFFF" />
+                                    </VerticalStackLayout>
+                                </DataTemplate>
+                            </BindableLayout.ItemTemplate>
+                        </VerticalStackLayout>
+
+                        <VerticalStackLayout Grid.Column="1"
+                                             BindableLayout.ItemsSource="{Binding AwayLineup}">
+                            <BindableLayout.ItemTemplate>
+                                <DataTemplate x:DataType="dto:EventLineupDTO">
+                                    <VerticalStackLayout>
+                                        <VerticalStackLayout.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="OnPlayerRowTapped" />
+                                        </VerticalStackLayout.GestureRecognizers>
+                                        <HorizontalStackLayout Spacing="8" Margin="0,8" HorizontalOptions="End">
+                                            <Label Text="{Binding PlayerDisplay}"
+                                                   TextColor="White"
+                                                   FontSize="12"
+                                                   VerticalOptions="Center"
+                                                   LineBreakMode="TailTruncation" />
+
+                                            <Image Source="{Binding ImageUrl}"
+                                                   IsVisible="{Binding HasImage}"
+                                                   HeightRequest="40"
+                                                   WidthRequest="40">
+                                                <Image.GestureRecognizers>
+                                                    <TapGestureRecognizer Tapped="OnPlayerImageTapped" />
+                                                </Image.GestureRecognizers>
+                                            </Image>
+
+                                            <Label Text="{x:Static helpers:Icons.UserIcon}"
+                                                   IsVisible="{Binding NoImage}"
+                                                   FontFamily="FA7Solid"
+                                                   FontSize="28"
+                                                   TextColor="White"
+                                                   WidthRequest="40"
+                                                   HorizontalTextAlignment="Center"
+                                                   VerticalOptions="Center" />
+
+                                            <Label Text="{Binding SquadNumber, StringFormat='#{0}'}"
+                                                   TextColor="White"
+                                                   WidthRequest="28"
+                                                   HorizontalTextAlignment="End"
+                                                   VerticalOptions="Center" />
+                                        </HorizontalStackLayout>
+                                        <BoxView HeightRequest="1" BackgroundColor="#33FFFFFF" />
+                                    </VerticalStackLayout>
+                                </DataTemplate>
+                            </BindableLayout.ItemTemplate>
+                        </VerticalStackLayout>
+                    </Grid>
+
+                    <!-- Statistics -->
+                    <VerticalStackLayout BackgroundColor="#1A1A2E"
+                                          Padding="16"
+                                          Spacing="0"
+                                          IsVisible="{Binding IsStatisticsSelected}"
+                                          BindableLayout.ItemsSource="{Binding Details.Statistics}">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate x:DataType="dto:EventStatisticsDTO">
+                                <VerticalStackLayout Spacing="4" Margin="0,8">
+                                    <Label Text="{Binding Stat}"
+                                           TextColor="White"
+                                           FontAttributes="Bold"
+                                           FontSize="13"
+                                           HorizontalOptions="Center"
+                                           HorizontalTextAlignment="Center" />
+
+                                    <Grid ColumnDefinitions="*,Auto,*">
+                                        <Label Grid.Column="0"
+                                               Text="{Binding HomeScore}"
+                                               TextColor="White"
+                                               HorizontalOptions="Start" />
+
+                                        <Label Grid.Column="1"
+                                               Text=":"
+                                               TextColor="White" />
+
+                                        <Label Grid.Column="2"
+                                               Text="{Binding AwayScore}"
+                                               TextColor="White"
+                                               HorizontalOptions="End" />
+                                    </Grid>
+
+                                    <BoxView HeightRequest="1" BackgroundColor="#33FFFFFF" Margin="0,4,0,0" />
+                                </VerticalStackLayout>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </VerticalStackLayout>
+
+                    <!-- Broadcasts: TV kanali (logo, zastavica, ime), dva po redu. Ceo tab se ne
+                         pojavljuje ako mec nema kanala (HasBroadcasts). CollectionView umesto
+                         BindableLayout - BindableLayout materijalizuje SVAKU stavku kao punu vizuelnu
+                         stablo+binding strukturu bez ikakvog recikliranja, sto je bilo uzrok "kocenja"
+                         kod meceva sa dosta kanala; CollectionView ima jeftiniju, native-backed
+                         adapter/viewholder mehaniku. Uz to je i broj redova ogranicen (BroadcastRowLimit
+                         u ViewModel-u) - "Show all" otkriva ostatak tek na klik. -->
+                    <VerticalStackLayout BackgroundColor="#1A1A2E" Padding="16" Spacing="0" IsVisible="{Binding IsBroadcastsSelected}">
+                        <CollectionView ItemsSource="{Binding BroadcastRows}" VerticalOptions="Start">
+                            <CollectionView.ItemsLayout>
+                                <LinearItemsLayout Orientation="Vertical" ItemSpacing="0" />
+                            </CollectionView.ItemsLayout>
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate x:DataType="dto:EventBroadcastRowDTO">
+                                    <VerticalStackLayout Spacing="0">
+                                        <Grid ColumnDefinitions="*,*" ColumnSpacing="28">
+                                            <partials:BroadcastCell Grid.Column="0" BindingContext="{Binding Left}" />
+
+                                            <!-- Visibility je na OMOTACU, ne na samoj celiji: na istom elementu
+                                                 "IsVisible={Binding HasRight}" bi se trazilo u NJEGOVOM novom
+                                                 BindingContext-u (Right, koji je null), pa bi prazna desna celija
+                                                 (neparan broj kanala) ostala vidljiva. -->
+                                            <Grid Grid.Column="1" IsVisible="{Binding HasRight}">
+                                                <partials:BroadcastCell BindingContext="{Binding Right}" />
+                                            </Grid>
+                                        </Grid>
+                                        <BoxView HeightRequest="1" BackgroundColor="#33FFFFFF" />
+                                    </VerticalStackLayout>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+
+                        <Label Text="{Binding ShowAllBroadcastsText}"
+                               IsVisible="{Binding HasMoreBroadcastRows}"
+                               TextColor="#8A8A8A"
+                               FontAttributes="Bold"
+                               FontSize="12"
+                               Margin="0,10,0,0"
+                               HorizontalOptions="Center">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ShowAllBroadcastsCommand}" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </VerticalStackLayout>
+
+                    <!-- Full timeline: SVAKI red iz EventTimelines (golovi, kartoni, izmene, VAR, ostalo),
+                         isti domacin/gost+minut raspored kao kratki Timeline iznad osnovnih info. CollectionView
+                         (ne BindableLayout) - isti razlog kao kod Broadcasts (jeftinija native adapter mehanika
+                         za potencijalno duge liste). -->
+                    <VerticalStackLayout BackgroundColor="#1A1A2E" Padding="16" Spacing="0" IsVisible="{Binding IsFullTimelineSelected}">
+                        <CollectionView ItemsSource="{Binding Details.FullTimeline}" VerticalOptions="Start">
+                            <CollectionView.ItemsLayout>
+                                <LinearItemsLayout Orientation="Vertical" ItemSpacing="0" />
+                            </CollectionView.ItemsLayout>
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate x:DataType="dto:EventTimelineDTO">
+                                    <Grid ColumnDefinitions="*,44,*" ColumnSpacing="6" Padding="0,6">
+                                        <Grid Grid.Column="0" IsVisible="{Binding Home}">
+                                            <partials:TimelineCell HorizontalOptions="End" TextColor="White" />
+                                        </Grid>
+
+                                        <Label Grid.Column="1"
+                                               Text="{Binding MinuteDisplay}"
+                                               FontSize="12"
+                                               FontAttributes="Bold"
+                                               TextColor="White"
+                                               HorizontalTextAlignment="Center"
+                                               VerticalOptions="Center" />
+
+                                        <Grid Grid.Column="2" IsVisible="{Binding IsAway}">
+                                            <partials:TimelineCell HorizontalOptions="Start" TextColor="White" />
+                                        </Grid>
+                                    </Grid>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </VerticalStackLayout>
+
+                </Grid>
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+    <partials:LoadingOverlay IsLoading="{Binding IsBusy}" />
+    </Grid>
+</ContentPage>

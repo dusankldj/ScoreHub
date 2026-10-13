@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI.Views.LoginPage"
+             >
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="16" VerticalOptions="Center">
+
+            <Label Text="Login"
+                   FontSize="32"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#1A1A2E" />
+
+            <Entry Placeholder="Username"
+                   Text="{Binding Username}"
+                   ReturnType="Next" />
+
+            <Entry Placeholder="Password"
+                   Text="{Binding Password}"
+                   IsPassword="True"
+                   ReturnType="Done" />
+
+            <Button Text="Login"
+                    BackgroundColor="#1A1A2E"
+                    TextColor="White"
+                    CornerRadius="8"
+                    HeightRequest="48"
+                    Margin="0,10,0,0"
+                    Command="{Binding LoginCommand}" />
+
+            <Label Text="{Binding ErrorMessage}"
+                   TextColor="Red"
+                   FontSize="12"
+                   FontAttributes="Italic"
+                   HorizontalOptions="Center" />
+
+            <!-- Link - Label + tanak BoxView ispod, sa malim razmakom (Spacing) izmedju,
+                 umesto oslanjanja na podrazumevano TextDecorations="Underline" ponasanje. -->
+            <VerticalStackLayout HorizontalOptions="Center" Spacing="2" Margin="0,20,0,0">
+                <VerticalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnRegisterLinkTapped" />
+                </VerticalStackLayout.GestureRecognizers>
+                <Label Text="Don't have an account? Register!"
+                       FontAttributes="Italic"
+                       TextColor="#1A1A2E" />
+                <BoxView HeightRequest="1" BackgroundColor="#1A1A2E" HorizontalOptions="Fill" />
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

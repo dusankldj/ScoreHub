@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dto="clr-namespace:MAUI.DTO.Input"
+             xmlns:helpers="clr-namespace:MAUI.Helpers"
+             x:Class="MAUI.Views.Partials.BroadcastCell"
+             x:DataType="dto:EventBroadcastDTO">
+
+    <!-- Jedan kanal, centriran u svojoj polovini reda:
+             [        logo        ]
+             [zastavica] Ime kanala
+         Prostor za logo je FIKSNE visine i kad ga nema, pa su imena u istom redu poravnata.
+         Nepoznata zemlja / "World" / prazno -> ikonica planete umesto zastavice (samo uz ime). -->
+    <Grid RowDefinitions="48,Auto" RowSpacing="10" Padding="0,14">
+
+        <Image Grid.Row="0"
+               Source="{Binding LogoThumbUrl}"
+               IsVisible="{Binding HasLogo}"
+               HeightRequest="48"
+               MaximumWidthRequest="120"
+               Aspect="AspectFit"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+
+        <HorizontalStackLayout Grid.Row="1"
+                               IsVisible="{Binding HasName}"
+                               Spacing="6"
+                               HorizontalOptions="Center">
+            <Image Source="{Binding FlagImage}"
+                   IsVisible="{Binding HasFlag}"
+                   WidthRequest="20"
+                   HeightRequest="15"
+                   VerticalOptions="Center" />
+
+            <Label Text="{x:Static helpers:Icons.PlanetIcon}"
+                   IsVisible="{Binding NoFlag}"
+                   FontFamily="FA7Solid"
+                   FontSize="14"
+                   TextColor="White"
+                   VerticalOptions="Center" />
+
+            <Label Text="{Binding ChannelName}"
+                   TextColor="White"
+                   FontSize="12"
+                   MaximumWidthRequest="100"
+                   LineBreakMode="TailTruncation"
+                   VerticalOptions="Center" />
+        </HorizontalStackLayout>
+    </Grid>
+</ContentView>

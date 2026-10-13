@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dto="clr-namespace:MAUI.DTO.Input"
+             xmlns:helpers="clr-namespace:MAUI.Helpers"
+             xmlns:viewmodel="clr-namespace:MAUI.ViewModel"
+             xmlns:partials="clr-namespace:MAUI.Views.Partials"
+             x:Class="MAUI.Views.PlayerPage">
+
+    <Grid>
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="0">
+
+            <Label Text="{Binding ErrorMessage}"
+                   TextColor="Red"
+                   FontSize="12"
+                   HorizontalOptions="Center" />
+
+            <!-- Slika levo, ime/datum rodjenja/mesto rodjenja(ako postoji)/status(ako postoji) desno -->
+            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="16">
+                <Image Grid.Column="0"
+                       Source="{Binding Details.ImageUrl}"
+                       IsVisible="{Binding Details.HasImage}"
+                       HeightRequest="130"
+                       WidthRequest="130" />
+
+                <Label Grid.Column="0"
+                       Text="{x:Static helpers:Icons.UserIcon}"
+                       IsVisible="{Binding Details.NoImage}"
+                       FontFamily="FA7Solid"
+                       FontSize="90"
+                       TextColor="#1A1A2E"
+                       WidthRequest="130"
+                       HorizontalTextAlignment="Center" />
+
+                <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Spacing="2">
+                    <Label Text="{Binding Details.PlayerDisplay}"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="#1A1A2E"
+                           LineBreakMode="WordWrap" />
+
+                    <Label TextColor="#8A8A8A" FontSize="13">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{Binding Details.BirthDate, StringFormat='{0:dd/MM/yyyy}'}" />
+                                <Span Text="{Binding Details.Age, StringFormat=' ({0})'}" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <Label Text="{Binding Details.BirthLocation, StringFormat='Birth place: {0}'}"
+                           IsVisible="{Binding HasBirthLocation}"
+                           TextColor="#8A8A8A"
+                           FontSize="13" />
+
+                    <Label Text="{Binding Details.Status}"
+                           IsVisible="{Binding HasStatus}"
+                           TextColor="#8A8A8A"
+                           FontSize="13" />
+                </VerticalStackLayout>
+            </Grid>
+
+            <!-- Tim(pun naziv) / Position / Worth / Weight / Height - svaki red se sakriva ako fali -->
+            <VerticalStackLayout Margin="0,16,0,0" Spacing="4">
+                <Label Text="{Binding Details.TeamDisplay, StringFormat='Current team: {0}'}"
+                       IsVisible="{Binding HasTeam}"
+                       FontAttributes="Bold"
+                       TextColor="#1A1A2E" />
+
+                <Label Text="{Binding Details.Position, StringFormat='Position: {0}'}" TextColor="#1A1A2E" />
+
+                <Label Text="{Binding Details.Worth, StringFormat='Worth: {0}'}"
+                       IsVisible="{Binding HasWorth}"
+                       TextColor="#1A1A2E" />
+
+                <Label Text="{Binding Details.Weight, StringFormat='Weight: {0}'}"
+                       IsVisible="{Binding HasWeight}"
+                       TextColor="#1A1A2E" />
+
+                <Label Text="{Binding Details.Height, StringFormat='Height: {0}'}"
+                       IsVisible="{Binding HasHeight}"
+                       TextColor="#1A1A2E" />
+            </VerticalStackLayout>
+
+            <Label Text="{Binding Details.Description}"
+                   IsVisible="{Binding HasDescription}"
+                   TextColor="#1A1A2E"
+                   Margin="0,8,0,0" />
+
+            <BoxView HeightRequest="1" BackgroundColor="#E0E0E0" Margin="0,20,0,0" />
+
+            <!-- Statistics / Honours / Milestones / FormerTeams tabovi - prikazuje se samo tab
+                 za koji STVARNO ima podataka; ceo blok se sakriva ako nema ni jednog. Isti
+                 fade-switch obrazac kao na EventDetailsPage/TeamPage. -->
+            <VerticalStackLayout Margin="-20,0,-20,0" IsVisible="{Binding HasAnyTabData}">
+
+                <!-- Horizontalni scroll - sa svih 5 tabova (igrac koji ima Statistics/Honours/
+                     Milestones/FormerTeams/Socials) red ume da bude sira od ekrana, pa bi
+                     "Socials" ispao van vidljivog dela i ne bi mogao da se klikne. -->
+                <ScrollView Orientation="Horizontal" Margin="0,0,0,8">
+                <HorizontalStackLayout HorizontalOptions="Center" Spacing="20" Margin="20,0,20,0">
+                    <VerticalStackLayout Spacing="4" IsVisible="{Binding HasStatistics}">
+                        <Label Text="Statistics" FontAttributes="Bold" TextColor="#1A1A2E" HorizontalOptions="Center">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnStatisticsTabTapped" />
+                            </Label.GestureRecognizers>
+                            <Label.Triggers>
+                                <DataTrigger TargetType="Label" Binding="{Binding IsStatisticsSelected}" Value="False">
+                                    <Setter Property="TextColor" Value="#8A8A8A" />
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
+                        <BoxView HeightRequest="2" WidthRequest="70" BackgroundColor="#1A1A2E" IsVisible="{Binding IsStatisticsSelected}" />
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Spacing="4" IsVisible="{Binding HasHonours}">
+                        <Label Text="Honours" FontAttributes="Bold" TextColor="#1A1A2E" HorizontalOptions="Center">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnHonoursTabTapped" />
+                            </Label.GestureRecognizers>
+                            <Label.Triggers>
+                                <DataTrigger TargetType="Label" Binding="{Binding IsHonoursSelected}" Value="False">
+                                    <Setter Property="TextColor" Value="#8A8A8A" />
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
+                        <BoxView HeightRequest="2" WidthRequest="60" BackgroundColor="#1A1A2E" IsVisible="{Binding IsHonoursSelected}" />
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Spacing="4" IsVisible="{Binding HasMilestones}">
+                        <Label Text="Milestones" FontAttributes="Bold" TextColor="#1A1A2E" HorizontalOptions="Center">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnMilestonesTabTapped" />
+                            </Label.GestureRecognizers>
+                            <Label.Triggers>
+                                <DataTrigger TargetType="Label" Binding="{Binding IsMilestonesSelected}" Value="False">
+                                    <Setter Property="TextColor" Value="#8A8A8A" />
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
+                        <BoxView HeightRequest="2" WidthRequest="80" BackgroundColor="#1A1A2E" IsVisible="{Binding IsMilestonesSelected}" />
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Spacing="4" IsVisible="{Binding HasFormerTeams}">
+                        <Label Text="Former teams" FontAttributes="Bold" TextColor="#1A1A2E" HorizontalOptions="Center">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnFormerTeamsTabTapped" />
+                            </Label.GestureRecognizers>
+                            <Label.Triggers>
+                                <DataTrigger TargetType="Label" Binding="{Binding IsFormerTeamsSelected}" Value="False">
+                                    <Setter Property="TextColor" Value="#8A8A8A" />
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
+                        <BoxView HeightRequest="2" WidthRequest="90" BackgroundColor="#1A1A2E" IsVisible="{Binding IsFormerTeamsSelected}" />
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Spacing="4" IsVisible="{Binding HasSocials}">
+                        <Label Text="Socials" FontAttributes="Bold" TextColor="#1A1A2E" HorizontalOptions="Center">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnSocialsTabTapped" />
+                            </Label.GestureRecognizers>
+                            <Label.Triggers>
+                                <DataTrigger TargetType="Label" Binding="{Binding IsSocialsSelected}" Value="False">
+                                    <Setter Property="TextColor" Value="#8A8A8A" />
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
+                        <BoxView HeightRequest="2" WidthRequest="60" BackgroundColor="#1A1A2E" IsVisible="{Binding IsSocialsSelected}" />
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+                </ScrollView>
+
+                <Grid x:Name="TabContentContainer">
+
+                    <!-- Statistics - grupisano po sezoni (PlayerViewModel.StatisticsBySeason),
+                         najstarija sezona prva (isti smer kao FormerTeams). -->
+                    <VerticalStackLayout BackgroundColor="#1A1A2E"
+                                          Padding="16"
+                                          IsVisible="{Binding IsStatisticsSelected}"
+                                          BindableLayout.ItemsSource="{Binding StatisticsBySeason}">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate x:DataType="viewmodel:PlayerStatisticsSeasonGroup">
+                                <VerticalStackLayout Margin="0,8">
+                                    <Label Text="{Binding Season}" TextColor="White" FontAttributes="Bold" FontSize="13" Margin="0,0,0,6" />
+
+                                    <VerticalStackLayout BindableLayout.ItemsSource="{Binding Items}">
+                                        <BindableLayout.ItemTemplate>
+                                            <DataTemplate x:DataType="dto:PlayerStatistics">
+                                                <VerticalStackLayout Margin="0,4" Spacing="2">
+                                                    <Label Text="{Binding StatDisplay}" TextColor="#E0E0E0" FontSize="12" />
+                                                    <Label Text="{Binding SubText}" TextColor="#B0B0C0" FontSize="11" />
+                                                </VerticalStackLayout>
+                                            </DataTemplate>
+                                        </BindableLayout.ItemTemplate>
+                                    </VerticalStackLayout>
+
+                                    <BoxView HeightRequest="1" BackgroundColor="#33FFFFFF" Margin="0,8,0,0" />
+                                </VerticalStackLayout>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </VerticalStackLayout>
+
+                    <!-- Honours -->
+                    <VerticalStackLayout BackgroundColor="#1A1A2E"
+                                          Padding="16"
+                                          IsVisible="{Binding IsHonoursSelected}"
+                                          BindableLayout.ItemsSource="{Binding Details.Honours}">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate x:DataType="dto:PlayerHonours">
+                                <VerticalStackLayout>
+                                    <HorizontalStackLayout Spacing="16" Margin="0,8">
+                                        <Image Source="{Binding HonourTrophyUrl}"
+                                               IsVisible="{Binding HasTrophyImage}"
+                                               HeightRequest="36"
+                                               WidthRequest="36" />
+
+                                        <VerticalStackLayout VerticalOptions="Center" Spacing="2">
+                                            <Label Text="{Binding HonourName}" TextColor="White" FontSize="13" FontAttributes="Bold" />
+                                            <Label Text="{Binding SubText}" TextColor="#B0B0C0" FontSize="11" />
+                                        </VerticalStackLayout>
+                                    </HorizontalStackLayout>
+                                    <BoxView HeightRequest="1" BackgroundColor="#33FFFFFF" />
+                                </VerticalStackLayout>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </VerticalStackLayout>
+
+                    <!-- Milestones -->
+                    <VerticalStackLayout BackgroundColor="#1A1A2E"
+                                          Padding="16"
+                                          IsVisible="{Binding IsMilestonesSelected}"
+                                          BindableLayout.ItemsSource="{Binding Details.Milestones}">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate x:DataType="dto:PlayerMilestones">
+                                <VerticalStackLayout>
+                                    <HorizontalStackLayout Spacing="16" Margin="0,8">
+                                        <Image Source="{Binding MilestoneUrl}"
+                                               IsVisible="{Binding HasImage}"
+                                               HeightRequest="46"
+                                               WidthRequest="46" />
+
+                                        <VerticalStackLayout VerticalOptions="Center" Spacing="2">
+                                            <Label Text="{Binding MilestoneName}" TextColor="White" FontSize="13" FontAttributes="Bold" />
+                                            <Label Text="{Binding DateAchieved, StringFormat='{0:dd/MM/yyyy}'}" TextColor="#B0B0C0" FontSize="11" />
+                                            <Label Text="{Binding Team}" IsVisible="{Binding HasTeam}" TextColor="#B0B0C0" FontSize="11" />
+                                        </VerticalStackLayout>
+                                    </HorizontalStackLayout>
+                                    <BoxView HeightRequest="1" BackgroundColor="#33FFFFFF" />
+                                </VerticalStackLayout>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </VerticalStackLayout>
+
+                    <!-- Former teams -->
+                    <VerticalStackLayout BackgroundColor="#1A1A2E"
+                                          Padding="16"
+                                          IsVisible="{Binding IsFormerTeamsSelected}"
+                                          BindableLayout.ItemsSource="{Binding Details.FormerTeams}">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate x:DataType="dto:PlayerFormerTeams">
+                                <VerticalStackLayout>
+                                    <HorizontalStackLayout Spacing="16" Margin="0,8">
+                                        <Image Source="{Binding TeamLogoUrl}" HeightRequest="36" WidthRequest="36" />
+
+                                        <VerticalStackLayout VerticalOptions="Center" Spacing="2">
+                                            <Label Text="{Binding Team}" TextColor="White" FontSize="13" FontAttributes="Bold" />
+                                            <Label Text="{Binding MoveType}" TextColor="#B0B0C0" FontSize="11" />
+                                            <Label Text="{Binding PeriodDisplay}" TextColor="#B0B0C0" FontSize="11" />
+                                            <Label Text="{Binding Appearences, StringFormat='Appearances: {0}'}" IsVisible="{Binding HasAppearances}" TextColor="#B0B0C0" FontSize="11" />
+                                            <Label Text="{Binding Goals, StringFormat='Goals: {0}'}" IsVisible="{Binding HasGoals}" TextColor="#B0B0C0" FontSize="11" />
+                                        </VerticalStackLayout>
+                                    </HorizontalStackLayout>
+                                    <BoxView HeightRequest="1" BackgroundColor="#33FFFFFF" />
+                                </VerticalStackLayout>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </VerticalStackLayout>
+
+                    <!-- Socials - srednje-krupne ikonice, klik otvara profil te mreze. Pozadina
+                         (Grid, bez HorizontalOptions) puni celu sirinu kartice, HorizontalStack
+                         unutra samo centrira ikonice. -->
+                    <Grid BackgroundColor="#1A1A2E"
+                          Padding="16"
+                          IsVisible="{Binding IsSocialsSelected}">
+                        <HorizontalStackLayout Spacing="36" HorizontalOptions="Center">
+                        <Label Text="{x:Static helpers:Icons.FacebookIcon}"
+                               IsVisible="{Binding Details.HasFacebook}"
+                               FontFamily="FA7Brands"
+                               FontSize="34"
+                               TextColor="White">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenSocialLinkCommand}" CommandParameter="{Binding Details.FacebookLink}" />
+                            </Label.GestureRecognizers>
+                        </Label>
+
+                        <Label Text="{x:Static helpers:Icons.InstagramIcon}"
+                               IsVisible="{Binding Details.HasInstagram}"
+                               FontFamily="FA7Brands"
+                               FontSize="34"
+                               TextColor="White">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenSocialLinkCommand}" CommandParameter="{Binding Details.InstagramLink}" />
+                            </Label.GestureRecognizers>
+                        </Label>
+
+                        <Label Text="{x:Static helpers:Icons.XSocialIcon}"
+                               IsVisible="{Binding Details.HasTwitter}"
+                               FontFamily="FA7Brands"
+                               FontSize="34"
+                               TextColor="White">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenSocialLinkCommand}" CommandParameter="{Binding Details.TwitterLink}" />
+                            </Label.GestureRecognizers>
+                        </Label>
+
+                        </HorizontalStackLayout>
+                    </Grid>
+
+                </Grid>
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+    <partials:LoadingOverlay IsLoading="{Binding IsBusy}" />
+    </Grid>
+</ContentPage>

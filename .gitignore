@@ -1,0 +1,8 @@
+# Firebase push notifikacije - OBA fajla su tajni kljucevi, ne smeju u git
+WebAPI/firebase-service-account.json
+MAUI/Platforms/Android/google-services.json
+**/bin/
+**/obj/
+.vs/
+*.user
+*.suo

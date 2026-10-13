@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dto="clr-namespace:MAUI.DTO.Input"
+             xmlns:helpers="clr-namespace:MAUI.Helpers"
+             x:Class="MAUI.Views.Partials.TimelineCell"
+             x:DataType="dto:EventTimelineDTO"
+             x:Name="Root">
+
+    <!-- Jedan red toka meca - koristi se i za kratki Timeline (samo golovi/kartoni) i za Full timeline
+         (svaki tip). Gol: [lopta] Igrac ([asistent-ikonica] Asistent). Karton: Igrac + JEDNA ikonica
+         kartona zarotirana za 90 stepeni u boji kartona. Izmena: [zelena strelica gore] Igrac-ulazi
+         [crvena strelica dole] Igrac-izlazi. VAR: [displej ikonica] + detalji. Sve ostalo (IsOther):
+         prost tekstualni fallback, da "Full timeline" nista ne izostavi. Poravnanje (udesno za domacina,
+         ulevo za gosta) dolazi iz DTO-a (TextAlignment/HorizontalOptions se postavlja spolja). -->
+    <Grid>
+        <Label IsVisible="{Binding IsGoal}"
+               FontSize="12"
+               TextColor="{Binding TextColor, Source={x:Reference Root}}"
+               HorizontalTextAlignment="{Binding TextAlignment}">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="{x:Static helpers:Icons.FootballIcon}" FontFamily="FA7Solid" />
+                    <Span Text="{Binding PenaltyMarker}" TextColor="#8A8A8A" />
+                    <Span Text="{Binding GoalPlayerDisplay, StringFormat=' {0}'}" />
+                    <Span Text="{Binding AssistOpen}" TextColor="#8A8A8A" />
+                    <Span Text="{Binding AssistIconText}" FontFamily="FA7Solid" TextColor="#8A8A8A" />
+                    <Span Text="{Binding AssistDisplay}" TextColor="#8A8A8A" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <!-- FlexLayout sa Wrap (umesto HorizontalStackLayout, koji elementima daje neogranicenu sirinu pa
+             dugacak komentar ulazi pod minut ili izlazi van ekrana): komentar ostaje u istom redu iza
+             kartona dok staje, a ako ne staje, odmah prelazi u red ispod. Shrink=1 dozvoljava da se i
+             sam dugacak tekst (ime/komentar) prelomi u svoj red umesto da prelazi ivicu kolone.
+             JustifyContent (DTO) poravnava svaki red udesno za domacina, ulevo za gosta. -->
+        <FlexLayout IsVisible="{Binding IsCard}"
+                    Wrap="Wrap"
+                    JustifyContent="{Binding FlexJustify}"
+                    AlignItems="Center">
+            <Label Text="{Binding PlayerName}"
+                   FontSize="12"
+                   FlexLayout.Shrink="1"
+                   TextColor="{Binding TextColor, Source={x:Reference Root}}" />
+            <Label Text="{x:Static helpers:Icons.CardIcon}"
+                   FontFamily="MDI"
+                   Rotation="90"
+                   Margin="6,0"
+                   TextColor="{Binding CardColor}" />
+            <!-- Komentar u zagradi pored kartona (npr. "(Argument)") - samo ako postoji. -->
+            <Label Text="{Binding CommentDisplay}"
+                   IsVisible="{Binding HasComment}"
+                   FontSize="12"
+                   FlexLayout.Shrink="1"
+                   TextColor="#8A8A8A" />
+        </FlexLayout>
+
+        <!-- Izmena: red 1 = zelena strelica gore (ulazi) + ime, red 2 = crvena strelica dole (izlazi) + ime. -->
+        <VerticalStackLayout IsVisible="{Binding IsSubstitution}" Spacing="2">
+            <HorizontalStackLayout Spacing="4">
+                <Label Text="{x:Static helpers:Icons.ArrowIcon}"
+                       FontFamily="FA7Solid"
+                       Rotation="180"
+                       TextColor="#2E7D32"
+                       VerticalOptions="Center" />
+                <Label Text="{Binding PlayerInName}"
+                       FontSize="12"
+                       TextColor="{Binding TextColor, Source={x:Reference Root}}"
+                       VerticalOptions="Center" />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Spacing="4">
+                <Label Text="{x:Static helpers:Icons.ArrowIcon}"
+                       FontFamily="FA7Solid"
+                       TextColor="#D32F2F"
+                       VerticalOptions="Center" />
+                <Label Text="{Binding PlayerOutName}"
+                       FontSize="12"
+                       TextColor="{Binding TextColor, Source={x:Reference Root}}"
+                       VerticalOptions="Center" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+
+        <!-- VAR: displej ikonica + detalji. -->
+        <HorizontalStackLayout IsVisible="{Binding IsVar}" Spacing="6">
+            <Label Text="{x:Static helpers:Icons.VarIcon}"
+                   FontFamily="FA7Solid"
+                   TextColor="{Binding TextColor, Source={x:Reference Root}}"
+                   VerticalOptions="Center" />
+            <Label Text="{Binding VarDisplay}"
+                   FontSize="12"
+                   TextColor="{Binding TextColor, Source={x:Reference Root}}"
+                   VerticalOptions="Center" />
+        </HorizontalStackLayout>
+
+        <!-- Fallback - sve sto nije gol/karton/izmena/VAR (npr. "2 Pointer" kod kosarke). -->
+        <Label Text="{Binding OtherDisplay}"
+               IsVisible="{Binding IsOther}"
+               FontSize="12"
+               TextColor="{Binding TextColor, Source={x:Reference Root}}"
+               HorizontalTextAlignment="{Binding TextAlignment}" />
+    </Grid>
+</ContentView>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dto="clr-namespace:MAUI.DTO.Input"
+             xmlns:helpers="clr-namespace:MAUI.Helpers"
+             xmlns:partials="clr-namespace:MAUI.Views.Partials"
+             x:Class="MAUI.Views.ProfilePage">
+
+    <ContentPage.Resources>
+        <!-- Jedan red prognoze - deli ga sve tri sekcije (Finished/Live/Upcoming). Zelena/crvena
+             boja (akcenat + pozadina) dolazi iz MyPredictionDTO.AccentColor/CardBackground. Klik
+             -> OnPredictionTapped -> EventDetails za taj eventId. -->
+        <DataTemplate x:Key="PredictionRowTemplate" x:DataType="dto:MyPredictionDTO">
+            <Grid ColumnDefinitions="4,*,Auto"
+                  ColumnSpacing="10"
+                  Padding="0,8,10,8"
+                  Margin="0,0,0,8"
+                  BackgroundColor="{Binding CardBackground}">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnPredictionTapped" />
+                </Grid.GestureRecognizers>
+
+                <BoxView Grid.Column="0" Color="{Binding AccentColor}" />
+
+                <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Spacing="2">
+                    <Label Text="{Binding MatchTitle}"
+                           FontSize="14"
+                           FontAttributes="Bold"
+                           TextColor="#1A1A2E" />
+                    <Label Text="{Binding PredictionDisplay}"
+                           FontSize="13"
+                           TextColor="{Binding AccentColor}" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="2" VerticalOptions="Center" Spacing="2">
+                    <Label Text="{Binding RightTopDisplay}"
+                           FontSize="15"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="End"
+                           TextColor="{Binding AccentColor}" />
+                    <Label Text="{Binding RightBottomDisplay}"
+                           FontSize="11"
+                           HorizontalTextAlignment="End"
+                           TextColor="{Binding RightBottomColor}" />
+                </VerticalStackLayout>
+            </Grid>
+        </DataTemplate>
+    </ContentPage.Resources>
+
+    <Grid>
+    <ScrollView>
+        <VerticalStackLayout Padding="30,30,30,30" Spacing="8" VerticalOptions="Start">
+
+            <Label Text="{Binding FullName}"
+                   FontSize="26"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#1A1A2E" />
+
+            <Label Text="{Binding Username}"
+                   FontSize="16"
+                   FontAttributes="Italic"
+                   HorizontalOptions="Center"
+                   TextColor="#1A1A2E" />
+
+            <Label Text="{Binding MemberSince, StringFormat='Member since: {0}'}"
+                   FontSize="13"
+                   HorizontalOptions="Center"
+                   TextColor="#8A8A8A"
+                   Margin="0,4,0,0" />
+
+            <Label Text="{Binding ErrorMessage}"
+                   TextColor="Red"
+                   FontSize="12"
+                   HorizontalOptions="Center"
+                   Margin="0,10,0,0" />
+
+            <Button Text="Logout"
+                    BackgroundColor="#D32F2F"
+                    TextColor="White"
+                    CornerRadius="8"
+                    HeightRequest="48"
+                    Margin="0,30,0,0"
+                    Command="{Binding LogoutCommand}" />
+
+            <!-- Omiljeni timovi - bez keširanja (vidi ProfileViewModel), uvek svež podatak pri
+                 svakom otvaranju stranice. Kanta na desnoj ivici brise SAMO taj red i osvezava listu. -->
+            <Label Text="Favorite teams"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#1A1A2E"
+                   IsVisible="{Binding HasFavoriteTeams}"
+                   Margin="0,30,0,16" />
+
+            <CollectionView ItemsSource="{Binding FavoriteTeams}"
+                             IsVisible="{Binding HasFavoriteTeams}"
+                             VerticalOptions="Start">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="12" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="dto:FavoriteTeamDTO">
+                        <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="12">
+                            <Image Grid.Column="0"
+                                   Source="{Binding LogoUrl}"
+                                   HeightRequest="40"
+                                   WidthRequest="40"
+                                   VerticalOptions="Center" />
+
+                            <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Spacing="2">
+                                <Label Text="{Binding TeamDisplayName}"
+                                       FontSize="15"
+                                       FontAttributes="Bold"
+                                       TextColor="#1A1A2E" />
+                                <Label Text="{Binding SportName}"
+                                       FontAttributes="Italic"
+                                       FontSize="12"
+                                       TextColor="#8A8A8A" />
+                            </VerticalStackLayout>
+
+                            <Label Grid.Column="2"
+                                   Text="{x:Static helpers:Icons.TrashCanIcon}"
+                                   FontFamily="FA7Solid"
+                                   FontSize="18"
+                                   TextColor="#D32F2F"
+                                   VerticalOptions="Center">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnRemoveFavoriteTeamTapped" />
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <!-- Prikazano je prvih 10 (ProfileListLimit u ViewModel-u); ostatak tek na klik. -->
+            <Label Text="{Binding ShowAllFavoriteTeamsText}"
+                   IsVisible="{Binding HasMoreFavoriteTeams}"
+                   TextColor="#8A8A8A"
+                   FontAttributes="Bold"
+                   FontSize="12"
+                   Margin="0,6,0,0"
+                   HorizontalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ShowAllFavoriteTeamsCommand}" />
+                </Label.GestureRecognizers>
+            </Label>
+
+            <!-- Moje prognoze - ispod omiljenih timova, podeljene na Finished / Live / Upcoming
+                 (sekcija koja je prazna se ne prikazuje). Filter (All/Finished/Live/Upcoming) radi
+                 lokalno nad vec ucitanim prognozama; prikazano je prvih 10, ostatak na "Show all". -->
+            <Label Text="My predictions"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#1A1A2E"
+                   IsVisible="{Binding HasAnyPredictions}"
+                   Margin="0,30,0,0" />
+
+            <!-- Dva filtera jedan pored drugog: status (All/Finished/Live/Upcoming) i ishod (All/Hit/Missed).
+                 Kombinuju se (I) - Hit/Missed postoje samo za zavrsene mecove. -->
+            <HorizontalStackLayout IsVisible="{Binding HasAnyPredictions}" HorizontalOptions="Center" Spacing="16">
+                <Picker ItemsSource="{Binding PredictionFilterOptions}"
+                        SelectedItem="{Binding SelectedPredictionFilter, Mode=TwoWay}"
+                        HorizontalTextAlignment="Center"
+                        WidthRequest="120"
+                        TextColor="#1A1A2E" />
+
+                <Picker ItemsSource="{Binding ResultFilterOptions}"
+                        SelectedItem="{Binding SelectedResultFilter, Mode=TwoWay}"
+                        HorizontalTextAlignment="Center"
+                        WidthRequest="120"
+                        TextColor="#1A1A2E" />
+            </HorizontalStackLayout>
+
+            <Label Text="No predictions"
+                   IsVisible="{Binding HasNoPredictionsForFilter}"
+                   TextColor="#8A8A8A"
+                   FontSize="14"
+                   HorizontalOptions="Center"
+                   Margin="0,8,0,0" />
+
+            <Label Text="Finished"
+                   FontSize="14"
+                   FontAttributes="Bold"
+                   TextColor="#8A8A8A"
+                   IsVisible="{Binding HasFinishedPredictions}"
+                   Margin="0,8,0,4" />
+            <VerticalStackLayout BindableLayout.ItemsSource="{Binding FinishedPredictions}"
+                                 BindableLayout.ItemTemplate="{StaticResource PredictionRowTemplate}"
+                                 IsVisible="{Binding HasFinishedPredictions}" />
+
+            <Label Text="Live"
+                   FontSize="14"
+                   FontAttributes="Bold"
+                   TextColor="#D32F2F"
+                   IsVisible="{Binding HasLivePredictions}"
+                   Margin="0,8,0,4" />
+            <VerticalStackLayout BindableLayout.ItemsSource="{Binding LivePredictions}"
+                                 BindableLayout.ItemTemplate="{StaticResource PredictionRowTemplate}"
+                                 IsVisible="{Binding HasLivePredictions}" />
+
+            <Label Text="Upcoming"
+                   FontSize="14"
+                   FontAttributes="Bold"
+                   TextColor="#8A8A8A"
+                   IsVisible="{Binding HasUpcomingPredictions}"
+                   Margin="0,8,0,4" />
+            <VerticalStackLayout BindableLayout.ItemsSource="{Binding UpcomingPredictions}"
+                                 BindableLayout.ItemTemplate="{StaticResource PredictionRowTemplate}"
+                                 IsVisible="{Binding HasUpcomingPredictions}" />
+
+            <Label Text="{Binding ShowAllPredictionsText}"
+                   IsVisible="{Binding HasMorePredictions}"
+                   TextColor="#8A8A8A"
+                   FontAttributes="Bold"
+                   FontSize="12"
+                   Margin="0,6,0,0"
+                   HorizontalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ShowAllPredictionsCommand}" />
+                </Label.GestureRecognizers>
+            </Label>
+
+        </VerticalStackLayout>
+    </ScrollView>
+    <partials:LoadingOverlay IsLoading="{Binding IsBusy}" />
+    </Grid>
+</ContentPage>

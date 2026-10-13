@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:partials="clr-namespace:MAUI.Views.Partials"
+             xmlns:helpers="clr-namespace:MAUI.Helpers"
+             x:Class="MAUI.Views.HomePage"
+             Shell.NavBarIsVisible="False">
+
+    <ContentPage.Resources>
+        <helpers:InvertedBoolConverter x:Key="InvertBool" />
+    </ContentPage.Resources>
+
+    <Grid RowDefinitions="Auto,*">
+        <partials:NavMenu x:Name="NavMenuControl" Grid.Row="0" Grid.ZIndex="10" 
+                          Sports="{Binding Sports}" OverflowSports="{Binding OverflowSports}" 
+                          IsLoggedIn="{Binding IsLoggedIn}" LogoutCommand="{Binding LogoutCommand}"
+                          SportSelectedCommand="{Binding SportSelectedCommand}" 
+                          SearchText="{Binding SearchText, Mode=TwoWay}" 
+                          SearchResults="{Binding SearchResults}" 
+                          IsSearchResultsVisible="{Binding IsSearchResultsVisible}" 
+                          HasNoSearchResults="{Binding HasNoSearchResults}"
+                          SearchResultSelectedCommand="{Binding SearchResultSelectedCommand}"
+                          IsSearchFocused="{Binding IsSearchFocused, Mode=TwoWay}"
+                          IsShowingRecents="{Binding IsShowingRecents}"
+                          RemoveRecentCommand="{Binding RemoveRecentSearchCommand}"
+                          ClearRecentsCommand="{Binding ClearRecentSearchesCommand}"/>
+
+        <Grid Grid.Row="1" RowDefinitions="Auto,*">
+            <Label Grid.Row="0"
+                   Text="{Binding ErrorMessage}"
+                   TextColor="Red"
+                   FontSize="10"
+                   Padding="10"
+                   LineBreakMode="WordWrap" />
+
+            <partials:MatchesList Grid.Row="1"
+                                  Matches="{Binding Matches}"
+                                  SelectedDate="{Binding SelectedDate, Mode=TwoWay}"
+                                  SelectedStatus="{Binding SelectedStatus, Mode=TwoWay}"
+                                  IsBusy="{Binding IsBusy}"
+                                  IsPickerEnabled="{Binding IsAnyMenuOpen, Source={x:Reference NavMenuControl}, Converter={StaticResource InvertBool}}"
+                                  EventSelectedCommand="{Binding EventSelectedCommand}"
+                                  LeagueSelectedCommand="{Binding LeagueSelectedCommand}" />
+
+            <partials:LoadingOverlay Grid.Row="1" IsLoading="{Binding IsInitialLoading}" />
+        </Grid>
+    </Grid>
+</ContentPage>

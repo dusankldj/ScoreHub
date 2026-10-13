@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI.Views.RegisterPage"
+             >
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="16" VerticalOptions="Center">
+
+            <Label Text="Register"
+                   FontSize="32"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#1A1A2E" />
+
+            <Entry Placeholder="First Name"
+                   Text="{Binding FirstName}"
+                   ReturnType="Next" />
+
+            <Entry Placeholder="Last Name"
+                   Text="{Binding LastName}"
+                   ReturnType="Next" />
+
+            <Entry Placeholder="Username"
+                   Text="{Binding Username}"
+                   ReturnType="Next" />
+
+            <Entry Placeholder="Email"
+                   Text="{Binding Email}"
+                   Keyboard="Email"
+                   ReturnType="Next" />
+
+            <Entry Placeholder="Password"
+                   Text="{Binding Password}"
+                   IsPassword="True"
+                   ReturnType="Next" />
+
+            <Entry Placeholder="Repeat Password"
+                   Text="{Binding RepeatPassword}"
+                   IsPassword="True"
+                   ReturnType="Done" />
+
+            <Button Text="Register"
+                    BackgroundColor="#1A1A2E"
+                    TextColor="White"
+                    CornerRadius="8"
+                    HeightRequest="48"
+                    Margin="0,10,0,0"
+                    Command="{Binding RegisterCommand}" />
+
+            <Label Text="{Binding ErrorMessage}"
+                   TextColor="Red"
+                   FontSize="12"
+                   FontAttributes="Italic"
+                   HorizontalOptions="Center" />
+
+            <VerticalStackLayout HorizontalOptions="Center" Spacing="2" Margin="0,20,0,0">
+                <VerticalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnLoginLinkTapped" />
+                </VerticalStackLayout.GestureRecognizers>
+                <Label Text="Already have an account? Login!"
+                       FontAttributes="Italic"
+                       TextColor="#1A1A2E" />
+                <BoxView HeightRequest="1" BackgroundColor="#1A1A2E" HorizontalOptions="Fill" />
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

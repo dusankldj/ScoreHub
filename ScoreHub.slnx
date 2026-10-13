@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="DataAccess/DataAccess.csproj" />
+  <Project Path="Domain/Domain.csproj" />
+  <Project Path="Infrastructure/Infrastructure.csproj" />
+  <Project Path="MAUI/MAUI.csproj" Id="60d7c07f-a9b4-4acd-b000-8f4288003216">
+    <Deploy Solution="Debug|*" />
+  </Project>
+  <Project Path="WebAPI/WebAPI.csproj" />
+</Solution>

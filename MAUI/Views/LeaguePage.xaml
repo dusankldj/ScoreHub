@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dto="clr-namespace:MAUI.DTO.Input"
+             xmlns:helpers="clr-namespace:MAUI.Helpers"
+             xmlns:viewmodel="clr-namespace:MAUI.ViewModel"
+             xmlns:partials="clr-namespace:MAUI.Views.Partials"
+             x:Class="MAUI.Views.LeaguePage">
+
+    <Grid>
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="0">
+
+            <Label Text="{Binding ErrorMessage}"
+                   TextColor="Red"
+                   FontSize="12"
+                   HorizontalOptions="Center" />
+
+            <!-- Logo levo, ime desno - ispod imena zastavica zemlje (ili planeta za
+                 World/Worldwide/International, vidi LeagueDetailsDTO.FlagImage), umesto ranije
+                 italic drzave u istom redu sa imenom. Malo veci razmak (10, vertikalno ovde) nego u
+                 Broadcasts kartici (6, horizontalno), gde je prvi put uveden isti obrazac. -->
+            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="16">
+                <Image Grid.Column="0"
+                       Source="{Binding Details.LogoUrl}"
+                       IsVisible="{Binding Details.HasLogo}"
+                       HeightRequest="70"
+                       WidthRequest="70" />
+
+                <Label Grid.Column="0"
+                       Text="{x:Static helpers:Icons.TrophyIcon}"
+                       IsVisible="{Binding Details.NoLogo}"
+                       FontFamily="FA7Solid"
+                       FontSize="46"
+                       TextColor="#1A1A2E"
+                       WidthRequest="70"
+                       HorizontalTextAlignment="Center" />
+
+                <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Spacing="10">
+                    <Label Text="{Binding Details.Name}"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="#1A1A2E"
+                           LineBreakMode="WordWrap" />
+
+                    <Image Source="{Binding Details.FlagImage}"
+                           IsVisible="{Binding Details.HasFlag}"
+                           WidthRequest="26"
+                           HeightRequest="19"
+                           HorizontalOptions="Start" />
+
+                    <Label Text="{x:Static helpers:Icons.PlanetIcon}"
+                           IsVisible="{Binding Details.NoFlag}"
+                           FontFamily="FA7Solid"
+                           FontSize="18"
+                           TextColor="#1A1A2E"
+                           HorizontalOptions="Start" />
+                </VerticalStackLayout>
+            </Grid>
+
+            <BoxView HeightRequest="1" BackgroundColor="#E0E0E0" Margin="0,20,0,0" />
+
+            <!-- Tabela lige (Standings) - poredjano po Rank-u. Header i redovi dele ISTE
+                 kolone (34,26,100,30,26,26,26,30,30,30,70,34 - "Form" dodat pre "Pts"),
+                 umotano u horizontalni ScrollView da stane na uzim ekranima; header i redovi
+                 skroluju zajedno jer su u istoj vertikalnoj celini. -->
+            <ScrollView Orientation="Horizontal"
+                        Margin="-20,20,-20,0"
+                        IsVisible="{Binding HasStandings}">
+                <VerticalStackLayout BackgroundColor="#1A1A2E" Padding="16,16,16,8">
+
+                    <Grid ColumnDefinitions="34,26,100,30,26,26,26,30,30,30,70,34" Margin="0,0,0,6">
+                        <Label Grid.Column="3" Text="MP" TextColor="#B0B0C0" FontAttributes="Bold" FontSize="10" HorizontalTextAlignment="Center" />
+                        <Label Grid.Column="4" Text="W" TextColor="#B0B0C0" FontAttributes="Bold" FontSize="10" HorizontalTextAlignment="Center" />
+                        <Label Grid.Column="5" Text="D" TextColor="#B0B0C0" FontAttributes="Bold" FontSize="10" HorizontalTextAlignment="Center" />
+                        <Label Grid.Column="6" Text="L" TextColor="#B0B0C0" FontAttributes="Bold" FontSize="10" HorizontalTextAlignment="Center" />
+                        <Label Grid.Column="7" Text="GF" TextColor="#B0B0C0" FontAttributes="Bold" FontSize="10" HorizontalTextAlignment="Center" />
+                        <Label Grid.Column="8" Text="GA" TextColor="#B0B0C0" FontAttributes="Bold" FontSize="10" HorizontalTextAlignment="Center" />
+                        <Label Grid.Column="9" Text="GD" TextColor="#B0B0C0" FontAttributes="Bold" FontSize="10" HorizontalTextAlignment="Center" />
+                        <Label Grid.Column="10" Text="Form" TextColor="#B0B0C0" FontAttributes="Bold" FontSize="10" HorizontalTextAlignment="Center" />
+                        <Label Grid.Column="11" Text="Pts" TextColor="White" FontAttributes="Bold" FontSize="10" HorizontalTextAlignment="Center" />
+                    </Grid>
+                    <BoxView HeightRequest="1" BackgroundColor="#33FFFFFF" />
+
+                    <VerticalStackLayout BindableLayout.ItemsSource="{Binding Details.Standings}">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate x:DataType="dto:LeagueStandingDTO">
+                                <VerticalStackLayout>
+                                    <Grid ColumnDefinitions="34,26,100,30,26,26,26,30,30,30,70,34" Margin="0,8">
+                                        <Grid.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="OnStandingRowTapped" />
+                                        </Grid.GestureRecognizers>
+
+                                        <HorizontalStackLayout Grid.Column="0" Spacing="2" VerticalOptions="Center">
+                                            <Label Text="{Binding Rank}" TextColor="White" FontSize="12" />
+                                            <Label Text="*"
+                                                   IsVisible="{Binding HasDescription}"
+                                                   TextColor="{Binding DescriptionColorHex}"
+                                                   FontAttributes="Bold"
+                                                   FontSize="14" />
+                                        </HorizontalStackLayout>
+
+                                        <Image Grid.Column="1" Source="{Binding TeamLogoUrl}" HeightRequest="22" WidthRequest="22" VerticalOptions="Center" />
+
+                                        <Label Grid.Column="2"
+                                               Text="{Binding TeamDisplayName}"
+                                               TextColor="White"
+                                               FontSize="12"
+                                               VerticalOptions="Center"
+                                               LineBreakMode="TailTruncation"
+                                               Margin="6,0,0,0" />
+
+                                        <Label Grid.Column="3" Text="{Binding MatchesPlayed}" TextColor="White" FontSize="12" HorizontalTextAlignment="Center" VerticalOptions="Center" />
+                                        <Label Grid.Column="4" Text="{Binding MatchesWon}" TextColor="White" FontSize="12" HorizontalTextAlignment="Center" VerticalOptions="Center" />
+                                        <Label Grid.Column="5" Text="{Binding MatchesDraw}" TextColor="White" FontSize="12" HorizontalTextAlignment="Center" VerticalOptions="Center" />
+                                        <Label Grid.Column="6" Text="{Binding MatchesLost}" TextColor="White" FontSize="12" HorizontalTextAlignment="Center" VerticalOptions="Center" />
+                                        <Label Grid.Column="7" Text="{Binding GoalsFor}" TextColor="White" FontSize="12" HorizontalTextAlignment="Center" VerticalOptions="Center" />
+                                        <Label Grid.Column="8" Text="{Binding GoalsAgainst}" TextColor="White" FontSize="12" HorizontalTextAlignment="Center" VerticalOptions="Center" />
+                                        <Label Grid.Column="9" Text="{Binding GoalDifference}" TextColor="White" FontSize="12" HorizontalTextAlignment="Center" VerticalOptions="Center" />
+                                        <Label Grid.Column="10" FormattedText="{Binding FormDisplay}" FontSize="12" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalOptions="Center" />
+                                        <Label Grid.Column="11" Text="{Binding Points}" TextColor="White" FontAttributes="Bold" FontSize="12" HorizontalTextAlignment="Center" VerticalOptions="Center" />
+                                    </Grid>
+                                    <BoxView HeightRequest="1" BackgroundColor="#33FFFFFF" />
+                                </VerticalStackLayout>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </VerticalStackLayout>
+
+                </VerticalStackLayout>
+            </ScrollView>
+
+            <!-- Legenda - jedan red po razlicitom Description-u, ista boja kao zvezdica u tabeli. -->
+            <VerticalStackLayout Margin="-20,0,-20,0"
+                                  BackgroundColor="#1A1A2E"
+                                  Padding="16,8,16,16"
+                                  IsVisible="{Binding HasStandings}"
+                                  BindableLayout.ItemsSource="{Binding Legend}">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate x:DataType="viewmodel:StandingLegendItem">
+                        <HorizontalStackLayout Spacing="8" Margin="0,4">
+                            <Label Text="*" TextColor="{Binding ColorHex}" FontAttributes="Bold" FontSize="14" />
+                            <Label Text="{Binding Description}" TextColor="#B0B0C0" FontSize="11" VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </VerticalStackLayout>
+
+            <!-- Rezerva - samo ako standings JOS NISU sinhronizovani za ovu ligu -->
+            <VerticalStackLayout Margin="-20,20,-20,0"
+                                  BackgroundColor="#1A1A2E"
+                                  Padding="16"
+                                  IsVisible="{Binding HasTeams}"
+                                  BindableLayout.ItemsSource="{Binding Details.Teams}">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate x:DataType="dto:LeagueTeamDTO">
+                        <VerticalStackLayout>
+                            <HorizontalStackLayout Spacing="12" Margin="0,8">
+                                <Image Source="{Binding LogoUrl}" HeightRequest="32" WidthRequest="32" />
+                                <Label Text="{Binding TeamName}" TextColor="White" FontSize="14" VerticalOptions="Center" />
+                                <Label Text="{Binding ShortName}"
+                                       IsVisible="{Binding HasShortName}"
+                                       TextColor="#B0B0C0"
+                                       FontSize="12"
+                                       VerticalOptions="Center" />
+                            </HorizontalStackLayout>
+                            <BoxView HeightRequest="1" BackgroundColor="#33FFFFFF" />
+                        </VerticalStackLayout>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+    <partials:LoadingOverlay IsLoading="{Binding IsBusy}" />
+    </Grid>
+</ContentPage>

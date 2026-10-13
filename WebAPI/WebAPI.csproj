@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <!-- NU1903: Microsoft.OpenApi 2.0.0 (tranzitivno preko Microsoft.AspNetCore.OpenApi 10.0.9)
+         Ranjivost se odnosi na parsiranje tuđih OpenAPI dokumenata sa cirkularnim referencama.
+         Mi samo generišemo sopstvenu OpenAPI specifikaciju, ne parsiramo tuđe - rizik zanemarljiv.
+         Ukloniti ovaj NoWarn kad Microsoft.AspNetCore.OpenApi izda verziju kompatibilnu sa
+         zakrpljenim Microsoft.OpenApi (>=2.7.5). -->
+    <NoWarn>$(NoWarn);NU1903</NoWarn>
+    <UserSecretsId>bc725edd-24bb-4bbc-87ed-84332e2949af</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
