@@ -9,6 +9,13 @@ public partial class HomePage : ContentPage
 	{
 		InitializeComponent();
 
+		// Sadrzaj ispod trake: gornja margina prati stvarnu visinu trake (bez padajucih menija).
+		NavMenuControl.PropertyChanged += (_, e) =>
+		{
+			if (e.PropertyName == nameof(Partials.NavMenu.BarHeight))
+				ContentHost.Margin = new Thickness(0, NavMenuControl.BarHeight, 0, 0);
+		};
+
 		_viewModel = viewModel;
 		BindingContext = viewModel;
 	}

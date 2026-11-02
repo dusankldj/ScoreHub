@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:helpers="clr-namespace:MAUI.Helpers"
+             x:Class="MAUI.Views.SettingsPage"
+             BackgroundColor="#1A1A2E"
+             Shell.BackgroundColor="#1A1A2E"
+             Shell.ForegroundColor="White"
+             Shell.TitleColor="White">
+
+    <!-- Podesavanja aplikacije: teget pozadina (nasa boja) i bela slova. Podesavanja su grupisana u sekcije sa podnaslovom;
+         svako podesavanje je jedan red sa strelicom i tankom linijom ispod. Sekcija "Account": Change password,
+         Edit profile i Delete account (poslednja dva jos nemaju stranicu - handleri u code-behind-u su prazni). -->
+    <ScrollView>
+        <VerticalStackLayout Padding="24,24,24,32" Spacing="0">
+
+            <Label Text="Settings"
+                   FontSize="26"
+                   FontAttributes="Bold"
+                   TextColor="White"
+                   Margin="0,0,0,20" />
+
+            <!-- Sekcija: Account -->
+            <Label Text="Account"
+                   FontSize="13"
+                   FontAttributes="Bold"
+                   TextColor="#B8BECC"
+                   Margin="0,0,0,4" />
+
+            <BoxView HeightRequest="1" Color="#3A3A55" />
+
+            <Grid ColumnDefinitions="*,Auto" Padding="0,16">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnChangePasswordTapped" />
+                </Grid.GestureRecognizers>
+                <Label Grid.Column="0"
+                       Text="Change password"
+                       FontSize="16"
+                       TextColor="White"
+                       VerticalOptions="Center" />
+                <Label Grid.Column="1"
+                       Text="{x:Static helpers:Icons.RightArrowLongIcon}"
+                       FontFamily="FA7Solid"
+                       FontSize="16"
+                       TextColor="White"
+                       VerticalOptions="Center" />
+            </Grid>
+
+            <BoxView HeightRequest="1" Color="#3A3A55" />
+
+            <Grid ColumnDefinitions="*,Auto" Padding="0,16">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnEditProfileTapped" />
+                </Grid.GestureRecognizers>
+                <Label Grid.Column="0"
+                       Text="Edit profile"
+                       FontSize="16"
+                       TextColor="White"
+                       VerticalOptions="Center" />
+                <Label Grid.Column="1"
+                       Text="{x:Static helpers:Icons.RightArrowLongIcon}"
+                       FontFamily="FA7Solid"
+                       FontSize="16"
+                       TextColor="White"
+                       VerticalOptions="Center" />
+            </Grid>
+
+            <BoxView HeightRequest="1" Color="#3A3A55" />
+
+            <!-- Opasna akcija: crveno slovo da se razlikuje od ostalih. -->
+            <Grid ColumnDefinitions="*,Auto" Padding="0,16">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnDeleteAccountTapped" />
+                </Grid.GestureRecognizers>
+                <Label Grid.Column="0"
+                       Text="Delete account"
+                       FontSize="16"
+                       TextColor="#FF8A80"
+                       VerticalOptions="Center" />
+                <Label Grid.Column="1"
+                       Text="{x:Static helpers:Icons.RightArrowLongIcon}"
+                       FontFamily="FA7Solid"
+                       FontSize="16"
+                       TextColor="#FF8A80"
+                       VerticalOptions="Center" />
+            </Grid>
+
+            <BoxView HeightRequest="1" Color="#3A3A55" />
+
+            <Label Text="{Binding ErrorMessage}"
+                   TextColor="#FF8A80"
+                   FontSize="13"
+                   FontAttributes="Italic"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,16,0,0" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

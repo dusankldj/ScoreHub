@@ -57,6 +57,14 @@ namespace MAUI.DTO.Input
     public class TeamMatches
     {
         public long EventId { get; set; }
+
+        // Mesto u carousel-u (postavlja ga TeamViewModel kad se detalji ucitaju): prvi = najraniji dostupan mec
+        // (nema strelice ulevo), poslednji = najkasniji dostupan mec (nema strelice udesno).
+        public bool IsFirst { get; set; }
+        public bool IsLast { get; set; }
+
+        public bool HasPrevious => !IsFirst;
+        public bool HasNext => !IsLast;
         public DateTime EventDate { get; set; }
 
         // Isti razlog kao EventsDTO.LocalEventDate/EventDetailsDTO.LocalEventDate - backend

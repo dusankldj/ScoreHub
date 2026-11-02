@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:partials="clr-namespace:MAUI.Views.Partials"
+             x:Class="MAUI.Views.EditProfilePage"
+             BackgroundColor="#1A1A2E"
+             Shell.BackgroundColor="#1A1A2E"
+             Shell.ForegroundColor="White"
+             Shell.TitleColor="White">
+
+    <!-- Isti izgled kao Settings (teget, bela slova). Korak 1: forma (username, e-mail [+ trenutna lozinka kad se menja e-mail]).
+         Korak 2: unos sestocifrenog koda sa "Resend code" (odbrojavanje) i rokom vazenja. -->
+    <Grid>
+        <ScrollView>
+            <VerticalStackLayout Padding="24,24,24,32" Spacing="14">
+
+                <Label Text="Edit profile"
+                       FontSize="26"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       Margin="0,0,0,8" />
+
+                <!-- Korak 1: forma -->
+                <VerticalStackLayout IsVisible="{Binding IsFormStep}" Spacing="14">
+                    <Label Text="Username" FontSize="13" TextColor="#B8BECC" />
+                    <Border BackgroundColor="#26264A" Stroke="#3A3A55" StrokeThickness="1" StrokeShape="RoundRectangle 8" Padding="12,0">
+                        <Entry Text="{Binding Username}"
+                               Placeholder="Username"
+                               TextColor="White"
+                               PlaceholderColor="#B8BECC"
+                               BackgroundColor="Transparent"
+                               Keyboard="Plain"
+                               ReturnType="Next" />
+                    </Border>
+
+                    <Label Text="Email" FontSize="13" TextColor="#B8BECC" />
+                    <Border BackgroundColor="#26264A" Stroke="#3A3A55" StrokeThickness="1" StrokeShape="RoundRectangle 8" Padding="12,0">
+                        <Entry Text="{Binding Email}"
+                               Placeholder="Email"
+                               TextColor="White"
+                               PlaceholderColor="#B8BECC"
+                               BackgroundColor="Transparent"
+                               Keyboard="Email"
+                               ReturnType="Next" />
+                    </Border>
+
+                    <!-- Samo kad se menja e-mail. -->
+                    <VerticalStackLayout IsVisible="{Binding NeedsPassword}" Spacing="6">
+                        <Label Text="Current password (required to change your email)" FontSize="13" TextColor="#B8BECC" />
+                        <Border BackgroundColor="#26264A" Stroke="#3A3A55" StrokeThickness="1" StrokeShape="RoundRectangle 8" Padding="12,0">
+                            <Entry Text="{Binding CurrentPassword}"
+                                   Placeholder="Current password"
+                                   IsPassword="True"
+                                   TextColor="White"
+                                   PlaceholderColor="#B8BECC"
+                                   BackgroundColor="Transparent"
+                                   ReturnType="Done" />
+                        </Border>
+                        <Label Text="We will send a 6-digit code to the new address, and a notice to your old one."
+                               FontSize="12"
+                               FontAttributes="Italic"
+                               TextColor="#B8BECC" />
+                    </VerticalStackLayout>
+
+                    <Button Text="Save"
+                            Command="{Binding SaveCommand}"
+                            BackgroundColor="White"
+                            TextColor="#1A1A2E"
+                            CornerRadius="8"
+                            HeightRequest="48"
+                            Margin="0,6,0,0" />
+                </VerticalStackLayout>
+
+                <!-- Korak 2: kod -->
+                <VerticalStackLayout IsVisible="{Binding IsCodeStep}" Spacing="14">
+                    <Label Text="{Binding SentToText}" FontSize="15" TextColor="White" />
+                    <Label Text="{Binding ExpiresText}" FontSize="12" FontAttributes="Italic" TextColor="#B8BECC" />
+
+                    <Border BackgroundColor="#26264A" Stroke="#3A3A55" StrokeThickness="1" StrokeShape="RoundRectangle 8" Padding="12,0">
+                        <Entry Text="{Binding Code}"
+                               Placeholder="6-digit code"
+                               Keyboard="Numeric"
+                               MaxLength="6"
+                               FontSize="22"
+                               HorizontalTextAlignment="Center"
+                               TextColor="White"
+                               PlaceholderColor="#B8BECC"
+                               BackgroundColor="Transparent" />
+                    </Border>
+
+                    <Button Text="Confirm"
+                            Command="{Binding ConfirmCodeCommand}"
+                            BackgroundColor="White"
+                            TextColor="#1A1A2E"
+                            CornerRadius="8"
+                            HeightRequest="48" />
+
+                    <Label Text="{Binding ResendText}"
+                           FontSize="14"
+                           TextDecorations="Underline"
+                           TextColor="#C5CAD6"
+                           HorizontalOptions="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ResendCodeCommand}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+
+                    <Label Text="Cancel"
+                           FontSize="14"
+                           TextColor="#B8BECC"
+                           HorizontalOptions="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding CancelCodeCommand}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </VerticalStackLayout>
+
+                <Label Text="{Binding ErrorMessage}"
+                       TextColor="#FF8A80"
+                       FontSize="13"
+                       FontAttributes="Italic"
+                       HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center" />
+
+                <Label Text="{Binding SuccessMessage}"
+                       TextColor="#A5D6A7"
+                       FontSize="14"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center" />
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <partials:LoadingOverlay IsLoading="{Binding IsBusy}" />
+    </Grid>
+</ContentPage>

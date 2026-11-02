@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dto="clr-namespace:MAUI.DTO.Input"
+             xmlns:vm="clr-namespace:MAUI.ViewModel"
+             x:Class="MAUI.Views.Partials.PredictionsSection"
+             x:DataType="vm:PredictionsListModel">
+
+    <ContentView.Resources>
+        <!-- Jedan red prognoze - deli ga sve tri sekcije (Finished/Live/Upcoming). Boje (akcenat + pozadina) dolaze
+             iz MyPredictionDTO (tacan = zeleno, pobednik = narandzasto, promasaj = crveno, otkazan = sivo).
+             Klik -> OnPredictionTapped -> EventDetails za taj eventId. -->
+        <DataTemplate x:Key="PredictionRowTemplate" x:DataType="dto:MyPredictionDTO">
+            <Grid ColumnDefinitions="4,*,Auto"
+                  ColumnSpacing="10"
+                  Padding="0,8,10,8"
+                  Margin="0,0,0,8"
+                  BackgroundColor="{Binding CardBackground}">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnPredictionTapped" />
+                </Grid.GestureRecognizers>
+
+                <BoxView Grid.Column="0" Color="{Binding AccentColor}" />
+
+                <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Spacing="2">
+                    <Label Text="{Binding MatchTitle}"
+                           FontSize="14"
+                           FontAttributes="Bold"
+                           TextColor="#1A1A2E" />
+                    <!-- Obicno: "Your prediction: 2-1 (+3)". U "Common" prikazu: dva reda, moja i prijateljeva prognoza. -->
+                    <Label Text="{Binding PredictionDisplay}"
+                           IsVisible="{Binding NoComparison}"
+                           FontSize="13"
+                           TextColor="{Binding AccentColor}" />
+                    <Label Text="{Binding YouDisplay}"
+                           IsVisible="{Binding HasComparison}"
+                           FontSize="13"
+                           TextColor="#1A1A2E" />
+                    <Label Text="{Binding FriendDisplay}"
+                           IsVisible="{Binding HasComparison}"
+                           FontSize="13"
+                           TextColor="#1A1A2E" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="2" VerticalOptions="Center" Spacing="2">
+                    <Label Text="{Binding RightTopDisplay}"
+                           FontSize="15"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="End"
+                           TextColor="{Binding AccentColor}" />
+                    <Label Text="{Binding RightBottomDisplay}"
+                           FontSize="11"
+                           HorizontalTextAlignment="End"
+                           TextColor="{Binding RightBottomColor}" />
+                </VerticalStackLayout>
+            </Grid>
+        </DataTemplate>
+    </ContentView.Resources>
+
+    <!-- Naslov + dva filtera (status, ishod) + tri sekcije + "Show more / Show less". BindingContext je
+         PredictionsListModel (postavlja ga stranica). Sekcija koja je prazna se ne prikazuje. -->
+    <VerticalStackLayout Spacing="8">
+        <Label Text="{Binding Title}"
+               FontSize="18"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="#1A1A2E"
+               IsVisible="{Binding HasAnyPredictions}" />
+
+        <HorizontalStackLayout IsVisible="{Binding HasAnyPredictions}" HorizontalOptions="Center" Spacing="8">
+            <Picker ItemsSource="{Binding PredictionFilterOptions}"
+                    SelectedItem="{Binding SelectedPredictionFilter, Mode=TwoWay}"
+                    HorizontalTextAlignment="Center"
+                    WidthRequest="100"
+                    TextColor="#1A1A2E" />
+
+            <Picker ItemsSource="{Binding ResultFilterOptions}"
+                    SelectedItem="{Binding SelectedResultFilter, Mode=TwoWay}"
+                    HorizontalTextAlignment="Center"
+                    WidthRequest="100"
+                    TextColor="#1A1A2E" />
+
+            <!-- Treci filter (All / Common) - samo na UserPage; "Common" = mecevi koje smo prognozirali oboje. -->
+            <Picker ItemsSource="{Binding CommonFilterOptions}"
+                    SelectedItem="{Binding SelectedCommonFilter, Mode=TwoWay}"
+                    IsVisible="{Binding ShowCommonFilter}"
+                    HorizontalTextAlignment="Center"
+                    WidthRequest="100"
+                    TextColor="#1A1A2E" />
+        </HorizontalStackLayout>
+
+        <!-- Head-to-head + legenda boja (samo dok je izabran "Common"). -->
+        <VerticalStackLayout IsVisible="{Binding IsCommonSelected}" Spacing="2" Margin="0,4,0,0">
+            <Label Text="{Binding HeadToHeadText}"
+                   FontSize="13"
+                   FontAttributes="Bold"
+                   TextColor="#1A1A2E"
+                   HorizontalTextAlignment="Center" />
+            <Label Text="{Binding CommonLegendText}"
+                   FontSize="11"
+                   TextColor="#8A8A8A"
+                   HorizontalTextAlignment="Center" />
+        </VerticalStackLayout>
+
+        <Label Text="No predictions"
+               IsVisible="{Binding HasNoPredictionsForFilter}"
+               TextColor="#8A8A8A"
+               FontSize="14"
+               HorizontalOptions="Center"
+               Margin="0,8,0,0" />
+
+        <Label Text="Finished"
+               FontSize="14"
+               FontAttributes="Bold"
+               TextColor="#8A8A8A"
+               IsVisible="{Binding HasFinishedPredictions}"
+               Margin="0,8,0,4" />
+        <VerticalStackLayout BindableLayout.ItemsSource="{Binding FinishedPredictions}"
+                             BindableLayout.ItemTemplate="{StaticResource PredictionRowTemplate}"
+                             IsVisible="{Binding HasFinishedPredictions}" />
+
+        <Label Text="Live"
+               FontSize="14"
+               FontAttributes="Bold"
+               TextColor="#D32F2F"
+               IsVisible="{Binding HasLivePredictions}"
+               Margin="0,8,0,4" />
+        <VerticalStackLayout BindableLayout.ItemsSource="{Binding LivePredictions}"
+                             BindableLayout.ItemTemplate="{StaticResource PredictionRowTemplate}"
+                             IsVisible="{Binding HasLivePredictions}" />
+
+        <Label Text="Upcoming"
+               FontSize="14"
+               FontAttributes="Bold"
+               TextColor="#8A8A8A"
+               IsVisible="{Binding HasUpcomingPredictions}"
+               Margin="0,8,0,4" />
+        <VerticalStackLayout BindableLayout.ItemsSource="{Binding UpcomingPredictions}"
+                             BindableLayout.ItemTemplate="{StaticResource PredictionRowTemplate}"
+                             IsVisible="{Binding HasUpcomingPredictions}" />
+
+        <Label Text="{Binding TogglePredictionsText}"
+               IsVisible="{Binding HasMorePredictions}"
+               TextColor="#8A8A8A"
+               FontAttributes="Bold"
+               FontSize="12"
+               Margin="0,6,0,0"
+               HorizontalOptions="Center">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding TogglePredictionsCommand}" />
+            </Label.GestureRecognizers>
+        </Label>
+    </VerticalStackLayout>
+</ContentView>

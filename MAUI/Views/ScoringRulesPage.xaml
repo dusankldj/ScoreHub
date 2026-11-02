@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dto="clr-namespace:MAUI.DTO.Input"
+             xmlns:partials="clr-namespace:MAUI.Views.Partials"
+             x:Class="MAUI.Views.ScoringRulesPage"
+             Title="">
+
+    <ContentPage.Resources>
+        <!-- Jedan primer: "Result 104-97   Close +2" (boja ishoda isto kao u listi prognoza). -->
+        <DataTemplate x:Key="ExampleRowTemplate" x:DataType="dto:ScoringExampleDTO">
+            <Grid ColumnDefinitions="*,Auto" ColumnSpacing="12">
+                <Label Grid.Column="0" Text="{Binding ResultDisplay}" FontSize="13" TextColor="#1A1A2E" />
+                <Label Grid.Column="1"
+                       Text="{Binding OutcomeDisplay}"
+                       FontSize="13"
+                       FontAttributes="Bold"
+                       TextColor="{Binding OutcomeColor}" />
+            </Grid>
+        </DataTemplate>
+    </ContentPage.Resources>
+
+    <Grid>
+        <ScrollView>
+            <VerticalStackLayout Padding="24,24,24,32" Spacing="12">
+
+                <Label Text="How points are scored"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       TextColor="#1A1A2E" />
+
+                <Label Text="You predict the final score of a match before it starts. After the match, your prediction is compared with the real result and you earn points for the highest level you reach - points from different levels never add up."
+                       FontSize="13"
+                       TextColor="#1A1A2E" />
+
+                <VerticalStackLayout Spacing="6" Margin="0,4,0,0">
+                    <Label FontSize="13" TextColor="#1A1A2E">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Exact" FontAttributes="Bold" TextColor="#2E7D32" />
+                                <Span Text=" - you predicted the exact final score." />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label FontSize="13" TextColor="#1A1A2E">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Close" FontAttributes="Bold" TextColor="#00897B" />
+                                <Span Text=" - you predicted the right winner (or a draw) and the score difference was close. How close depends on the sport." />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label FontSize="13" TextColor="#1A1A2E">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Winner" FontAttributes="Bold" TextColor="#EF6C00" />
+                                <Span Text=" - you predicted the right winner (or a draw), but the score difference was off." />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label FontSize="13" TextColor="#1A1A2E">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Miss" FontAttributes="Bold" TextColor="#D32F2F" />
+                                <Span Text=" - the wrong winner, 0 points." />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </VerticalStackLayout>
+
+                <Label Text="Points differ by sport because some sports are much harder to predict - an exact basketball score is far less likely than an exact football score. Cancelled or abandoned matches score no points; if a match is postponed, your prediction stays valid for the new date."
+                       FontSize="12"
+                       FontAttributes="Italic"
+                       TextColor="#8A8A8A" />
+
+                <Label Text="{Binding ErrorMessage}" TextColor="Red" FontSize="12" HorizontalOptions="Center" />
+
+                <!-- Kartica po sportu; sport meca iz kog si dosao je prvi i ima deblji okvir. -->
+                <VerticalStackLayout BindableLayout.ItemsSource="{Binding Sports}" Spacing="12" Margin="0,8,0,0">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate x:DataType="dto:SportScoringDTO">
+                            <Border Stroke="{Binding CardBorder}"
+                                    StrokeThickness="{Binding CardBorderWidth}"
+                                    StrokeShape="RoundRectangle 12"
+                                    BackgroundColor="White"
+                                    Padding="14">
+                                <VerticalStackLayout Spacing="6">
+                                    <Label Text="{Binding SportName}"
+                                           FontSize="17"
+                                           FontAttributes="Bold"
+                                           TextColor="#1A1A2E" />
+                                    <Label Text="{Binding ExactLine}" FontSize="13" TextColor="#2E7D32" />
+                                    <Label Text="{Binding CloseLine}" IsVisible="{Binding HasClose}" FontSize="13" TextColor="#00897B" />
+                                    <Label Text="{Binding WinnerLine}" FontSize="13" TextColor="#EF6C00" />
+                                    <Label Text="{Binding MaxScoreLine}"
+                                           IsVisible="{Binding HasMaxScore}"
+                                           FontSize="12"
+                                           FontAttributes="Italic"
+                                           TextColor="#8A8A8A" />
+
+                                    <Label Text="{Binding ExampleHeader}"
+                                           FontSize="12"
+                                           FontAttributes="Bold"
+                                           TextColor="#8A8A8A"
+                                           Margin="0,8,0,0" />
+                                    <VerticalStackLayout BindableLayout.ItemsSource="{Binding Examples}"
+                                                         BindableLayout.ItemTemplate="{StaticResource ExampleRowTemplate}"
+                                                         Spacing="4" />
+                                </VerticalStackLayout>
+                            </Border>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <partials:LoadingOverlay IsLoading="{Binding IsBusy}" />
+    </Grid>
+</ContentPage>

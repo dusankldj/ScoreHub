@@ -20,6 +20,12 @@
         public string Season { get; set; } = string.Empty;
         public string LeagueName { get; set; } = string.Empty;
         public string? Round { get; set; }
+
+        // Sport meca (za stranicu sa pravilima bodovanja) i najveci dozvoljen broj u prognozi po timu
+        // (npr. odbojka 3, iz SportScoringRules.MaxScore; null = bez ogranicenja).
+        public long SportId { get; set; }
+        public string SportName { get; set; } = string.Empty;
+        public int? MaxPredictedScore { get; set; }
         public List<EventLineupDTO>? Players { get; set; } = new List<EventLineupDTO>();
         public List<EventStatisticsDTO>? Statistics { get; set; } = new List<EventStatisticsDTO>();
         public List<EventBroadcastDTO>? Broadcasts { get; set; } = new List<EventBroadcastDTO>();

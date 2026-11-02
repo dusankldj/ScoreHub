@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dto="clr-namespace:MAUI.DTO.Input"
+             xmlns:helpers="clr-namespace:MAUI.Helpers"
+             xmlns:partials="clr-namespace:MAUI.Views.Partials"
+             x:Class="MAUI.Views.UserPage"
+             Title="">
+
+    <Grid>
+        <ScrollView>
+            <VerticalStackLayout Padding="30,30,30,30" Spacing="8" VerticalOptions="Start">
+
+                <!-- Korisnicko ime (centrirano) + X ikonica za uklanjanje prijatelja (samo ako su prijatelji). -->
+                <Grid>
+                    <Label Text="{Binding Username}"
+                           FontSize="26"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"
+                           TextColor="#1A1A2E" />
+                    <Label Text="{x:Static helpers:Icons.XIcon}"
+                           FontFamily="FA7Solid"
+                           FontSize="20"
+                           TextColor="#D32F2F"
+                           Padding="8"
+                           HorizontalOptions="End"
+                           VerticalOptions="Start"
+                           IsVisible="{Binding IsFriend}">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding RemoveFriendCommand}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+
+                <!-- Ime i prezime (manje, italic) - samo za prijatelje. -->
+                <Label Text="{Binding FullName}"
+                       IsVisible="{Binding HasFullName}"
+                       FontSize="14"
+                       FontAttributes="Italic"
+                       HorizontalOptions="Center"
+                       TextColor="#1A1A2E" />
+
+                <Label Text="{Binding MemberSince}"
+                       FontSize="13"
+                       HorizontalOptions="Center"
+                       TextColor="#8A8A8A" />
+
+                <Label Text="{Binding ErrorMessage}"
+                       TextColor="Red"
+                       FontSize="12"
+                       HorizontalOptions="Center" />
+
+                <!-- Dugme sirine ~70% ekrana, centrirano: Grid 15* / 70* / 15*. "Add friend" <-> "Request sent". -->
+                <Grid ColumnDefinitions="15*,70*,15*" Margin="0,16,0,0" IsVisible="{Binding ShowPrimaryButton}">
+                    <Button Grid.Column="1"
+                            Text="{Binding PrimaryButtonText}"
+                            Command="{Binding PrimaryActionCommand}"
+                            BackgroundColor="{Binding PrimaryButtonBackground}"
+                            TextColor="{Binding PrimaryButtonTextColor}"
+                            BorderColor="#1A1A2E"
+                            BorderWidth="1"
+                            CornerRadius="8"
+                            HeightRequest="46" />
+                </Grid>
+
+                <!-- Ta osoba je VEC poslala zahtev meni: Accept / Decline u istoj sirini. -->
+                <Grid ColumnDefinitions="15*,70*,15*" Margin="0,16,0,0" IsVisible="{Binding IsRequestReceived}">
+                    <Grid Grid.Column="1" ColumnDefinitions="*,*" ColumnSpacing="10">
+                        <Button Grid.Column="0"
+                                Text="Accept"
+                                Command="{Binding AcceptCommand}"
+                                BackgroundColor="#1A1A2E"
+                                TextColor="White"
+                                CornerRadius="8"
+                                HeightRequest="46" />
+                        <Button Grid.Column="1"
+                                Text="Decline"
+                                Command="{Binding DeclineCommand}"
+                                BackgroundColor="White"
+                                TextColor="#1A1A2E"
+                                BorderColor="#1A1A2E"
+                                BorderWidth="1"
+                                CornerRadius="8"
+                                HeightRequest="46" />
+                    </Grid>
+                </Grid>
+
+                <!-- Nije prijatelj: katanac + objasnjenje umesto omiljenih timova i prognoza. -->
+                <VerticalStackLayout IsVisible="{Binding IsLocked}" Spacing="10" Margin="0,30,0,0">
+                    <Label Text="{x:Static helpers:Icons.PadlockIcon}"
+                           FontFamily="FA7Solid"
+                           FontSize="34"
+                           TextColor="#8A8A8A"
+                           HorizontalOptions="Center" />
+                    <Label Text="{Binding LockedText}"
+                           FontSize="13"
+                           TextColor="#8A8A8A"
+                           HorizontalTextAlignment="Center"
+                           HorizontalOptions="Center" />
+                </VerticalStackLayout>
+
+                <!-- Prijatelj: omiljeni timovi (teget traka, kao na Profile) + prognoze. -->
+                <VerticalStackLayout IsVisible="{Binding ShowFriendContent}" Spacing="0">
+                    <VerticalStackLayout BackgroundColor="#1A1A2E"
+                                         Margin="-30,22,-30,0"
+                                         Padding="30,22,30,22"
+                                         Spacing="8"
+                                         IsVisible="{Binding HasFavoriteTeams}">
+                        <Label Text="Favorite teams"
+                               FontSize="18"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Center"
+                               TextColor="White"
+                               Margin="0,0,0,8" />
+
+                        <CollectionView ItemsSource="{Binding FavoriteTeams}"
+                                        VerticalOptions="Start"
+                                        BackgroundColor="Transparent">
+                            <CollectionView.ItemsLayout>
+                                <LinearItemsLayout Orientation="Vertical" ItemSpacing="12" />
+                            </CollectionView.ItemsLayout>
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate x:DataType="dto:FavoriteTeamDTO">
+                                    <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                        <Grid.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="OnFavoriteTeamTapped" />
+                                        </Grid.GestureRecognizers>
+                                        <Image Grid.Column="0"
+                                               Source="{Binding LogoUrl}"
+                                               HeightRequest="40"
+                                               WidthRequest="40"
+                                               VerticalOptions="Center" />
+                                        <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Spacing="2">
+                                            <Label Text="{Binding TeamDisplayName}"
+                                                   FontSize="15"
+                                                   FontAttributes="Bold"
+                                                   TextColor="White" />
+                                            <Label Text="{Binding SportName}"
+                                                   FontAttributes="Italic"
+                                                   FontSize="12"
+                                                   TextColor="#B8BECC" />
+                                        </VerticalStackLayout>
+                                    </Grid>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+
+                        <Label Text="{Binding ToggleFavoriteTeamsText}"
+                               IsVisible="{Binding HasMoreFavoriteTeams}"
+                               TextColor="#C5CAD6"
+                               FontAttributes="Bold"
+                               FontSize="12"
+                               Margin="0,6,0,0"
+                               HorizontalOptions="Center">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ToggleFavoriteTeamsCommand}" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </VerticalStackLayout>
+
+                    <partials:PredictionsSection BindingContext="{Binding Predictions}" Margin="0,22,0,0" />
+                </VerticalStackLayout>
+
+            </VerticalStackLayout>
+        </ScrollView>
+        <partials:LoadingOverlay IsLoading="{Binding IsBusy}" />
+    </Grid>
+</ContentPage>

@@ -11,5 +11,9 @@ namespace WebAPI.DTO.Output
         public string Status { get; set; } = string.Empty;
         public int PredictedHomeScore { get; set; }
         public int PredictedAwayScore { get; set; }
+
+        // "Exact" / "Winner" / "Missed" / "Void" (otkazan) / "Postponed" / "Pending" - vidi PredictionScoring.
+        public string Outcome { get; set; } = "Pending";
+        public int Points { get; set; }
     }
 }

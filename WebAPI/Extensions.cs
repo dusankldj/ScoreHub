@@ -3,6 +3,7 @@ using FirebaseAdmin;
 using FirebaseAdmin.Messaging;
 using Google.Apis.Auth.OAuth2;
 using Infrastructure;
+using Infrastructure.Email;
 using Infrastructure.Integrations;
 using Infrastructure.Integrations.SportsDB;
 using Infrastructure.Push;
@@ -68,6 +69,15 @@ namespace WebAPI
         /// golovi i krajnji rezultat za omiljene timove. Ako service-account JSON (ServiceAccountKeyPath)
         /// jos nije postavljen, FirebaseMessaging ostaje null i FcmPushNotificationService samo
         /// loguje umesto da salje - ostatak app-a normalno radi i bez toga.
+        // E-mail (SMTP) + sestocifreni kodovi za potvrdu. Kredencijali (Email:Address / Email:AppPassword / Email:Username) su u User Secrets.
+        public static IServiceCollection AddEmail(this IServiceCollection services, IConfiguration configuration)
+        {
+            services.Configure<EmailOptions>(configuration.GetSection(EmailOptions.SectionName));
+            services.AddScoped<IEmailSender, SmtpEmailSender>();
+            services.AddScoped<IVerificationCodeService, VerificationCodeService>();
+            return services;
+        }
+
         public static IServiceCollection AddPushNotifications(this IServiceCollection services, IConfiguration configuration)
         {
             services.Configure<FirebaseOptions>(configuration.GetSection(FirebaseOptions.SectionName));

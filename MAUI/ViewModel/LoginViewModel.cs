@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.Messaging;
 using MAUI.DTO.Output;
 using MAUI.Services.Interfaces;
 using System.ComponentModel.DataAnnotations;
@@ -22,6 +23,13 @@ namespace MAUI.ViewModel
             _authService = authService;
             _pushNotificationService = pushNotificationService;
             _deviceTokenApiService = deviceTokenApiService;
+
+            // Posle uspesnog "Forgot password" toka vracamo se ovde sa porukom (ForgotPasswordViewModel salje poruku).
+            WeakReferenceMessenger.Default.Register<LoginViewModel, Messages.PasswordResetCompletedMessage>(this, (recipient, _) =>
+            {
+                recipient.ErrorMessage = string.Empty;
+                recipient.InfoMessage = "Password changed. Please log in with your new password.";
+            });
         }
         #endregion
 
@@ -44,12 +52,16 @@ namespace MAUI.ViewModel
 
         [ObservableProperty]
         private string errorMessage = string.Empty;
+
+        [ObservableProperty]
+        private string infoMessage = string.Empty;
         #endregion
 
         #region Methods
         [RelayCommand]
         private async Task LoginAsync()
         {
+            InfoMessage = string.Empty;
             ValidateAllProperties();
 
             if (HasErrors)

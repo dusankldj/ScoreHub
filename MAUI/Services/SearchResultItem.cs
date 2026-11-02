@@ -27,10 +27,12 @@ namespace MAUI.Services
 
         public bool NoImage => !HasImage;
 
-        
+                // U dropdown-u se desno prikazuju DVA reda, centrirano: sport (npr. "Basketball") pa vrsta ("Player" / "Team" / "League").
+        public bool HasSportName => !string.IsNullOrWhiteSpace(SportName);
+
         public string KindLabel => Kind switch
         {
-            SearchResultKind.Player => string.IsNullOrWhiteSpace(SportName) ? "Player" : SportName,
+            SearchResultKind.Player => "Player",
             SearchResultKind.Team => "Team",
             SearchResultKind.League => "League",
             _ => string.Empty

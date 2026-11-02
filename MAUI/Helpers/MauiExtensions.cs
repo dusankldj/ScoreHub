@@ -75,6 +75,21 @@ namespace MAUI.Helpers
                 client.BaseAddress = new Uri(baseUrl);
             }).AddHttpMessageHandler<RefreshTokenHelper>();
 
+            builder.Services.AddHttpClient<IAccountApiService, AccountApiService>(client =>
+            {
+                client.BaseAddress = new Uri(baseUrl);
+            }).AddHttpMessageHandler<RefreshTokenHelper>();
+
+            builder.Services.AddHttpClient<IScoringRulesApiService, ScoringRulesApiService>(client =>
+            {
+                client.BaseAddress = new Uri(baseUrl);
+            });
+
+            builder.Services.AddHttpClient<IFriendApiService, FriendApiService>(client =>
+            {
+                client.BaseAddress = new Uri(baseUrl);
+            }).AddHttpMessageHandler<RefreshTokenHelper>();
+
             #region Cache services
             builder.Services.AddSingleton<ISportCacheService, SportsCacheService>();
 
@@ -92,6 +107,12 @@ namespace MAUI.Helpers
             builder.Services.AddTransient<ProfileViewModel>();
             builder.Services.AddTransient<EventDetailsViewModel>();
             builder.Services.AddTransient<TeamViewModel>();
+            builder.Services.AddTransient<UserViewModel>();
+            builder.Services.AddTransient<ScoringRulesViewModel>();
+            builder.Services.AddTransient<ChangePasswordViewModel>();
+            builder.Services.AddTransient<EditProfileViewModel>();
+            builder.Services.AddTransient<SettingsViewModel>();
+            builder.Services.AddTransient<ForgotPasswordViewModel>();
             builder.Services.AddTransient<PlayerViewModel>();
             builder.Services.AddTransient<LeagueViewModel>();
 
@@ -106,6 +127,12 @@ namespace MAUI.Helpers
             builder.Services.AddTransient<ProfilePage>();
             builder.Services.AddTransient<EventDetailsPage>();
             builder.Services.AddTransient<TeamPage>();
+            builder.Services.AddTransient<UserPage>();
+            builder.Services.AddTransient<SettingsPage>();
+            builder.Services.AddTransient<ChangePasswordPage>();
+            builder.Services.AddTransient<EditProfilePage>();
+            builder.Services.AddTransient<ForgotPasswordPage>();
+            builder.Services.AddTransient<ScoringRulesPage>();
             builder.Services.AddTransient<PlayerPage>();
             builder.Services.AddTransient<LeaguePage>();
 

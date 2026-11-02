@@ -21,9 +21,9 @@ namespace MAUI.ViewModel
         private readonly IDeviceTokenApiService _deviceTokenApiService;
         private readonly ISearchHistoryApiService _searchHistoryApiService;
 
-        private const int SearchMinQueryLength = 2;
+        protected const int SearchMinQueryLength = 2;
 
-        private static readonly TimeSpan SearchDebounceDelay = TimeSpan.FromMilliseconds(750);
+        protected static readonly TimeSpan SearchDebounceDelay = TimeSpan.FromMilliseconds(750);
 
         private CancellationTokenSource? _searchDebounceCts;
 
@@ -227,7 +227,8 @@ namespace MAUI.ViewModel
                     Id = t.Id,
                     Kind = SearchResultKind.Team,
                     DisplayName = t.Name,
-                    ImageUrl = t.ImageUrl
+                    ImageUrl = t.ImageUrl,
+                    SportName = t.SportName
                 }));
 
                 results.AddRange(leaguesTask.Result.Select(l => new SearchResultItem
@@ -235,7 +236,8 @@ namespace MAUI.ViewModel
                     Id = l.Id,
                     Kind = SearchResultKind.League,
                     DisplayName = l.Name,
-                    ImageUrl = l.ImageUrl
+                    ImageUrl = l.ImageUrl,
+                    SportName = l.SportName
                 }));
 
                 SearchResults = new ObservableCollection<SearchResultItem>(results);
@@ -401,6 +403,9 @@ namespace MAUI.ViewModel
         [RelayCommand]
         private async Task LogoutAsync()
         {
+            if (!await ConfirmDialog.ShowAsync("Log out?", "You will need to log in again to see your favorite teams and predictions."))
+                return;
+
             try
             {
                 try

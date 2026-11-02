@@ -52,13 +52,13 @@ namespace WebAPI.Controllers
             var teams = await _context.Teams
                 .AsNoTracking()
                 .Where(t => teamIds.Contains(t.Id))
-                .Select(t => new { t.Id, t.Name, t.LogoUrl })
+                .Select(t => new { t.Id, t.Name, t.LogoUrl, SportName = t.League != null ? t.League.Sport.Name : null })
                 .ToDictionaryAsync(t => t.Id, ct);
 
             var leagues = await _context.Leagues
                 .AsNoTracking()
                 .Where(l => leagueIds.Contains(l.Id))
-                .Select(l => new { l.Id, l.Name, l.LogoUrl })
+                .Select(l => new { l.Id, l.Name, l.LogoUrl, SportName = l.Sport.Name })
                 .ToDictionaryAsync(l => l.Id, ct);
 
             var result = new List<RecentSearchDTO>();
@@ -87,7 +87,8 @@ namespace WebAPI.Controllers
                             Kind = nameof(UserSearchKind.Team),
                             EntityId = t.Id,
                             DisplayName = t.Name,
-                            ImageUrl = t.LogoUrl
+                            ImageUrl = t.LogoUrl,
+                            SportName = t.SportName
                         });
                         break;
 
@@ -98,7 +99,8 @@ namespace WebAPI.Controllers
                             Kind = nameof(UserSearchKind.League),
                             EntityId = l.Id,
                             DisplayName = l.Name,
-                            ImageUrl = l.LogoUrl
+                            ImageUrl = l.LogoUrl,
+                            SportName = l.SportName
                         });
                         break;
                 }

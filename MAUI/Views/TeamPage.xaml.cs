@@ -103,6 +103,22 @@ public partial class TeamPage : ContentPage
             await Shell.Current.GoToAsync($"playerpage?playerId={player.PlayerId}");
     }
 
+    // Strelice u uglovima kartice pomeraju carousel za jedan mec (isto sto i swajp).
+    private void OnPreviousMatchTapped(object? sender, EventArgs e)
+        => MoveCarousel(-1);
+
+    private void OnNextMatchTapped(object? sender, EventArgs e)
+        => MoveCarousel(1);
+
+    private void MoveCarousel(int delta)
+    {
+        var count = _viewModel.Details?.Matches?.Count ?? 0;
+        var target = MatchesCarousel.Position + delta;
+
+        if (target >= 0 && target < count)
+            MatchesCarousel.ScrollTo(target, position: ScrollToPosition.Center, animate: true);
+    }
+
     private async void OnMatchCardTapped(object? sender, EventArgs e)
     {
         if (sender is VerticalStackLayout { BindingContext: TeamMatches match })

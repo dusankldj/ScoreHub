@@ -35,6 +35,7 @@ namespace MAUI.Helpers
         public const string ProfileIcon = "\uf2bd";
         public const string BellIcon = "\uf0f3";
         public const string XIcon = "\uf00d";
+        public const string PadlockIcon = "\uf023";
         public const string HamburgerIcon = "\uf0c9";
         public const string SearchIcon = "\uf002";
         public const string RankingIcon = "\ufe561"; 
@@ -42,6 +43,7 @@ namespace MAUI.Helpers
         public const string FullHearthIcon = "\uf004";
         public const string EmptyHearthIcon = "\uf004";
         public const string PlanetIcon = "\uf7a2";
+        public const string PlusIcon = "+"; // FA7Solid plus ("+")
         public const string StatisticsIcon = "\uf080";
         public const string BanIcon = "\uf05e";
         public const string TrashCanIcon = "\uf2ed";
@@ -52,13 +54,14 @@ namespace MAUI.Helpers
         public const string ScoreboardIcon = "\U000F127E"; // MDI
 
         public const string CardIcon = "\U000F0B6F"; // MDI - rotirati za 90 stepeni i promeniti boju za crveni karton
-        public const string AssistIcon = "A"; // FA7Solid "a" (fontawesome.com/icons/a) - koristiti sa FontFamily="FA7Solid"
+        public const string AssistIcon = "A"; // FA7Solid "a"
         public const string CorrectIcon = "\uf00c";
         public const string SubtitutionIcon = "\uf2f1";
         public const string UserIcon = "\uf007";
         public const string UsersIcon = "\uf0c0";
-        public const string ArrowIcon = "\uf063"; // FA7Solid arrow-down (fontawesome.com/icons/arrow-down) - rotirati 180 za "gore"
-        public const string VarIcon = "\ue163"; // FA7Solid display (fontawesome.com/icons/display)
+        public const string ArrowIcon = "\uf063"; // FA7Solid arrow-down 
+        public const string RightArrowLongIcon = "\uf178";
+        public const string VarIcon = "\ue163"; // FA7Solid display 
         #endregion
     }
 }

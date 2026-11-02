@@ -89,7 +89,8 @@ namespace WebAPI.Controllers
                 {
                     Id = l.Id,
                     Name = l.Name,
-                    ImageUrl = l.LogoUrl
+                    ImageUrl = l.LogoUrl,
+                    SportName = l.Sport.Name
                 })
                 .ToListAsync(ct);
 

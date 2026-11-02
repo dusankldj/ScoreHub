@@ -26,6 +26,24 @@ namespace MAUI.Services
             return result ?? new List<MyPredictionDTO>();
         }
 
+        public async Task<List<MyPredictionDTO>> GetUserPredictionsAsync(long userId, CancellationToken ct = default)
+        {
+            var result = await _httpClient.GetFromJsonAsync<List<MyPredictionDTO>>($"predictions/user/{userId}", ct);
+            return result ?? new List<MyPredictionDTO>();
+        }
+
+        public async Task<PredictionStatsDTO> GetMyStatsAsync(CancellationToken ct = default)
+        {
+            var result = await _httpClient.GetFromJsonAsync<PredictionStatsDTO>("predictions/me/stats", ct);
+            return result ?? new PredictionStatsDTO();
+        }
+
+        public async Task<LeaderboardDTO> GetLeaderboardAsync(int take = 20, CancellationToken ct = default)
+        {
+            var result = await _httpClient.GetFromJsonAsync<LeaderboardDTO>($"predictions/leaderboard?take={take}", ct);
+            return result ?? new LeaderboardDTO();
+        }
+
         // 404 znaci "korisnik jos nije prognozirao ovaj mec" - to je normalno stanje, ne greska.
         public async Task<PredictionDTO?> GetMyPredictionAsync(long matchId, CancellationToken ct = default)
         {

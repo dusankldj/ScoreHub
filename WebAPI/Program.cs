@@ -10,6 +10,7 @@ builder.Services.AddSportsDbIntegration(builder.Configuration);
 builder.Services.AddApplicationServices();
 builder.Services.AddAppAuthentication(builder.Configuration);
 builder.Services.AddPushNotifications(builder.Configuration);
+builder.Services.AddEmail(builder.Configuration);
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 

@@ -7,42 +7,72 @@
              x:Class="MAUI.Views.ProfilePage">
 
     <ContentPage.Resources>
-        <!-- Jedan red prognoze - deli ga sve tri sekcije (Finished/Live/Upcoming). Zelena/crvena
-             boja (akcenat + pozadina) dolazi iz MyPredictionDTO.AccentColor/CardBackground. Klik
-             -> OnPredictionTapped -> EventDetails za taj eventId. -->
-        <DataTemplate x:Key="PredictionRowTemplate" x:DataType="dto:MyPredictionDTO">
-            <Grid ColumnDefinitions="4,*,Auto"
-                  ColumnSpacing="10"
-                  Padding="0,8,10,8"
-                  Margin="0,0,0,8"
-                  BackgroundColor="{Binding CardBackground}">
+        <helpers:InvertedBoolConverter x:Key="InvertBool" />
+
+        <!-- Tanka linija preko cele sirine ekrana izmedju sekcija: ScrollView ima Padding 30 sa svake strane, pa
+             negativan bocni Margin (-30) razvlaci liniju do ivica ekrana. -->
+        <Style x:Key="SectionDivider" TargetType="BoxView">
+            <Setter Property="HeightRequest" Value="1" />
+            <Setter Property="Color" Value="#E0E0E0" />
+            <Setter Property="Margin" Value="-30,22,-30,12" />
+        </Style>
+
+        <!-- Jedan kruzic "forme" (poslednjih 10 ishoda): E = tacan rezultat, W = pobednik, M = promasaj. -->
+        <DataTemplate x:Key="FormDotTemplate" x:DataType="dto:FormDotDTO">
+            <Border WidthRequest="24"
+                    HeightRequest="24"
+                    StrokeThickness="0"
+                    StrokeShape="RoundRectangle 12"
+                    BackgroundColor="{Binding Color}">
+                <Label Text="{Binding Letter}"
+                       FontSize="11"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+            </Border>
+        </DataTemplate>
+
+        <!-- Jedan red rang-liste: mesto, korisnicko ime + detalj, bodovi, i traka (ProgressBar) srazmerna
+             bodovima prvoplasiranog. Red ulogovanog korisnika je zelen. -->
+        <DataTemplate x:Key="LeaderboardRowTemplate" x:DataType="dto:LeaderboardRowDTO">
+            <Grid ColumnDefinitions="30,*,Auto"
+                  RowDefinitions="Auto,Auto,Auto"
+                  ColumnSpacing="8"
+                  Padding="6,4"
+                  BackgroundColor="{Binding RowBackground}">
+                <!-- Tap na prijatelja -> njegova UserPage (na sopstveni red se ne reaguje - vec smo na svom profilu). -->
                 <Grid.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnPredictionTapped" />
+                    <TapGestureRecognizer Tapped="OnLeaderboardRowTapped" />
                 </Grid.GestureRecognizers>
-
-                <BoxView Grid.Column="0" Color="{Binding AccentColor}" />
-
-                <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Spacing="2">
-                    <Label Text="{Binding MatchTitle}"
-                           FontSize="14"
-                           FontAttributes="Bold"
-                           TextColor="#1A1A2E" />
-                    <Label Text="{Binding PredictionDisplay}"
-                           FontSize="13"
-                           TextColor="{Binding AccentColor}" />
-                </VerticalStackLayout>
-
-                <VerticalStackLayout Grid.Column="2" VerticalOptions="Center" Spacing="2">
-                    <Label Text="{Binding RightTopDisplay}"
-                           FontSize="15"
-                           FontAttributes="Bold"
-                           HorizontalTextAlignment="End"
-                           TextColor="{Binding AccentColor}" />
-                    <Label Text="{Binding RightBottomDisplay}"
-                           FontSize="11"
-                           HorizontalTextAlignment="End"
-                           TextColor="{Binding RightBottomColor}" />
-                </VerticalStackLayout>
+                <Label Grid.RowSpan="3"
+                       Text="{Binding RankDisplay}"
+                       FontSize="14"
+                       FontAttributes="Bold"
+                       TextColor="#1A1A2E"
+                       VerticalOptions="Center" />
+                <Label Grid.Column="1"
+                       Text="{Binding Username}"
+                       FontSize="14"
+                       FontAttributes="{Binding NameAttributes}"
+                       TextColor="#1A1A2E" />
+                <Label Grid.Column="2"
+                       Text="{Binding PointsDisplay}"
+                       FontSize="14"
+                       FontAttributes="Bold"
+                       TextColor="#1A1A2E" />
+                <Label Grid.Row="1"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="2"
+                       Text="{Binding Detail}"
+                       FontSize="11"
+                       TextColor="#8A8A8A" />
+                <ProgressBar Grid.Row="2"
+                             Grid.Column="1"
+                             Grid.ColumnSpan="2"
+                             Progress="{Binding Ratio}"
+                             ProgressColor="{Binding BarColor}"
+                             Margin="0,2,0,0" />
             </Grid>
         </DataTemplate>
     </ContentPage.Resources>
@@ -83,145 +113,449 @@
                     Margin="0,30,0,0"
                     Command="{Binding LogoutCommand}" />
 
-            <!-- Omiljeni timovi - bez keširanja (vidi ProfileViewModel), uvek svež podatak pri
-                 svakom otvaranju stranice. Kanta na desnoj ivici brise SAMO taj red i osvezava listu. -->
-            <Label Text="Favorite teams"
+            <!-- Linija ispod logout-a samo kad NEMA omiljenih timova - inace je granica sama tamna traka ispod. -->
+            <BoxView Style="{StaticResource SectionDivider}"
+                     Margin="-30,22,-30,12"
+                     IsVisible="{Binding HasFavoriteTeams, Converter={StaticResource InvertBool}}" />
+
+            <!-- Omiljeni timovi - tamna (teget) traka preko cele sirine, tekst beo. Bez kesiranja (vidi
+                 ProfileViewModel), uvek svez podatak pri svakom otvaranju. Tap na tim -> TeamPage; kanta
+                 (cela desna ivica) -> potvrda pa brisanje SAMO tog reda. -->
+            <VerticalStackLayout BackgroundColor="#1A1A2E"
+                                 Margin="-30,22,-30,0"
+                                 Padding="30,22,30,22"
+                                 Spacing="8"
+                                 IsVisible="{Binding HasFavoriteTeams}">
+                <Label Text="Favorite teams"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       TextColor="White"
+                       Margin="0,0,0,8" />
+
+                <CollectionView ItemsSource="{Binding FavoriteTeams}"
+                                 VerticalOptions="Start"
+                                 BackgroundColor="Transparent">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Vertical" ItemSpacing="12" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="dto:FavoriteTeamDTO">
+                            <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="12">
+                                <Image Grid.Column="0"
+                                       Source="{Binding LogoUrl}"
+                                       HeightRequest="40"
+                                       WidthRequest="40"
+                                       VerticalOptions="Center">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnFavoriteTeamTapped" />
+                                    </Image.GestureRecognizers>
+                                </Image>
+
+                                <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Spacing="2">
+                                    <VerticalStackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnFavoriteTeamTapped" />
+                                    </VerticalStackLayout.GestureRecognizers>
+                                    <Label Text="{Binding TeamDisplayName}"
+                                           FontSize="15"
+                                           FontAttributes="Bold"
+                                           TextColor="White" />
+                                    <Label Text="{Binding SportName}"
+                                           FontAttributes="Italic"
+                                           FontSize="12"
+                                           TextColor="#B8BECC" />
+                                </VerticalStackLayout>
+
+                                <Label Grid.Column="2"
+                                       Text="{x:Static helpers:Icons.TrashCanIcon}"
+                                       FontFamily="FA7Solid"
+                                       FontSize="18"
+                                       TextColor="#EF5350"
+                                       VerticalOptions="Center">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnRemoveFavoriteTeamTapped" />
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <!-- Prikazano je prvih 5 (ProfileListLimit u ViewModel-u); ostatak na "Show more", nazad na "Show less". -->
+                <Label Text="{Binding ToggleFavoriteTeamsText}"
+                       IsVisible="{Binding HasMoreFavoriteTeams}"
+                       TextColor="#C5CAD6"
+                       FontAttributes="Bold"
+                       FontSize="12"
+                       Margin="0,6,0,0"
+                       HorizontalOptions="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ToggleFavoriteTeamsCommand}" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </VerticalStackLayout>
+
+            <!-- Friends: zahtevi za prijateljstvo (ako ih ima), "Search user" (padajuca lista korisnickih imena ->
+                 UserPage) i poslednje dodatih 5 prijatelja. Lista prijatelja je SERVER-paging: "Show N more" salje
+                 nov zahtev za sledecih 10; kad je lista prosirena pojavljuje se "Show less" (nazad na 5). -->
+            <Label Text="Friends"
                    FontSize="18"
                    FontAttributes="Bold"
                    HorizontalOptions="Center"
                    TextColor="#1A1A2E"
-                   IsVisible="{Binding HasFavoriteTeams}"
-                   Margin="0,30,0,16" />
+                   Margin="0,22,0,8" />
 
-            <CollectionView ItemsSource="{Binding FavoriteTeams}"
-                             IsVisible="{Binding HasFavoriteTeams}"
-                             VerticalOptions="Start">
-                <CollectionView.ItemsLayout>
-                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="12" />
-                </CollectionView.ItemsLayout>
-                <CollectionView.ItemTemplate>
-                    <DataTemplate x:DataType="dto:FavoriteTeamDTO">
-                        <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="12">
-                            <Image Grid.Column="0"
-                                   Source="{Binding LogoUrl}"
-                                   HeightRequest="40"
-                                   WidthRequest="40"
-                                   VerticalOptions="Center" />
+            <Label Text="Search user"
+                   FontSize="13"
+                   FontAttributes="Bold"
+                   TextColor="#1A1A2E" />
 
-                            <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Spacing="2">
-                                <Label Text="{Binding TeamDisplayName}"
+            <Border BackgroundColor="#F2F2F2"
+                    Stroke="#E0E0E0"
+                    StrokeThickness="1"
+                    Padding="14,0"
+                    HeightRequest="40"
+                    StrokeShape="RoundRectangle 20">
+                <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="10">
+                    <Label Grid.Column="0"
+                           Text="{x:Static helpers:Icons.SearchIcon}"
+                           FontFamily="FA7Solid"
+                           FontSize="14"
+                           TextColor="#8A8A8A"
+                           VerticalOptions="Center" />
+                    <Entry Grid.Column="1"
+                           Text="{Binding FriendSearchText, Mode=TwoWay}"
+                           Placeholder="Search by username"
+                           PlaceholderColor="#8A8A8A"
+                           TextColor="#1A1A2E"
+                           FontSize="14"
+                           BackgroundColor="Transparent"
+                           VerticalOptions="Center" />
+                    <ActivityIndicator Grid.Column="2"
+                                       IsRunning="{Binding IsUserSearching}"
+                                       IsVisible="{Binding IsUserSearching}"
+                                       Color="#1A1A2E"
+                                       HeightRequest="18"
+                                       WidthRequest="18"
+                                       VerticalOptions="Center" />
+                </Grid>
+            </Border>
+
+            <!-- "Padajuca" lista rezultata (u toku stranice, odmah ispod polja). -->
+            <Border IsVisible="{Binding IsUserSearchVisible}"
+                    BackgroundColor="White"
+                    Stroke="#E0E0E0"
+                    StrokeThickness="1"
+                    Padding="0"
+                    StrokeShape="RoundRectangle 10">
+                <VerticalStackLayout>
+                    <Label Text="No users found"
+                           IsVisible="{Binding HasNoUserResults}"
+                           TextColor="#8A8A8A"
+                           FontSize="13"
+                           Padding="14,12" />
+                    <VerticalStackLayout BindableLayout.ItemsSource="{Binding UserSearchResults}">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate x:DataType="dto:UserSearchResultDTO">
+                                <Label Text="{Binding Username}"
+                                       FontSize="15"
+                                       TextColor="#1A1A2E"
+                                       Padding="14,12">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnUserSearchResultTapped" />
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Zahtevi za prijateljstvo (izmedju pretrage i liste prijatelja): "username  [kvacica Accept] [x Decline]".
+                 Prvih 5, ostatak na "Show more (N)" / "Show less". Accept -> postaje prijatelj; Decline -> zahtev se
+                 odbija, a posiljalac na nasem profilu opet vidi "Add friend". -->
+            <VerticalStackLayout IsVisible="{Binding HasFriendRequests}" Spacing="8" Margin="0,12,0,4">
+                <Label Text="{Binding FriendRequestsTitle}"
+                       FontSize="13"
+                       FontAttributes="Bold"
+                       TextColor="#1A1A2E" />
+
+                <VerticalStackLayout BindableLayout.ItemsSource="{Binding FriendRequests}" Spacing="8">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate x:DataType="dto:FriendRequestDTO">
+                            <Grid ColumnDefinitions="*,Auto,Auto" ColumnSpacing="8">
+                                <Label Grid.Column="0"
+                                       Text="{Binding Username}"
+                                       FontSize="15"
+                                       FontAttributes="Bold"
+                                       TextColor="#1A1A2E"
+                                       LineBreakMode="TailTruncation"
+                                       VerticalOptions="Center">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnRequestUserTapped" />
+                                    </Label.GestureRecognizers>
+                                </Label>
+
+                                <Border Grid.Column="1"
+                                        BackgroundColor="#1A1A2E"
+                                        Stroke="#1A1A2E"
+                                        StrokeThickness="1"
+                                        StrokeShape="RoundRectangle 8"
+                                        Padding="12,8">
+                                    <Border.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnAcceptRequestClicked" />
+                                    </Border.GestureRecognizers>
+                                    <HorizontalStackLayout Spacing="6">
+                                        <Label Text="Accept" FontSize="12" TextColor="White" VerticalOptions="Center" />
+                                        <Label Text="{x:Static helpers:Icons.CorrectIcon}"
+                                               FontFamily="FA7Solid"
+                                               FontSize="12"
+                                               TextColor="White"
+                                               VerticalOptions="Center" />
+                                    </HorizontalStackLayout>
+                                </Border>
+
+                                <Border Grid.Column="2"
+                                        BackgroundColor="White"
+                                        Stroke="#1A1A2E"
+                                        StrokeThickness="1"
+                                        StrokeShape="RoundRectangle 8"
+                                        Padding="12,8">
+                                    <Border.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnDeclineRequestClicked" />
+                                    </Border.GestureRecognizers>
+                                    <HorizontalStackLayout Spacing="6">
+                                        <Label Text="Decline" FontSize="12" TextColor="#1A1A2E" VerticalOptions="Center" />
+                                        <Label Text="{x:Static helpers:Icons.XIcon}"
+                                               FontFamily="FA7Solid"
+                                               FontSize="12"
+                                               TextColor="#D32F2F"
+                                               VerticalOptions="Center" />
+                                    </HorizontalStackLayout>
+                                </Border>
+                            </Grid>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </VerticalStackLayout>
+
+                <Label Text="{Binding ToggleFriendRequestsText}"
+                       IsVisible="{Binding HasMoreFriendRequests}"
+                       TextColor="#8A8A8A"
+                       FontAttributes="Bold"
+                       FontSize="12"
+                       HorizontalOptions="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ToggleFriendRequestsCommand}" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout BindableLayout.ItemsSource="{Binding Friends}"
+                                 IsVisible="{Binding HasFriends}"
+                                 Margin="0,8,0,0"
+                                 Spacing="10">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate x:DataType="dto:FriendDTO">
+                        <Grid ColumnDefinitions="*,Auto" ColumnSpacing="12">
+                            <VerticalStackLayout Grid.Column="0" Spacing="2" VerticalOptions="Center">
+                                <VerticalStackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnFriendTapped" />
+                                </VerticalStackLayout.GestureRecognizers>
+                                <Label Text="{Binding Username}"
                                        FontSize="15"
                                        FontAttributes="Bold"
                                        TextColor="#1A1A2E" />
-                                <Label Text="{Binding SportName}"
-                                       FontAttributes="Italic"
+                                <Label Text="{Binding FriendsSinceDisplay}"
                                        FontSize="12"
                                        TextColor="#8A8A8A" />
                             </VerticalStackLayout>
 
-                            <Label Grid.Column="2"
-                                   Text="{x:Static helpers:Icons.TrashCanIcon}"
+                            <!-- X -> modal "Are you sure you want to remove ... from your friend list?" -->
+                            <Label Grid.Column="1"
+                                   Text="{x:Static helpers:Icons.XIcon}"
                                    FontFamily="FA7Solid"
                                    FontSize="18"
                                    TextColor="#D32F2F"
+                                   Padding="8"
                                    VerticalOptions="Center">
                                 <Label.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="OnRemoveFavoriteTeamTapped" />
+                                    <TapGestureRecognizer Tapped="OnRemoveFriendTapped" />
                                 </Label.GestureRecognizers>
                             </Label>
                         </Grid>
                     </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
+                </BindableLayout.ItemTemplate>
+            </VerticalStackLayout>
 
-            <!-- Prikazano je prvih 10 (ProfileListLimit u ViewModel-u); ostatak tek na klik. -->
-            <Label Text="{Binding ShowAllFavoriteTeamsText}"
-                   IsVisible="{Binding HasMoreFavoriteTeams}"
+            <Label Text="No friends yet."
+                   IsVisible="{Binding HasNoFriends}"
+                   FontSize="13"
                    TextColor="#8A8A8A"
-                   FontAttributes="Bold"
-                   FontSize="12"
-                   Margin="0,6,0,0"
-                   HorizontalOptions="Center">
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding ShowAllFavoriteTeamsCommand}" />
-                </Label.GestureRecognizers>
-            </Label>
-
-            <!-- Moje prognoze - ispod omiljenih timova, podeljene na Finished / Live / Upcoming
-                 (sekcija koja je prazna se ne prikazuje). Filter (All/Finished/Live/Upcoming) radi
-                 lokalno nad vec ucitanim prognozama; prikazano je prvih 10, ostatak na "Show all". -->
-            <Label Text="My predictions"
-                   FontSize="18"
-                   FontAttributes="Bold"
-                   HorizontalOptions="Center"
-                   TextColor="#1A1A2E"
-                   IsVisible="{Binding HasAnyPredictions}"
-                   Margin="0,30,0,0" />
-
-            <!-- Dva filtera jedan pored drugog: status (All/Finished/Live/Upcoming) i ishod (All/Hit/Missed).
-                 Kombinuju se (I) - Hit/Missed postoje samo za zavrsene mecove. -->
-            <HorizontalStackLayout IsVisible="{Binding HasAnyPredictions}" HorizontalOptions="Center" Spacing="16">
-                <Picker ItemsSource="{Binding PredictionFilterOptions}"
-                        SelectedItem="{Binding SelectedPredictionFilter, Mode=TwoWay}"
-                        HorizontalTextAlignment="Center"
-                        WidthRequest="120"
-                        TextColor="#1A1A2E" />
-
-                <Picker ItemsSource="{Binding ResultFilterOptions}"
-                        SelectedItem="{Binding SelectedResultFilter, Mode=TwoWay}"
-                        HorizontalTextAlignment="Center"
-                        WidthRequest="120"
-                        TextColor="#1A1A2E" />
-            </HorizontalStackLayout>
-
-            <Label Text="No predictions"
-                   IsVisible="{Binding HasNoPredictionsForFilter}"
-                   TextColor="#8A8A8A"
-                   FontSize="14"
                    HorizontalOptions="Center"
                    Margin="0,8,0,0" />
 
-            <Label Text="Finished"
-                   FontSize="14"
-                   FontAttributes="Bold"
-                   TextColor="#8A8A8A"
-                   IsVisible="{Binding HasFinishedPredictions}"
-                   Margin="0,8,0,4" />
-            <VerticalStackLayout BindableLayout.ItemsSource="{Binding FinishedPredictions}"
-                                 BindableLayout.ItemTemplate="{StaticResource PredictionRowTemplate}"
-                                 IsVisible="{Binding HasFinishedPredictions}" />
+            <Button Text="{Binding ShowMoreFriendsText}"
+                    Command="{Binding ShowMoreFriendsCommand}"
+                    IsVisible="{Binding HasMoreFriends}"
+                    IsEnabled="{Binding CanShowMoreFriends}"
+                    BackgroundColor="#1A1A2E"
+                    TextColor="White"
+                    CornerRadius="8"
+                    HeightRequest="40"
+                    Margin="0,6,0,0" />
 
-            <Label Text="Live"
-                   FontSize="14"
-                   FontAttributes="Bold"
-                   TextColor="#D32F2F"
-                   IsVisible="{Binding HasLivePredictions}"
-                   Margin="0,8,0,4" />
-            <VerticalStackLayout BindableLayout.ItemsSource="{Binding LivePredictions}"
-                                 BindableLayout.ItemTemplate="{StaticResource PredictionRowTemplate}"
-                                 IsVisible="{Binding HasLivePredictions}" />
+            <Button Text="Show less"
+                    Command="{Binding CollapseFriendsCommand}"
+                    IsVisible="{Binding CanCollapseFriends}"
+                    BackgroundColor="White"
+                    TextColor="#1A1A2E"
+                    BorderColor="#1A1A2E"
+                    BorderWidth="1"
+                    CornerRadius="8"
+                    HeightRequest="40" />
 
-            <Label Text="Upcoming"
-                   FontSize="14"
-                   FontAttributes="Bold"
-                   TextColor="#8A8A8A"
-                   IsVisible="{Binding HasUpcomingPredictions}"
-                   Margin="0,8,0,4" />
-            <VerticalStackLayout BindableLayout.ItemsSource="{Binding UpcomingPredictions}"
-                                 BindableLayout.ItemTemplate="{StaticResource PredictionRowTemplate}"
-                                 IsVisible="{Binding HasUpcomingPredictions}" />
+            <!-- Statistika i rang-lista prognoza - kartica je bela, a traka iza nje (preko cele sirine) teget.
+                 Bodovi: tacan rezultat 3, pogodjen pobednik 1; otkazani mecevi se ne racunaju. Tab "Stats": donut
+                 grafikon ishoda + pokazatelji + forma (poslednjih 10); tab "Leaderboard": ja + moji prijatelji. -->
+            <VerticalStackLayout BackgroundColor="#1A1A2E"
+                                 Margin="-30,22,-30,0"
+                                 Padding="30,22,30,22">
+                <Border Padding="14"
+                        Stroke="#E0E0E0"
+                        StrokeThickness="1"
+                        StrokeShape="RoundRectangle 12"
+                        BackgroundColor="White">
+                    <VerticalStackLayout Spacing="12">
+                        <HorizontalStackLayout HorizontalOptions="Center" Spacing="28">
+                            <Label Text="Stats"
+                                   FontSize="16"
+                                   FontAttributes="Bold"
+                                   TextColor="{Binding StatsTabColor}">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding SelectStatsTabCommand}" CommandParameter="Stats" />
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <Label Text="Leaderboard"
+                                   FontSize="16"
+                                   FontAttributes="Bold"
+                                   TextColor="{Binding LeaderboardTabColor}">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding SelectStatsTabCommand}" CommandParameter="Leaderboard" />
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </HorizontalStackLayout>
 
-            <Label Text="{Binding ShowAllPredictionsText}"
-                   IsVisible="{Binding HasMorePredictions}"
-                   TextColor="#8A8A8A"
-                   FontAttributes="Bold"
-                   FontSize="12"
-                   Margin="0,6,0,0"
-                   HorizontalOptions="Center">
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding ShowAllPredictionsCommand}" />
-                </Label.GestureRecognizers>
-            </Label>
+                        <!-- Tab: Stats -->
+                        <VerticalStackLayout IsVisible="{Binding IsStatsTab}" Spacing="14">
+                            <Label Text="Predict a match score to start earning points."
+                                   IsVisible="{Binding HasNoStats}"
+                                   TextColor="#8A8A8A"
+                                   FontSize="13"
+                                   HorizontalOptions="Center" />
+
+                            <VerticalStackLayout IsVisible="{Binding HasStats}" Spacing="14">
+                                <GraphicsView Drawable="{Binding DonutDrawable}"
+                                              WidthRequest="170"
+                                              HeightRequest="170"
+                                              HorizontalOptions="Center" />
+
+                                <!-- Legenda donuta -->
+                                <VerticalStackLayout Spacing="4" HorizontalOptions="Center">
+                                    <Label FontSize="13" TextColor="#1A1A2E">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="●  " TextColor="#2E7D32" />
+                                                <Span Text="{Binding ExactText}" />
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                    <Label FontSize="13" TextColor="#1A1A2E">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="●  " TextColor="#00897B" />
+                                                <Span Text="{Binding CloseText}" />
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                    <Label FontSize="13" TextColor="#1A1A2E">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="●  " TextColor="#EF6C00" />
+                                                <Span Text="{Binding WinnerText}" />
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                    <Label FontSize="13" TextColor="#1A1A2E">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="●  " TextColor="#D32F2F" />
+                                                <Span Text="{Binding MissedText}" />
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                </VerticalStackLayout>
+
+                                <Grid ColumnDefinitions="*,*,*" ColumnSpacing="8">
+                                    <VerticalStackLayout Grid.Column="0" Spacing="2">
+                                        <Label Text="{Binding SuccessRateText}" FontSize="18" FontAttributes="Bold" TextColor="#1A1A2E" HorizontalOptions="Center" />
+                                        <Label Text="Success rate" FontSize="11" TextColor="#8A8A8A" HorizontalOptions="Center" />
+                                    </VerticalStackLayout>
+                                    <VerticalStackLayout Grid.Column="1" Spacing="2">
+                                        <Label Text="{Binding StreakText}" FontSize="18" FontAttributes="Bold" TextColor="#1A1A2E" HorizontalOptions="Center" />
+                                        <Label Text="Streak" FontSize="11" TextColor="#8A8A8A" HorizontalOptions="Center" />
+                                    </VerticalStackLayout>
+                                    <VerticalStackLayout Grid.Column="2" Spacing="2">
+                                        <Label Text="{Binding RankText}" FontSize="18" FontAttributes="Bold" TextColor="#1A1A2E" HorizontalOptions="Center" />
+                                        <Label Text="Rank" FontSize="11" TextColor="#8A8A8A" HorizontalOptions="Center" />
+                                    </VerticalStackLayout>
+                                </Grid>
+
+                                <VerticalStackLayout IsVisible="{Binding HasSettledStats}" Spacing="6">
+                                    <Label Text="Recent form" FontSize="11" TextColor="#8A8A8A" HorizontalOptions="Center" />
+                                    <HorizontalStackLayout BindableLayout.ItemsSource="{Binding FormDots}"
+                                                           BindableLayout.ItemTemplate="{StaticResource FormDotTemplate}"
+                                                           HorizontalOptions="Center"
+                                                           Spacing="4" />
+                                </VerticalStackLayout>
+
+                                <Label Text="{Binding OtherStatsText}"
+                                       IsVisible="{Binding HasOtherStats}"
+                                       FontSize="11"
+                                       TextColor="#8A8A8A"
+                                       HorizontalOptions="Center" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+
+                        <!-- Tab: Leaderboard -->
+                        <VerticalStackLayout IsVisible="{Binding IsLeaderboardTab}" Spacing="6">
+                            <ActivityIndicator IsRunning="{Binding IsLeaderboardLoading}"
+                                               IsVisible="{Binding IsLeaderboardLoading}"
+                                               HeightRequest="28" />
+
+                            <Label Text="{Binding LeaderboardNote}"
+                                   IsVisible="{Binding HasLeaderboardNote}"
+                                   FontSize="12"
+                                   TextColor="#8A8A8A"
+                                   HorizontalOptions="Center"
+                                   HorizontalTextAlignment="Center" />
+
+                            <VerticalStackLayout BindableLayout.ItemsSource="{Binding LeaderboardRows}"
+                                                 BindableLayout.ItemTemplate="{StaticResource LeaderboardRowTemplate}"
+                                                 Spacing="4" />
+
+                            <VerticalStackLayout IsVisible="{Binding HasLeaderboardMeRow}" Spacing="2">
+                                <Label Text="..." FontSize="14" TextColor="#8A8A8A" HorizontalOptions="Center" />
+                                <VerticalStackLayout BindableLayout.ItemsSource="{Binding LeaderboardMeRows}"
+                                                     BindableLayout.ItemTemplate="{StaticResource LeaderboardRowTemplate}" />
+                            </VerticalStackLayout>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
+            </VerticalStackLayout>
+
+            <!-- Moje prognoze - deli ih sa UserPage (PredictionsSection): naslov, filteri (status + ishod),
+                 sekcije Finished/Live/Upcoming i "Show more / Show less". -->
+            <partials:PredictionsSection BindingContext="{Binding Predictions}" Margin="0,22,0,0" />
 
         </VerticalStackLayout>
     </ScrollView>

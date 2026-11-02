@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI.Views.ConfirmDialogPage"
+             BackgroundColor="#99000000"
+             Shell.NavBarIsVisible="False">
+
+    <!-- Mali potvrdni modal (vidi Helpers/ConfirmDialog): glavno pitanje boldovano, ispod njega manjim fontom
+         objasnjenje, pa dugmad No / Yes. Pozadina je poluprovidna da se vidi stranica ispod. -->
+    <Grid Padding="32" VerticalOptions="Center">
+        <Border BackgroundColor="White"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 14"
+                Padding="20">
+            <VerticalStackLayout Spacing="12">
+                <Label x:Name="TitleLabel"
+                       FontSize="17"
+                       FontAttributes="Bold"
+                       TextColor="#1A1A2E"
+                       HorizontalTextAlignment="Center" />
+
+                <Label x:Name="MessageLabel"
+                       FontSize="13"
+                       FontAttributes="None"
+                       TextColor="#555555"
+                       HorizontalTextAlignment="Center" />
+
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="12" Margin="0,8,0,0">
+                    <Button x:Name="NoButton"
+                            Grid.Column="0"
+                            Text="No"
+                            BackgroundColor="White"
+                            TextColor="#1A1A2E"
+                            BorderColor="#1A1A2E"
+                            BorderWidth="1"
+                            CornerRadius="8"
+                            Clicked="OnNoClicked" />
+                    <Button x:Name="YesButton"
+                            Grid.Column="1"
+                            Text="Yes"
+                            BackgroundColor="#1A1A2E"
+                            TextColor="White"
+                            CornerRadius="8"
+                            Clicked="OnYesClicked" />
+                </Grid>
+            </VerticalStackLayout>
+        </Border>
+    </Grid>
+</ContentPage>

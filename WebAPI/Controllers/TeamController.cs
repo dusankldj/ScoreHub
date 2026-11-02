@@ -164,7 +164,8 @@ namespace WebAPI.Controllers
                 {
                     Id = t.Id,
                     Name = t.Name,
-                    ImageUrl = t.LogoUrl
+                    ImageUrl = t.LogoUrl,
+                    SportName = t.League != null ? t.League.Sport.Name : null
                 })
                 .ToListAsync(ct);
 

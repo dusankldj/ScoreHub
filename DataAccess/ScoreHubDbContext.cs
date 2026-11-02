@@ -44,5 +44,8 @@ namespace DataAccess
         public DbSet<Jwt> Jwt { get; set; }
         public DbSet<DeviceToken> DeviceTokens { get; set; }
         public DbSet<UserSearch> UserSearches { get; set; }
+        public DbSet<Friendship> Friendships { get; set; }
+        public DbSet<SportScoringRule> SportScoringRules { get; set; }
+        public DbSet<EmailVerificationCode> EmailVerificationCodes { get; set; }
     }
 }

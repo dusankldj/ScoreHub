@@ -92,6 +92,13 @@ namespace MAUI.ViewModel
             var matches = Details?.Matches;
             if (matches is { Count: > 0 })
             {
+                // Strelice u uglovima kartice: bez leve na prvom, bez desne na poslednjem mecu (vidi TeamPage.xaml).
+                for (var i = 0; i < matches.Count; i++)
+                {
+                    matches[i].IsFirst = i == 0;
+                    matches[i].IsLast = i == matches.Count - 1;
+                }
+
                 var lastPlayedIndex = matches.FindLastIndex(m => m.IsPlayed);
                 SelectedMatchIndex = lastPlayedIndex >= 0 ? lastPlayedIndex : 0;
             }

@@ -150,6 +150,10 @@
                                   HeightRequest="220">
                         <CarouselView.ItemTemplate>
                             <DataTemplate x:DataType="dto:TeamMatches">
+                                <!-- Kartica + strelice u gornjim uglovima: desna (RightArrowLongIcon) vodi na sledeci mec,
+                                     leva (ista ikonica zarotirana 180) na prethodni. Prvi mec nema levu, poslednji desnu
+                                     (IsFirst / IsLast). Tap na strelicu pomera carousel, tap na karticu otvara mec. -->
+                                <Grid BackgroundColor="#1A1A2E">
                                 <VerticalStackLayout BackgroundColor="#1A1A2E" Padding="16" Spacing="4">
                                     <VerticalStackLayout.GestureRecognizers>
                                         <TapGestureRecognizer Tapped="OnMatchCardTapped" />
@@ -209,6 +213,34 @@
                                         </VerticalStackLayout>
                                     </Grid>
                                 </VerticalStackLayout>
+
+                                <Label Text="{x:Static helpers:Icons.RightArrowLongIcon}"
+                                       FontFamily="FA7Solid"
+                                       FontSize="18"
+                                       TextColor="White"
+                                       Rotation="180"
+                                       Padding="12"
+                                       HorizontalOptions="Start"
+                                       VerticalOptions="Start"
+                                       IsVisible="{Binding HasPrevious}">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnPreviousMatchTapped" />
+                                    </Label.GestureRecognizers>
+                                </Label>
+
+                                <Label Text="{x:Static helpers:Icons.RightArrowLongIcon}"
+                                       FontFamily="FA7Solid"
+                                       FontSize="18"
+                                       TextColor="White"
+                                       Padding="12"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Start"
+                                       IsVisible="{Binding HasNext}">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnNextMatchTapped" />
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                </Grid>
                             </DataTemplate>
                         </CarouselView.ItemTemplate>
                     </CarouselView>

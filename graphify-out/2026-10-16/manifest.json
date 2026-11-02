@@ -1,0 +1,4928 @@
+{
+  "DataAccess/Class1.cs": {
+    "mtime": 1784013939.8696764,
+    "seen": 1788453050.4167309,
+    "ast_hash": "35bfa00a4b7cf344a3fc5a1cfd1e7ef1",
+    "semantic_hash": "35bfa00a4b7cf344a3fc5a1cfd1e7ef1"
+  },
+  "DataAccess/Configurations/BaseConfiguration/BaseConfiguration.cs": {
+    "mtime": 1787582228.1438642,
+    "seen": 1788453050.416737,
+    "ast_hash": "4c6b6cc3597e4895683e68ed613f3b51",
+    "semantic_hash": "4c6b6cc3597e4895683e68ed613f3b51"
+  },
+  "DataAccess/Configurations/EventLineupConfiguration.cs": {
+    "mtime": 1787309192.1197238,
+    "seen": 1788453050.4167435,
+    "ast_hash": "30f82aa905637f819fbdc42b854cd1a1",
+    "semantic_hash": "30f82aa905637f819fbdc42b854cd1a1"
+  },
+  "DataAccess/Configurations/EventStatisticsConfiguration.cs": {
+    "mtime": 1787308977.0335412,
+    "seen": 1788453050.4167492,
+    "ast_hash": "0a9b045300565df11542289c987dc4f1",
+    "semantic_hash": "0a9b045300565df11542289c987dc4f1"
+  },
+  "DataAccess/Configurations/FavoriteTeamConfiguration.cs": {
+    "mtime": 1786552557.581956,
+    "seen": 1788453050.4167562,
+    "ast_hash": "49deedaa530868a4c87c5eed3cb0e286",
+    "semantic_hash": "49deedaa530868a4c87c5eed3cb0e286"
+  },
+  "DataAccess/Configurations/JwtConfiguration.cs": {
+    "mtime": 1786547798.8464718,
+    "seen": 1788453050.416762,
+    "ast_hash": "eb3711e54bba7dbebaf9b9284638fa76",
+    "semantic_hash": "eb3711e54bba7dbebaf9b9284638fa76"
+  },
+  "DataAccess/Configurations/LeagueConfiguration.cs": {
+    "mtime": 1784553931.0550802,
+    "seen": 1788453050.4167671,
+    "ast_hash": "7eda62246bd3c077827615aff5e7c6c8",
+    "semantic_hash": "7eda62246bd3c077827615aff5e7c6c8"
+  },
+  "DataAccess/Configurations/LogConfiguration.cs": {
+    "mtime": 1786547599.613102,
+    "seen": 1788453050.4167726,
+    "ast_hash": "891eba1c47d0efafb173f0d3fd18acce",
+    "semantic_hash": "891eba1c47d0efafb173f0d3fd18acce"
+  },
+  "DataAccess/Configurations/MatchConfiguration.cs": {
+    "mtime": 1786553034.7792614,
+    "seen": 1788453050.4167776,
+    "ast_hash": "694a7b441ab6c3736375d0e49e16bda1",
+    "semantic_hash": "694a7b441ab6c3736375d0e49e16bda1"
+  },
+  "DataAccess/Configurations/PlayerConfiguration.cs": {
+    "mtime": 1789160217.7840536,
+    "seen": 1789160545.5777485,
+    "ast_hash": "440eb900a830873e4b28e02983dd0abb",
+    "semantic_hash": ""
+  },
+  "DataAccess/Configurations/PlayerFormerTeamConfiguration.cs": {
+    "mtime": 1787311458.533445,
+    "seen": 1788453050.4167893,
+    "ast_hash": "bd00b40d44d4565bc62425d1f6889927",
+    "semantic_hash": "bd00b40d44d4565bc62425d1f6889927"
+  },
+  "DataAccess/Configurations/PlayerHonourConfiguration.cs": {
+    "mtime": 1787311463.7339807,
+    "seen": 1788453050.4167945,
+    "ast_hash": "1dbd3989aded584ed8594ca0f0c43758",
+    "semantic_hash": "1dbd3989aded584ed8594ca0f0c43758"
+  },
+  "DataAccess/Configurations/PlayerMilestoneConfiguration.cs": {
+    "mtime": 1787311469.2401109,
+    "seen": 1788453050.4167993,
+    "ast_hash": "8b1e623eca0b057d2182da6e03dd089e",
+    "semantic_hash": "8b1e623eca0b057d2182da6e03dd089e"
+  },
+  "DataAccess/Configurations/PlayerStatisticConfiguration.cs": {
+    "mtime": 1787311453.5754898,
+    "seen": 1788453050.416804,
+    "ast_hash": "4fa509a1c5ad587ffa3948000792ba9b",
+    "semantic_hash": "4fa509a1c5ad587ffa3948000792ba9b"
+  },
+  "DataAccess/Configurations/PredictionConfiguration.cs": {
+    "mtime": 1786552863.14992,
+    "seen": 1788453050.4168088,
+    "ast_hash": "e06f73923c0e04947d264c10391d770e",
+    "semantic_hash": "e06f73923c0e04947d264c10391d770e"
+  },
+  "DataAccess/Configurations/SportConfiguration.cs": {
+    "mtime": 1786363554.6488755,
+    "seen": 1788453050.416814,
+    "ast_hash": "2b64f8a05645c4f125237fcd7eed7356",
+    "semantic_hash": "2b64f8a05645c4f125237fcd7eed7356"
+  },
+  "DataAccess/Configurations/TeamConfiguration.cs": {
+    "mtime": 1789233607.96491,
+    "seen": 1789909358.0819056,
+    "ast_hash": "c868adf539dccdb323b940d1aed03628",
+    "semantic_hash": ""
+  },
+  "DataAccess/Configurations/TeamEquipmentConfiguration.cs": {
+    "mtime": 1787308984.7603197,
+    "seen": 1788453050.416824,
+    "ast_hash": "79002b48c7a9741b0fd499e7be783945",
+    "semantic_hash": "79002b48c7a9741b0fd499e7be783945"
+  },
+  "DataAccess/Configurations/UserConfiguration.cs": {
+    "mtime": 1786547463.028923,
+    "seen": 1788453050.416829,
+    "ast_hash": "bece661555b27c69ce909ccdbc934318",
+    "semantic_hash": "bece661555b27c69ce909ccdbc934318"
+  },
+  "DataAccess/Configurations/UserRoleConfiguration.cs": {
+    "mtime": 1786553091.7899969,
+    "seen": 1788453050.4168344,
+    "ast_hash": "f9cf96445e354b19142452ee202d0ffa",
+    "semantic_hash": "f9cf96445e354b19142452ee202d0ffa"
+  },
+  "DataAccess/Configurations/VenueConfiguration.cs": {
+    "mtime": 1787393637.6784437,
+    "seen": 1788453050.4168413,
+    "ast_hash": "d5386f003bad5a3446a1491463d4bfc8",
+    "semantic_hash": "d5386f003bad5a3446a1491463d4bfc8"
+  },
+  "DataAccess/DataAccess.csproj": {
+    "mtime": 1784286439.7968132,
+    "seen": 1788453050.4168465,
+    "ast_hash": "fcd1228ac01b5491f7dcdfac2df336b2",
+    "semantic_hash": "fcd1228ac01b5491f7dcdfac2df336b2"
+  },
+  "DataAccess/ScoreHubDbContext.cs": {
+    "mtime": 1791984662.6967452,
+    "seen": 1791985033.3994305,
+    "ast_hash": "a14d5a651e489049e26a5688cf524401",
+    "semantic_hash": ""
+  },
+  "Domain/Class1.cs": {
+    "mtime": 1784013959.318396,
+    "seen": 1788453050.4169014,
+    "ast_hash": "e0e941b67224993caf7bc9fec7d02314",
+    "semantic_hash": "e0e941b67224993caf7bc9fec7d02314"
+  },
+  "Domain/Domain.csproj": {
+    "mtime": 1784026627.1959548,
+    "seen": 1788453050.4169066,
+    "ast_hash": "4258e11a2b535b27f62d0cc8ecdeccc5",
+    "semantic_hash": "4258e11a2b535b27f62d0cc8ecdeccc5"
+  },
+  "Domain/Entities/BaseEntity/BaseEntity.cs": {
+    "mtime": 1784025266.1639202,
+    "seen": 1788453050.4169116,
+    "ast_hash": "9709d135798d018724f587fd00d39f79",
+    "semantic_hash": "9709d135798d018724f587fd00d39f79"
+  },
+  "Domain/Entities/EventLineup.cs": {
+    "mtime": 1787308940.8007045,
+    "seen": 1788453050.4169161,
+    "ast_hash": "2fff3943dc79db3683526b030ef461e3",
+    "semantic_hash": "2fff3943dc79db3683526b030ef461e3"
+  },
+  "Domain/Entities/EventStatistic.cs": {
+    "mtime": 1787307816.9527617,
+    "seen": 1788453050.4169211,
+    "ast_hash": "65dab03ce9f28face1e9c731dfbc285c",
+    "semantic_hash": "65dab03ce9f28face1e9c731dfbc285c"
+  },
+  "Domain/Entities/FavoriteTeam.cs": {
+    "mtime": 1786552441.8292854,
+    "seen": 1788453050.4169261,
+    "ast_hash": "93d5d6196c25104150b077005d857e6a",
+    "semantic_hash": "93d5d6196c25104150b077005d857e6a"
+  },
+  "Domain/Entities/Jwt.cs": {
+    "mtime": 1786547419.0262878,
+    "seen": 1788453050.416932,
+    "ast_hash": "e6c98d0aaff2d856ddaede8fcae86b5c",
+    "semantic_hash": "e6c98d0aaff2d856ddaede8fcae86b5c"
+  },
+  "Domain/Entities/League.cs": {
+    "mtime": 1784553514.6750956,
+    "seen": 1788453050.4169366,
+    "ast_hash": "e572f3e14a4f65815b4d51ac6bc77ed3",
+    "semantic_hash": "e572f3e14a4f65815b4d51ac6bc77ed3"
+  },
+  "Domain/Entities/Log.cs": {
+    "mtime": 1786361542.7400765,
+    "seen": 1788453050.4169414,
+    "ast_hash": "70c7fff585649f3ce43961ceb428e8a7",
+    "semantic_hash": "70c7fff585649f3ce43961ceb428e8a7"
+  },
+  "Domain/Entities/Match.cs": {
+    "mtime": 1790425329.9731743,
+    "seen": 1790425675.0669036,
+    "ast_hash": "8e2dddc38f48a1a879f6d57b9cbbfd2b",
+    "semantic_hash": ""
+  },
+  "Domain/Entities/Player.cs": {
+    "mtime": 1789232512.7369347,
+    "seen": 1789909358.082141,
+    "ast_hash": "3d81797112d176f043941e81cb2d3e32",
+    "semantic_hash": ""
+  },
+  "Domain/Entities/PlayerFormerTeam.cs": {
+    "mtime": 1787311427.8711681,
+    "seen": 1788453050.4169576,
+    "ast_hash": "3e296df6f4e4a862f7653d59f7e90c81",
+    "semantic_hash": "3e296df6f4e4a862f7653d59f7e90c81"
+  },
+  "Domain/Entities/PlayerHonour.cs": {
+    "mtime": 1787311436.0511947,
+    "seen": 1788453050.4169626,
+    "ast_hash": "0cab0c075f57ae085e186cff946ac76c",
+    "semantic_hash": "0cab0c075f57ae085e186cff946ac76c"
+  },
+  "Domain/Entities/PlayerMilestone.cs": {
+    "mtime": 1787311441.3226535,
+    "seen": 1788453050.4169676,
+    "ast_hash": "67f8c9ca1514648f83519b9ec089adc0",
+    "semantic_hash": "67f8c9ca1514648f83519b9ec089adc0"
+  },
+  "Domain/Entities/PlayerStatistic.cs": {
+    "mtime": 1787311422.5969045,
+    "seen": 1788453050.4169729,
+    "ast_hash": "756496776267170fabf4c65269d90fe3",
+    "semantic_hash": "756496776267170fabf4c65269d90fe3"
+  },
+  "Domain/Entities/Prediction.cs": {
+    "mtime": 1786552745.0362887,
+    "seen": 1788453050.4169774,
+    "ast_hash": "4d1a17911c138d4f5433c03b116fac44",
+    "semantic_hash": "4d1a17911c138d4f5433c03b116fac44"
+  },
+  "Domain/Entities/Sport.cs": {
+    "mtime": 1786363502.3560684,
+    "seen": 1788453050.4169822,
+    "ast_hash": "2e8fd5ae881eddb7e4075d08701aa107",
+    "semantic_hash": "2e8fd5ae881eddb7e4075d08701aa107"
+  },
+  "Domain/Entities/SyncedEntity/SyncedEntity.cs": {
+    "mtime": 1784016730.8294508,
+    "seen": 1788453050.4169872,
+    "ast_hash": "6b900b551c4d5d812de0852e863da2e5",
+    "semantic_hash": "6b900b551c4d5d812de0852e863da2e5"
+  },
+  "Domain/Entities/Team.cs": {
+    "mtime": 1787304626.8808322,
+    "seen": 1788453050.4169915,
+    "ast_hash": "e26a1c9c0aadef9d03dbc75817ba9675",
+    "semantic_hash": "e26a1c9c0aadef9d03dbc75817ba9675"
+  },
+  "Domain/Entities/TeamEquipment.cs": {
+    "mtime": 1787304367.4051738,
+    "seen": 1788453050.416996,
+    "ast_hash": "886027a5344c65e4e6ab543063844d2f",
+    "semantic_hash": "886027a5344c65e4e6ab543063844d2f"
+  },
+  "Domain/Entities/User.cs": {
+    "mtime": 1791018186.224977,
+    "seen": 1791018914.8796232,
+    "ast_hash": "2d6bc162d2a404cd772179feaa459732",
+    "semantic_hash": ""
+  },
+  "Domain/Entities/UserRole.cs": {
+    "mtime": 1786361954.6968098,
+    "seen": 1788453050.4170055,
+    "ast_hash": "c08bdfdf380d968ed64939f11039e4f4",
+    "semantic_hash": "c08bdfdf380d968ed64939f11039e4f4"
+  },
+  "Domain/Entities/Venue.cs": {
+    "mtime": 1787394535.4357324,
+    "seen": 1788453050.41701,
+    "ast_hash": "4789c62f7f4f8dc038acd75edb11d0fe",
+    "semantic_hash": "4789c62f7f4f8dc038acd75edb11d0fe"
+  },
+  "Infrastructure/Class1.cs": {
+    "mtime": 1784541125.400763,
+    "seen": 1788453050.4170437,
+    "ast_hash": "2981c8ec9308859d0001d1f52597bf3e",
+    "semantic_hash": "2981c8ec9308859d0001d1f52597bf3e"
+  },
+  "Infrastructure/Infrastructure.csproj": {
+    "mtime": 1788877409.1268532,
+    "seen": 1788879132.491559,
+    "ast_hash": "2ff74214208568f8dae199b767510cf9",
+    "semantic_hash": ""
+  },
+  "Infrastructure/Integrations/DTO/SportsDbEventLineup.cs": {
+    "mtime": 1787392902.1418593,
+    "seen": 1788453050.4170532,
+    "ast_hash": "b57206bb98bce12ecb2a65f78dab345b",
+    "semantic_hash": "b57206bb98bce12ecb2a65f78dab345b"
+  },
+  "Infrastructure/Integrations/DTO/SportsDbEventStatistic.cs": {
+    "mtime": 1787308994.2768655,
+    "seen": 1788453050.417058,
+    "ast_hash": "47b120d760826eef4d487a0451557c97",
+    "semantic_hash": "47b120d760826eef4d487a0451557c97"
+  },
+  "Infrastructure/Integrations/DTO/SportsDbLeague.cs": {
+    "mtime": 1784546376.343252,
+    "seen": 1788453050.417063,
+    "ast_hash": "b7f1d935ed823980590bd67a1bbc2640",
+    "semantic_hash": "b7f1d935ed823980590bd67a1bbc2640"
+  },
+  "Infrastructure/Integrations/DTO/SportsDbMatch.cs": {
+    "mtime": 1788697500.6802971,
+    "seen": 1788786869.0901253,
+    "ast_hash": "bbacb1a480d728760bc2a3d7da3c7328",
+    "semantic_hash": ""
+  },
+  "Infrastructure/Integrations/DTO/SportsDbPlayer.cs": {
+    "mtime": 1789160234.0428345,
+    "seen": 1789160545.5782278,
+    "ast_hash": "0500d46dc221989b8fef7830cd91faff",
+    "semantic_hash": ""
+  },
+  "Infrastructure/Integrations/DTO/SportsDbPlayerFormerTeam.cs": {
+    "mtime": 1787311493.2877126,
+    "seen": 1788453050.417077,
+    "ast_hash": "87130fc3fcc3e884ddbdfd90c0610142",
+    "semantic_hash": "87130fc3fcc3e884ddbdfd90c0610142"
+  },
+  "Infrastructure/Integrations/DTO/SportsDbPlayerHonour.cs": {
+    "mtime": 1787311498.933171,
+    "seen": 1788453050.417082,
+    "ast_hash": "a67af8b49e09c576508d6d8b48032d51",
+    "semantic_hash": "a67af8b49e09c576508d6d8b48032d51"
+  },
+  "Infrastructure/Integrations/DTO/SportsDbPlayerMilestone.cs": {
+    "mtime": 1787311506.287359,
+    "seen": 1788453050.417087,
+    "ast_hash": "45fe5d6b0fc6e73b687ae33840b13ef8",
+    "semantic_hash": "45fe5d6b0fc6e73b687ae33840b13ef8"
+  },
+  "Infrastructure/Integrations/DTO/SportsDbPlayerStatistic.cs": {
+    "mtime": 1787311484.2101877,
+    "seen": 1788453050.4170918,
+    "ast_hash": "fc44eb9f2102665d02e26029d6835bba",
+    "semantic_hash": "fc44eb9f2102665d02e26029d6835bba"
+  },
+  "Infrastructure/Integrations/DTO/SportsDbSport.cs": {
+    "mtime": 1786726034.1453958,
+    "seen": 1788453050.4170969,
+    "ast_hash": "ccb8f7dcaf41cccf081d2f99e7c3fac0",
+    "semantic_hash": "ccb8f7dcaf41cccf081d2f99e7c3fac0"
+  },
+  "Infrastructure/Integrations/DTO/SportsDbTeam.cs": {
+    "mtime": 1784546731.8385963,
+    "seen": 1788453050.4171016,
+    "ast_hash": "a3a267899148aa707335b8fc3d5a1a97",
+    "semantic_hash": "a3a267899148aa707335b8fc3d5a1a97"
+  },
+  "Infrastructure/Integrations/DTO/SportsDbTeamEquipment.cs": {
+    "mtime": 1787309009.5969913,
+    "seen": 1788453050.417106,
+    "ast_hash": "8d33ca67f088c5058d19fc5825e51952",
+    "semantic_hash": "8d33ca67f088c5058d19fc5825e51952"
+  },
+  "Infrastructure/Integrations/DTO/SportsDbVenue.cs": {
+    "mtime": 1786962696.233577,
+    "seen": 1788453050.4171104,
+    "ast_hash": "d63511b1ac77bb8dd9c79c6cd92db8db",
+    "semantic_hash": "d63511b1ac77bb8dd9c79c6cd92db8db"
+  },
+  "Infrastructure/Integrations/Exceptions/SportsDbApiException.cs": {
+    "mtime": 1789235240.3120172,
+    "seen": 1789909358.0823927,
+    "ast_hash": "e863fa4c071b9472bc8a3aca5a01e6fb",
+    "semantic_hash": ""
+  },
+  "Infrastructure/Integrations/ISportsDbClient.cs": {
+    "mtime": 1790425330.2889018,
+    "seen": 1790425675.0670125,
+    "ast_hash": "c70786b5d85082f55034a8ec0e131033",
+    "semantic_hash": ""
+  },
+  "Infrastructure/Integrations/SportsDB/SportOptions.cs": {
+    "mtime": 1785669961.9430852,
+    "seen": 1788453050.4171252,
+    "ast_hash": "0df18cd869ce8a49cd7454d95dcbe18c",
+    "semantic_hash": "0df18cd869ce8a49cd7454d95dcbe18c"
+  },
+  "Infrastructure/SportsDbClient.cs": {
+    "mtime": 1790425330.3890884,
+    "seen": 1790425675.0670304,
+    "ast_hash": "ff774e9b7edf4674d4e4c85552967d4c",
+    "semantic_hash": ""
+  },
+  "Infrastructure/Sync/ISportsDbSyncService.cs": {
+    "mtime": 1790425330.6340806,
+    "seen": 1790425675.0670407,
+    "ast_hash": "d9bbeb10b3a11fedb6fb1c94ebce2a9a",
+    "semantic_hash": ""
+  },
+  "Infrastructure/Sync/MatchScheduleBackgroundService.cs": {
+    "mtime": 1789154186.9266946,
+    "seen": 1789160545.5783727,
+    "ast_hash": "cf61de7b563852b7a59e13cb7b8422a1",
+    "semantic_hash": ""
+  },
+  "Infrastructure/Sync/MatchStatisticsTrackerService.cs": {
+    "mtime": 1788960160.6228235,
+    "seen": 1789160545.5783792,
+    "ast_hash": "13a0792f292506252de68eaca0ed38fa",
+    "semantic_hash": ""
+  },
+  "Infrastructure/Sync/PlayerFormerTeamBackgroundService.cs": {
+    "mtime": 1788960211.825389,
+    "seen": 1789160545.5783854,
+    "ast_hash": "886224d73cc0296d92c9e5c805de9904",
+    "semantic_hash": ""
+  },
+  "Infrastructure/Sync/PlayerSyncBackgroundService.cs": {
+    "mtime": 1788960269.4520662,
+    "seen": 1789160545.5783913,
+    "ast_hash": "8dae6ad0fabe2726967345c06a42a32b",
+    "semantic_hash": ""
+  },
+  "Infrastructure/Sync/PreMatchLineupBackgroundService.cs": {
+    "mtime": 1788960291.0414689,
+    "seen": 1789160545.578397,
+    "ast_hash": "e9b2d156ecb7e901115f1090b187c5a2",
+    "semantic_hash": ""
+  },
+  "Infrastructure/Sync/SportsDbStartupSyncService.cs": {
+    "mtime": 1788960365.1095457,
+    "seen": 1789160545.5784028,
+    "ast_hash": "08e0b2a56a51c0ea1c9ccb93a1ceb2ac",
+    "semantic_hash": ""
+  },
+  "Infrastructure/Sync/SportsDbSyncService.cs": {
+    "mtime": 1790426124.0685525,
+    "seen": 1790426274.962257,
+    "ast_hash": "218a1eacb692850401cef52fe569d580",
+    "semantic_hash": ""
+  },
+  "MAUI/App.xaml": {
+    "mtime": 1787751859.0205836,
+    "seen": 1788453050.4172072,
+    "ast_hash": "d108cfbba2936aafccb904ee8d731d2a",
+    "semantic_hash": "d108cfbba2936aafccb904ee8d731d2a"
+  },
+  "MAUI/App.xaml.cs": {
+    "mtime": 1788878624.2804868,
+    "seen": 1788879132.4916575,
+    "ast_hash": "6d55ca7d062f8767c70ccfec4eadb679",
+    "semantic_hash": ""
+  },
+  "MAUI/AppShell.xaml": {
+    "mtime": 1788457692.132419,
+    "seen": 1788465802.7226784,
+    "ast_hash": "60e860b01bd1dcc2a4d29f6f3e78ee33",
+    "semantic_hash": "60e860b01bd1dcc2a4d29f6f3e78ee33"
+  },
+  "MAUI/AppShell.xaml.cs": {
+    "mtime": 1791986848.1299875,
+    "seen": 1791986995.6620946,
+    "ast_hash": "9ddea45f5814aabda9f244936f726172",
+    "semantic_hash": ""
+  },
+  "MAUI/DTO/Input/AuthResponseDTO.cs": {
+    "mtime": 1788276660.4486806,
+    "seen": 1788453050.4172285,
+    "ast_hash": "b7c0cddda6f39e7efe6bf28d18ea3bae",
+    "semantic_hash": "b7c0cddda6f39e7efe6bf28d18ea3bae"
+  },
+  "MAUI/DTO/Input/SportsDTO.cs": {
+    "mtime": 1788276105.5171273,
+    "seen": 1788453050.4172337,
+    "ast_hash": "a58944716c69ae5908d35f5d3b528b75",
+    "semantic_hash": "a58944716c69ae5908d35f5d3b528b75"
+  },
+  "MAUI/DTO/Output/LoginRequestDTO.cs": {
+    "mtime": 1788276522.4396393,
+    "seen": 1788453050.4172387,
+    "ast_hash": "085313b245a98a3df2fb0d567cafe7fa",
+    "semantic_hash": "085313b245a98a3df2fb0d567cafe7fa"
+  },
+  "MAUI/DTO/Output/RefreshRequestDTO.cs": {
+    "mtime": 1788386043.6967218,
+    "seen": 1788453050.417244,
+    "ast_hash": "a62b09bda8bf66447ab93cb1511f9a53",
+    "semantic_hash": "a62b09bda8bf66447ab93cb1511f9a53"
+  },
+  "MAUI/DTO/Output/RegisterRequestDTO.cs": {
+    "mtime": 1788276515.5032198,
+    "seen": 1788453050.4172497,
+    "ast_hash": "6a9193fc5ff31316435e5f5599a09255",
+    "semantic_hash": "6a9193fc5ff31316435e5f5599a09255"
+  },
+  "MAUI/Helpers/Icons.cs": {
+    "mtime": 1791990050.113196,
+    "seen": 1791990842.5754783,
+    "ast_hash": "1c903f665253e61a506dac63a3bec934",
+    "semantic_hash": ""
+  },
+  "MAUI/Helpers/MauiExtensions.cs": {
+    "mtime": 1791986848.2292106,
+    "seen": 1791986995.6622374,
+    "ast_hash": "fe77b572a8279958003fef741ffa7886",
+    "semantic_hash": ""
+  },
+  "MAUI/Helpers/RefreshTokenHelper.cs": {
+    "mtime": 1789481098.6942446,
+    "seen": 1789909358.0827193,
+    "ast_hash": "34903e0523498c66800c34057314a0e4",
+    "semantic_hash": ""
+  },
+  "MAUI/Helpers/SportIcon.cs": {
+    "mtime": 1789318206.3479745,
+    "seen": 1789909358.0827312,
+    "ast_hash": "728e241a4dd221214e991005885c01fe",
+    "semantic_hash": ""
+  },
+  "MAUI/Helpers/SportIconMap.cs": {
+    "mtime": 1788260245.427058,
+    "seen": 1788453050.417275,
+    "ast_hash": "878cb28076b1d78d6227202a199fa9b5",
+    "semantic_hash": "878cb28076b1d78d6227202a199fa9b5"
+  },
+  "MAUI/MAUI.csproj": {
+    "mtime": 1791987025.673334,
+    "seen": 1791989641.8954387,
+    "ast_hash": "a3741cfa907d25a447f5fa19893bb94b",
+    "semantic_hash": ""
+  },
+  "MAUI/MauiProgram.cs": {
+    "mtime": 1789469212.0411572,
+    "seen": 1789909358.0827496,
+    "ast_hash": "6088eec0b4b40b59d161e5c70b5c24d7",
+    "semantic_hash": ""
+  },
+  "MAUI/Platforms/Android/MainActivity.cs": {
+    "mtime": 1788878521.4293518,
+    "seen": 1788879132.491725,
+    "ast_hash": "b876100a7a262d967bee74a085abf9e5",
+    "semantic_hash": ""
+  },
+  "MAUI/Platforms/Android/MainApplication.cs": {
+    "mtime": 1789908979.5969276,
+    "seen": 1789909358.0827618,
+    "ast_hash": "4f2497d10519d4535ada36a278bfc533",
+    "semantic_hash": ""
+  },
+  "MAUI/Platforms/MacCatalyst/AppDelegate.cs": {
+    "mtime": 1787751865.2261727,
+    "seen": 1788453050.4172997,
+    "ast_hash": "e2548aec395242da1295ea46c3fa228d",
+    "semantic_hash": "e2548aec395242da1295ea46c3fa228d"
+  },
+  "MAUI/Platforms/MacCatalyst/Program.cs": {
+    "mtime": 1787751864.6545002,
+    "seen": 1788453050.417305,
+    "ast_hash": "1c05b05c62b3a5c223f94e869cdf1730",
+    "semantic_hash": "1c05b05c62b3a5c223f94e869cdf1730"
+  },
+  "MAUI/Platforms/Windows/App.xaml": {
+    "mtime": 1787751859.3683887,
+    "seen": 1788453050.4173102,
+    "ast_hash": "c59f2056ebbd022135a0e411ce3cf5c8",
+    "semantic_hash": "c59f2056ebbd022135a0e411ce3cf5c8"
+  },
+  "MAUI/Platforms/Windows/App.xaml.cs": {
+    "mtime": 1787751863.703014,
+    "seen": 1788453050.4173152,
+    "ast_hash": "1baafd09d653c2151edae84b1f204b55",
+    "semantic_hash": "1baafd09d653c2151edae84b1f204b55"
+  },
+  "MAUI/Platforms/iOS/AppDelegate.cs": {
+    "mtime": 1787751863.6680372,
+    "seen": 1788453050.41732,
+    "ast_hash": "e2548aec395242da1295ea46c3fa228d",
+    "semantic_hash": "e2548aec395242da1295ea46c3fa228d"
+  },
+  "MAUI/Platforms/iOS/Program.cs": {
+    "mtime": 1787751864.6355088,
+    "seen": 1788453050.417325,
+    "ast_hash": "1c05b05c62b3a5c223f94e869cdf1730",
+    "semantic_hash": "1c05b05c62b3a5c223f94e869cdf1730"
+  },
+  "MAUI/Properties/launchSettings.json": {
+    "mtime": 1788208345.771128,
+    "seen": 1788453050.4173303,
+    "ast_hash": "f7142c13ff4980614ce1c5d6134e1f08",
+    "semantic_hash": "f7142c13ff4980614ce1c5d6134e1f08"
+  },
+  "MAUI/Resources/Raw/appsettings.json": {
+    "mtime": 1790419627.5875452,
+    "seen": 1790419935.6282105,
+    "ast_hash": "2a7006aa5fb647cc1066df6a5d082456",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Styles/Colors.xaml": {
+    "mtime": 1787751859.4013722,
+    "seen": 1788453050.4173415,
+    "ast_hash": "c574260a92de815c35d74e0e0a3d69e6",
+    "semantic_hash": "c574260a92de815c35d74e0e0a3d69e6"
+  },
+  "MAUI/Resources/Styles/Styles.xaml": {
+    "mtime": 1787751859.4153633,
+    "seen": 1788453050.4173465,
+    "ast_hash": "c75e830dac11f65b6640bcbc8bfcd3e8",
+    "semantic_hash": "c75e830dac11f65b6640bcbc8bfcd3e8"
+  },
+  "MAUI/Services/AuthAPIService.cs": {
+    "mtime": 1789480502.7763922,
+    "seen": 1789909358.0828342,
+    "ast_hash": "d97cc8cd7db856e1786437e65f920a40",
+    "semantic_hash": "d97cc8cd7db856e1786437e65f920a40"
+  },
+  "MAUI/Services/AuthService.cs": {
+    "mtime": 1789472011.1017673,
+    "seen": 1789909358.0828395,
+    "ast_hash": "a01c6fa1ef1c0ece79357073da1b311f",
+    "semantic_hash": ""
+  },
+  "MAUI/Services/Interfaces/IAuthAPIService.cs": {
+    "mtime": 1788455217.4921045,
+    "seen": 1788465802.7227464,
+    "ast_hash": "8ea97ffccca222b629c653fc211e14d1",
+    "semantic_hash": "8ea97ffccca222b629c653fc211e14d1"
+  },
+  "MAUI/Services/Interfaces/IAuthService.cs": {
+    "mtime": 1788386463.5901127,
+    "seen": 1788453050.4173677,
+    "ast_hash": "ad21cee3b02a8e3d2643f79462043af5",
+    "semantic_hash": "ad21cee3b02a8e3d2643f79462043af5"
+  },
+  "MAUI/Services/Interfaces/ISportCacheService.cs": {
+    "mtime": 1788191610.8601468,
+    "seen": 1788453050.4173727,
+    "ast_hash": "78cd0403dc4e314688939c20346db311",
+    "semantic_hash": "78cd0403dc4e314688939c20346db311"
+  },
+  "MAUI/Services/Interfaces/ISportsApiService.cs": {
+    "mtime": 1788191607.1297994,
+    "seen": 1788453050.4173777,
+    "ast_hash": "0946e50b418efba210bc67097107fe96",
+    "semantic_hash": "0946e50b418efba210bc67097107fe96"
+  },
+  "MAUI/Services/SportMenuItem.cs": {
+    "mtime": 1788257961.929424,
+    "seen": 1788453050.4173827,
+    "ast_hash": "4b39761a5792349a2a4cbc05f06ba10f",
+    "semantic_hash": "4b39761a5792349a2a4cbc05f06ba10f"
+  },
+  "MAUI/Services/SportsApiService.cs": {
+    "mtime": 1788256881.382347,
+    "seen": 1788453050.4173872,
+    "ast_hash": "d86f4bf2c0fedafb2711a385cd9dbed2",
+    "semantic_hash": "d86f4bf2c0fedafb2711a385cd9dbed2"
+  },
+  "MAUI/Services/SportsCacheService.cs": {
+    "mtime": 1788191616.4724524,
+    "seen": 1788453050.417392,
+    "ast_hash": "a7ab4d52848cdb4bbc2595b8bf9f6061",
+    "semantic_hash": "a7ab4d52848cdb4bbc2595b8bf9f6061"
+  },
+  "MAUI/ViewModel/HomeViewModel.cs": {
+    "mtime": 1791018747.1950417,
+    "seen": 1791018914.880405,
+    "ast_hash": "b9c321e64e9f235dbdc02d20bf0b2cd0",
+    "semantic_hash": ""
+  },
+  "MAUI/ViewModel/LoginViewModel.cs": {
+    "mtime": 1789480168.1840584,
+    "seen": 1789909358.0830493,
+    "ast_hash": "e9b8bc5c1b7db334d616e1170af48d69",
+    "semantic_hash": ""
+  },
+  "MAUI/ViewModel/NavMenuViewModelBase.cs": {
+    "mtime": 1791986513.2362719,
+    "seen": 1791986995.6625535,
+    "ast_hash": "4be551251786196cc1e32c172d9a70dd",
+    "semantic_hash": ""
+  },
+  "MAUI/ViewModel/RegisterViewModel.cs": {
+    "mtime": 1788532538.3097763,
+    "seen": 1788786869.0903463,
+    "ast_hash": "b256d8b63bda8c16eb0bc8a59c443399",
+    "semantic_hash": ""
+  },
+  "MAUI/Views/HomePage.xaml": {
+    "mtime": 1791018747.3332574,
+    "seen": 1791018914.8804538,
+    "ast_hash": "9014c26e26976a51b1a2ac565021a116",
+    "semantic_hash": ""
+  },
+  "MAUI/Views/HomePage.xaml.cs": {
+    "mtime": 1788957523.8741746,
+    "seen": 1789160545.579034,
+    "ast_hash": "69947ea294aa2efbd88866d20d72a5a5",
+    "semantic_hash": ""
+  },
+  "MAUI/Views/LoginPage.xaml": {
+    "mtime": 1788275151.5229368,
+    "seen": 1788453050.4174263,
+    "ast_hash": "551f01a69d09674dd8659e643efd5f34",
+    "semantic_hash": "551f01a69d09674dd8659e643efd5f34"
+  },
+  "MAUI/Views/LoginPage.xaml.cs": {
+    "mtime": 1788262572.7724447,
+    "seen": 1788453050.4174316,
+    "ast_hash": "9cbfc494db58873562964c9e1215f4be",
+    "semantic_hash": "9cbfc494db58873562964c9e1215f4be"
+  },
+  "MAUI/Views/Partials/NavMenu.xaml": {
+    "mtime": 1791984594.1020894,
+    "seen": 1791985033.4009283,
+    "ast_hash": "5efadaf68d62e2b4d8b43d8c74224c21",
+    "semantic_hash": ""
+  },
+  "MAUI/Views/Partials/NavMenu.xaml.cs": {
+    "mtime": 1791984594.1020894,
+    "seen": 1791985033.4009342,
+    "ast_hash": "15b7a502f55bf458b230d1594ba67b9a",
+    "semantic_hash": ""
+  },
+  "MAUI/Views/ProfilePage.xaml": {
+    "mtime": 1791989358.2062662,
+    "seen": 1791989641.8960497,
+    "ast_hash": "b7d8053f427656722579af8b1794f720",
+    "semantic_hash": ""
+  },
+  "MAUI/Views/ProfilePage.xaml.cs": {
+    "mtime": 1791989358.207265,
+    "seen": 1791989641.896054,
+    "ast_hash": "b9f7e83c56ad4bb1e11cff5b12d08bc5",
+    "semantic_hash": ""
+  },
+  "MAUI/Views/RegisterPage.xaml": {
+    "mtime": 1788275159.1048217,
+    "seen": 1788453050.4174554,
+    "ast_hash": "953050c38638e00ecc9b33540db0d5e9",
+    "semantic_hash": "953050c38638e00ecc9b33540db0d5e9"
+  },
+  "MAUI/Views/RegisterPage.xaml.cs": {
+    "mtime": 1788262593.3252523,
+    "seen": 1788453050.4174604,
+    "ast_hash": "efcf0058be638666e6a2e5172c5c8e7a",
+    "semantic_hash": "efcf0058be638666e6a2e5172c5c8e7a"
+  },
+  "ScoreHub.slnx": {
+    "mtime": 1787751889.1969461,
+    "seen": 1788453050.4193726,
+    "ast_hash": "a3d191f228bf3f43dd77efcc954f85d4",
+    "semantic_hash": "a3d191f228bf3f43dd77efcc954f85d4"
+  },
+  "WebAPI/Controllers/AdminSyncController.cs": {
+    "mtime": 1790425388.695046,
+    "seen": 1790425675.0686793,
+    "ast_hash": "d1d7a0acf18c02b330b1123f5fc833a5",
+    "semantic_hash": ""
+  },
+  "WebAPI/Controllers/AuthController.cs": {
+    "mtime": 1788457315.9779534,
+    "seen": 1788465802.7228,
+    "ast_hash": "5aa03eaf844aeac21f3777553b9ce5ba",
+    "semantic_hash": "5aa03eaf844aeac21f3777553b9ce5ba"
+  },
+  "WebAPI/Controllers/SportsController.cs": {
+    "mtime": 1788187081.2992694,
+    "seen": 1788453050.419388,
+    "ast_hash": "8664f0c9ae5cb5538455551c1b1cc3d7",
+    "semantic_hash": "8664f0c9ae5cb5538455551c1b1cc3d7"
+  },
+  "WebAPI/Controllers/WeatherForecastController.cs": {
+    "mtime": 1784013920.4209163,
+    "seen": 1788453050.419393,
+    "ast_hash": "b0b9a5239515748f8338bf2d809bcd85",
+    "semantic_hash": "b0b9a5239515748f8338bf2d809bcd85"
+  },
+  "WebAPI/DTO/Input/LoginRequestDTO.cs": {
+    "mtime": 1788276461.3299315,
+    "seen": 1788453050.4193976,
+    "ast_hash": "58bbbf440ff4dbfd200b760227eb0644",
+    "semantic_hash": "58bbbf440ff4dbfd200b760227eb0644"
+  },
+  "WebAPI/DTO/Input/RefreshRequestDTO.cs": {
+    "mtime": 1788378850.7014778,
+    "seen": 1788453050.4194026,
+    "ast_hash": "915eb7a52659785ce5ce6cb971e6a712",
+    "semantic_hash": "915eb7a52659785ce5ce6cb971e6a712"
+  },
+  "WebAPI/DTO/Input/RegisterRequestDTO.cs": {
+    "mtime": 1788276529.0071912,
+    "seen": 1788453050.4194076,
+    "ast_hash": "1d5d07778f00c2c5cce6cf85070e908b",
+    "semantic_hash": "1d5d07778f00c2c5cce6cf85070e908b"
+  },
+  "WebAPI/DTO/Output/AuthResponseDTO.cs": {
+    "mtime": 1788379162.662024,
+    "seen": 1788453050.4194121,
+    "ast_hash": "b96efa7ae4bcb169e7e25bae4300473b",
+    "semantic_hash": "b96efa7ae4bcb169e7e25bae4300473b"
+  },
+  "WebAPI/DTO/Output/ErrorResponseDTO.cs": {
+    "mtime": 1788379223.9064436,
+    "seen": 1788453050.4194171,
+    "ast_hash": "69016cefbdd4013215ccb24fb4a90776",
+    "semantic_hash": "69016cefbdd4013215ccb24fb4a90776"
+  },
+  "WebAPI/DTO/Output/NavMenuSportsDTO.cs": {
+    "mtime": 1788185976.1745167,
+    "seen": 1788453050.4194224,
+    "ast_hash": "24ec5786d6c045f2589e1b10b6db0d67",
+    "semantic_hash": "24ec5786d6c045f2589e1b10b6db0d67"
+  },
+  "WebAPI/Extensions.cs": {
+    "mtime": 1790425388.595405,
+    "seen": 1790425675.0688102,
+    "ast_hash": "46ddcd486cbb833f4016988e25c52e05",
+    "semantic_hash": ""
+  },
+  "WebAPI/JWT/JwtOptions.cs": {
+    "mtime": 1788432211.497167,
+    "seen": 1788453050.4194329,
+    "ast_hash": "2faed16fc75561f3b8cb86bf0844fe5f",
+    "semantic_hash": "2faed16fc75561f3b8cb86bf0844fe5f"
+  },
+  "WebAPI/Middleware/GlobalExceptionHandler.cs": {
+    "mtime": 1788186568.4075737,
+    "seen": 1788453050.4194386,
+    "ast_hash": "1637b3b3f8d92662a058bc046ef628e6",
+    "semantic_hash": "1637b3b3f8d92662a058bc046ef628e6"
+  },
+  "WebAPI/Program.cs": {
+    "mtime": 1789159095.3527083,
+    "seen": 1789160545.582148,
+    "ast_hash": "f232663ec4f253cc8a2f6a1155c16ea3",
+    "semantic_hash": ""
+  },
+  "WebAPI/Properties/launchSettings.json": {
+    "mtime": 1788254333.0002353,
+    "seen": 1788453050.419449,
+    "ast_hash": "51eb0b9e2471210aa2136789a1bd997d",
+    "semantic_hash": "51eb0b9e2471210aa2136789a1bd997d"
+  },
+  "WebAPI/Services/Interfaces/IJwtService.cs": {
+    "mtime": 1788380347.2363296,
+    "seen": 1788453050.4194546,
+    "ast_hash": "3b4421b26d06bc0e0dcf049ddf18d153",
+    "semantic_hash": "3b4421b26d06bc0e0dcf049ddf18d153"
+  },
+  "WebAPI/Services/JwtService.cs": {
+    "mtime": 1788432136.631722,
+    "seen": 1788453050.4194598,
+    "ast_hash": "0c87ab440a6506243f332b17a8654722",
+    "semantic_hash": "0c87ab440a6506243f332b17a8654722"
+  },
+  "WebAPI/WeatherForecast.cs": {
+    "mtime": 1784013920.3031073,
+    "seen": 1788453050.419465,
+    "ast_hash": "ad9f4005104bebb11115e0211b8867c1",
+    "semantic_hash": "ad9f4005104bebb11115e0211b8867c1"
+  },
+  "WebAPI/WebAPI.csproj": {
+    "mtime": 1788431723.1671855,
+    "seen": 1788453050.4194698,
+    "ast_hash": "2115c828f4dbd1e861cdd469cef619a3",
+    "semantic_hash": "2115c828f4dbd1e861cdd469cef619a3"
+  },
+  "WebAPI/appsettings.Development.json": {
+    "mtime": 1784013918.9490404,
+    "seen": 1788453050.4194748,
+    "ast_hash": "804b473502a4c415cf75db61c56c32aa",
+    "semantic_hash": "804b473502a4c415cf75db61c56c32aa"
+  },
+  "WebAPI/appsettings.json": {
+    "mtime": 1790861157.390038,
+    "seen": 1791018914.8828368,
+    "ast_hash": "98dc9d96ec8fb5820c843604631e0248",
+    "semantic_hash": ""
+  },
+  ".claude/settings.json": {
+    "mtime": 1788456640.0936556,
+    "seen": 1788465802.7224665,
+    "ast_hash": "4f1750b8204c98e9049753ed4a6ef210",
+    "semantic_hash": "4f1750b8204c98e9049753ed4a6ef210"
+  },
+  "CLAUDE.md": {
+    "mtime": 1788456640.072669,
+    "seen": 1788465802.7228496,
+    "ast_hash": "8a6643a420fdad6bfb583523bc6cef16",
+    "semantic_hash": "8a6643a420fdad6bfb583523bc6cef16"
+  },
+  "MAUI/Resources/Raw/AboutAssets.txt": {
+    "mtime": 1787751859.3953745,
+    "seen": 1788465802.7228525,
+    "ast_hash": "f2a9b40b175b413ea2fc7421ee26c6a5",
+    "semantic_hash": "f2a9b40b175b413ea2fc7421ee26c6a5"
+  },
+  "MAUI/Resources/AppIcon/appicon.svg": {
+    "mtime": 1787751859.3783844,
+    "seen": 1788465802.7228553,
+    "ast_hash": "5c7fce998bd02a44ecccee4b477919f8",
+    "semantic_hash": "5c7fce998bd02a44ecccee4b477919f8"
+  },
+  "MAUI/Resources/AppIcon/appiconfg.svg": {
+    "mtime": 1787751859.3803823,
+    "seen": 1788465802.7228577,
+    "ast_hash": "f90b41ec7837716bd7ed08c88114e060",
+    "semantic_hash": "f90b41ec7837716bd7ed08c88114e060"
+  },
+  "MAUI/Resources/Images/scorehub_160x160px.png": {
+    "mtime": 1787678608.8773744,
+    "seen": 1788465802.7228603,
+    "ast_hash": "d0e3a4cb5d1ecb601a157122938177f3",
+    "semantic_hash": "d0e3a4cb5d1ecb601a157122938177f3"
+  },
+  "MAUI/Resources/Images/scorehub_160x90px.png": {
+    "mtime": 1787678731.083816,
+    "seen": 1788465802.7228625,
+    "ast_hash": "1684979645438dae1dc809c46216ce73",
+    "semantic_hash": "1684979645438dae1dc809c46216ce73"
+  },
+  "MAUI/Resources/Images/scorehub_160x90px_v2.png": {
+    "mtime": 1788182693.3350635,
+    "seen": 1788465802.7228649,
+    "ast_hash": "848765087501bfd769f001bbc60140ec",
+    "semantic_hash": "848765087501bfd769f001bbc60140ec"
+  },
+  "MAUI/Resources/Images/scorehub_64x36px.png": {
+    "mtime": 1787678816.4698534,
+    "seen": 1788465802.7228673,
+    "ast_hash": "10f33a10a4e73b4b87a9b8047bda0df9",
+    "semantic_hash": "10f33a10a4e73b4b87a9b8047bda0df9"
+  },
+  "MAUI/Resources/Images/scorehub_64x64px.png": {
+    "mtime": 1787678780.39377,
+    "seen": 1788465802.72287,
+    "ast_hash": "4a443297bd3d767224dc42a440c7fc3c",
+    "semantic_hash": "4a443297bd3d767224dc42a440c7fc3c"
+  },
+  "MAUI/Resources/Splash/splash.svg": {
+    "mtime": 1787751859.3973734,
+    "seen": 1788465802.722872,
+    "ast_hash": "f90b41ec7837716bd7ed08c88114e060",
+    "semantic_hash": "f90b41ec7837716bd7ed08c88114e060"
+  },
+  ".claude/settings.local.json": {
+    "mtime": 1788867138.7117772,
+    "seen": 1788879132.4913619,
+    "ast_hash": "77402c916d628085aa7d9f630425b09c",
+    "semantic_hash": ""
+  },
+  "MAUI/DTO/Input/EventDetailsDTO.cs": {
+    "mtime": 1791025621.867199,
+    "seen": 1791025926.3144565,
+    "ast_hash": "a9b5e21093a7658cd0ebd9d6346aa658",
+    "semantic_hash": ""
+  },
+  "MAUI/DTO/Input/MatchesDTO.cs": {
+    "mtime": 1789911515.043189,
+    "seen": 1789911802.0643604,
+    "ast_hash": "9d7ac86c409e02b7ad9b7f3544e98f90",
+    "semantic_hash": ""
+  },
+  "MAUI/DTO/Input/PlayerDTO.cs": {
+    "mtime": 1789164360.1213408,
+    "seen": 1789164759.0955095,
+    "ast_hash": "748540fd320ca7d668121c5950f3bcc5",
+    "semantic_hash": ""
+  },
+  "MAUI/DTO/Input/SearchResultDTO.cs": {
+    "mtime": 1788959621.9691482,
+    "seen": 1789160545.5785348,
+    "ast_hash": "3ba723761a4a0ac7872dde8c5c552749",
+    "semantic_hash": ""
+  },
+  "MAUI/DTO/Input/TeamDTO.cs": {
+    "mtime": 1791991204.9317713,
+    "seen": 1791991468.2068827,
+    "ast_hash": "feeb9ec336682c7c7eb0bb97a2627b9c",
+    "semantic_hash": ""
+  },
+  "MAUI/DTO/Input/UserProfileDTO.cs": {
+    "mtime": 1788530731.6852274,
+    "seen": 1788786869.0902176,
+    "ast_hash": "bcff98af95c7224c2f6dd2829e5def06",
+    "semantic_hash": ""
+  },
+  "MAUI/Helpers/ImagePreviewHelper.cs": {
+    "mtime": 1788732805.583355,
+    "seen": 1788786869.0902295,
+    "ast_hash": "23eeb66044a4a1d49ca5b6e6542645cd",
+    "semantic_hash": ""
+  },
+  "MAUI/Helpers/InvertedBoolConverter.cs": {
+    "mtime": 1788691828.8123925,
+    "seen": 1788786869.0902317,
+    "ast_hash": "906be23559e2aa381a69471a3fcf9992",
+    "semantic_hash": ""
+  },
+  "MAUI/Helpers/ScoreFlashBehavior.cs": {
+    "mtime": 1789468008.8570075,
+    "seen": 1789909358.0827255,
+    "ast_hash": "3a516aaa9b19048eb3e19df48307f470",
+    "semantic_hash": ""
+  },
+  "MAUI/Services/EventDetailsApiService.cs": {
+    "mtime": 1788708636.347886,
+    "seen": 1788786869.0902824,
+    "ast_hash": "f62ba16e8a3ba0165c5759d2f9d11db9",
+    "semantic_hash": ""
+  },
+  "MAUI/Services/Interfaces/IEventDetailsApiService.cs": {
+    "mtime": 1788708634.166049,
+    "seen": 1788786869.09029,
+    "ast_hash": "277543d8425713c2f6e382bd56ab88e7",
+    "semantic_hash": ""
+  },
+  "MAUI/Services/Interfaces/ILeagueApiService.cs": {
+    "mtime": 1788805557.1243021,
+    "seen": 1788879132.4917724,
+    "ast_hash": "01bfc3081d88e8292d9948969f8e978b",
+    "semantic_hash": ""
+  },
+  "MAUI/Services/Interfaces/IMatchesAPIService.cs": {
+    "mtime": 1788694051.0780072,
+    "seen": 1788786869.0902946,
+    "ast_hash": "5957e65422dfb77dd9346239a3acbbb0",
+    "semantic_hash": ""
+  },
+  "MAUI/Services/Interfaces/IPlayerApiService.cs": {
+    "mtime": 1788786376.7926211,
+    "seen": 1788786869.0902965,
+    "ast_hash": "009bea57fad036bdeca2c138b2699455",
+    "semantic_hash": ""
+  },
+  "MAUI/Services/Interfaces/ITeamApiService.cs": {
+    "mtime": 1788874327.2896905,
+    "seen": 1788879132.4917874,
+    "ast_hash": "b2eb0dcfdacd4d4280108e8bc6b7c2a7",
+    "semantic_hash": ""
+  },
+  "MAUI/Services/Interfaces/IUserApiService.cs": {
+    "mtime": 1791986409.4219527,
+    "seen": 1791986995.6624532,
+    "ast_hash": "8bde4847858f86710aa37b4c1d472f0d",
+    "semantic_hash": ""
+  },
+  "MAUI/Services/Interfaces/IUserCacheService.cs": {
+    "mtime": 1788530782.0453165,
+    "seen": 1788786869.0903075,
+    "ast_hash": "eb53adc1219dea1102f379e44f51a103",
+    "semantic_hash": ""
+  },
+  "MAUI/Services/LeagueApiService.cs": {
+    "mtime": 1788805566.1193166,
+    "seen": 1788879132.491794,
+    "ast_hash": "c4aa8fcb9b472a6e2766bc015fa207f3",
+    "semantic_hash": ""
+  },
+  "MAUI/Services/MatchesAPIService.cs": {
+    "mtime": 1788694059.957646,
+    "seen": 1788786869.0903115,
+    "ast_hash": "bc121945997678b39846a752593811d2",
+    "semantic_hash": ""
+  },
+  "MAUI/Services/PlayerApiService.cs": {
+    "mtime": 1788786381.644052,
+    "seen": 1788786869.0903137,
+    "ast_hash": "20da1b379790615e06d171069dfcb626",
+    "semantic_hash": ""
+  },
+  "MAUI/Services/SearchResultItem.cs": {
+    "mtime": 1791018367.682271,
+    "seen": 1791018914.8803508,
+    "ast_hash": "8fc3bbf2297dc4d87a9943c8f28807c8",
+    "semantic_hash": ""
+  },
+  "MAUI/Services/TeamApiService.cs": {
+    "mtime": 1788874336.3563552,
+    "seen": 1788879132.4918134,
+    "ast_hash": "ead3cefb1c0221e87793c4849779a01b",
+    "semantic_hash": ""
+  },
+  "MAUI/Services/UserApiService.cs": {
+    "mtime": 1791986409.616701,
+    "seen": 1791986995.6625223,
+    "ast_hash": "cb67c90f77706b99e87c86d7d10d21dd",
+    "semantic_hash": ""
+  },
+  "MAUI/Services/UserCacheService.cs": {
+    "mtime": 1788531405.407124,
+    "seen": 1788786869.0903292,
+    "ast_hash": "9738c41b58f007624b6ba6fe71be89b6",
+    "semantic_hash": ""
+  },
+  "MAUI/ViewModel/EventDetailsViewModel.cs": {
+    "mtime": 1791983318.514287,
+    "seen": 1791983564.9129581,
+    "ast_hash": "d94a2dc3bbe65e10419f22914d3d702b",
+    "semantic_hash": ""
+  },
+  "MAUI/ViewModel/PlayerPageViewModel.cs": {
+    "mtime": 1788774027.3373654,
+    "seen": 1788786869.0903404,
+    "ast_hash": "2fecfaf47effed325e2fd1ac21fec4be",
+    "semantic_hash": ""
+  },
+  "MAUI/ViewModel/PlayerViewModel.cs": {
+    "mtime": 1788867215.643077,
+    "seen": 1788879132.4918334,
+    "ast_hash": "8c70d140ae16eb7d396e5d1c2da649eb",
+    "semantic_hash": ""
+  },
+  "MAUI/ViewModel/ProfileViewModel.cs": {
+    "mtime": 1791989324.564565,
+    "seen": 1791989641.8958747,
+    "ast_hash": "a52f13a62078f06f59a0857dd0498fe0",
+    "semantic_hash": ""
+  },
+  "MAUI/ViewModel/TeamViewModel.cs": {
+    "mtime": 1791991197.4552553,
+    "seen": 1791991468.2074816,
+    "ast_hash": "7acfe0a27d03948fae07e1dc104a47a5",
+    "semantic_hash": ""
+  },
+  "MAUI/Views/EventDetailsPage.xaml": {
+    "mtime": 1791984641.2731123,
+    "seen": 1791985033.4008026,
+    "ast_hash": "af3131d429be957450f8d54f970cb627",
+    "semantic_hash": ""
+  },
+  "MAUI/Views/EventDetailsPage.xaml.cs": {
+    "mtime": 1790764343.2535763,
+    "seen": 1790764820.9869573,
+    "ast_hash": "c6049757d7233937f58b5c9e06a18919",
+    "semantic_hash": ""
+  },
+  "MAUI/Views/ImagePreviewPage.xaml": {
+    "mtime": 1788732795.475389,
+    "seen": 1788786869.090359,
+    "ast_hash": "23b2f02171cd5340a0b967a4541c9177",
+    "semantic_hash": ""
+  },
+  "MAUI/Views/ImagePreviewPage.xaml.cs": {
+    "mtime": 1788732799.8194675,
+    "seen": 1788786869.090361,
+    "ast_hash": "770d8bcc023cace0bc3d05563b073354",
+    "semantic_hash": ""
+  },
+  "MAUI/Views/Partials/DateFilterOption.cs": {
+    "mtime": 1788955223.2243173,
+    "seen": 1789160545.5790827,
+    "ast_hash": "247946ee8e089e59a85b581166a5072a",
+    "semantic_hash": ""
+  },
+  "MAUI/Views/Partials/MatchesList.xaml": {
+    "mtime": 1790768629.8071845,
+    "seen": 1790768951.836136,
+    "ast_hash": "7207675474dda2b8e939050a166953ec",
+    "semantic_hash": ""
+  },
+  "MAUI/Views/Partials/MatchesList.xaml.cs": {
+    "mtime": 1788958052.738787,
+    "seen": 1789160545.5790942,
+    "ast_hash": "4dfc1678668842e8aa8e41d84530a13d",
+    "semantic_hash": ""
+  },
+  "MAUI/Views/Partials/StatusFilterOption.cs": {
+    "mtime": 1788957961.8629546,
+    "seen": 1789160545.579112,
+    "ast_hash": "466e294f5d84eca79b312ab7a8b9e628",
+    "semantic_hash": ""
+  },
+  "MAUI/Views/PlayerPage.xaml": {
+    "mtime": 1791018726.712862,
+    "seen": 1791018914.880543,
+    "ast_hash": "1175d0e39541f1f07c241db7e44e5c67",
+    "semantic_hash": ""
+  },
+  "MAUI/Views/PlayerPage.xaml.cs": {
+    "mtime": 1788778342.4680233,
+    "seen": 1788786869.0903819,
+    "ast_hash": "ec44b52a6197dc503e6f6665e2ad4a8a",
+    "semantic_hash": ""
+  },
+  "MAUI/Views/TeamPage.xaml": {
+    "mtime": 1791991197.4588523,
+    "seen": 1791991468.2077346,
+    "ast_hash": "b5c1f4f1b9d767c0310d549c1ead473c",
+    "semantic_hash": ""
+  },
+  "MAUI/Views/TeamPage.xaml.cs": {
+    "mtime": 1791991197.4608374,
+    "seen": 1791991468.2077413,
+    "ast_hash": "ed4be14a877b72258c68110f9ddba02a",
+    "semantic_hash": ""
+  },
+  "WebAPI/Controllers/EventController.cs": {
+    "mtime": 1791020196.4365313,
+    "seen": 1791020522.7846386,
+    "ast_hash": "03ee6eaf1c48e08b366fc454d71c8803",
+    "semantic_hash": ""
+  },
+  "WebAPI/Controllers/LeagueController.cs": {
+    "mtime": 1790768531.9498348,
+    "seen": 1790768951.838125,
+    "ast_hash": "2a9ead0a2321fd99cda06ac69ad7b645",
+    "semantic_hash": ""
+  },
+  "WebAPI/Controllers/MatchesController.cs": {
+    "mtime": 1789154523.431458,
+    "seen": 1789160545.5819712,
+    "ast_hash": "cd0a75d1c1f1f883b25b1f823a55bbc1",
+    "semantic_hash": ""
+  },
+  "WebAPI/Controllers/PlayerController.cs": {
+    "mtime": 1789164316.7407868,
+    "seen": 1789164759.09851,
+    "ast_hash": "0de75c4a398103dee8e098ea2d026b3b",
+    "semantic_hash": ""
+  },
+  "WebAPI/Controllers/TeamController.cs": {
+    "mtime": 1789160306.393899,
+    "seen": 1789160545.5819902,
+    "ast_hash": "c82e0feeda9e1dcef4b2a673865541b5",
+    "semantic_hash": ""
+  },
+  "WebAPI/Controllers/UsersController.cs": {
+    "mtime": 1791986337.3274167,
+    "seen": 1791986995.6629112,
+    "ast_hash": "5e857517f78cf9c4959a535b1eb123b9",
+    "semantic_hash": ""
+  },
+  "WebAPI/DTO/Input/MatchesFiltersDTO.cs": {
+    "mtime": 1788693981.9580812,
+    "seen": 1788786869.0912223,
+    "ast_hash": "d439734077fdcceae17b5f3ff7b275b0",
+    "semantic_hash": ""
+  },
+  "WebAPI/DTO/Output/EventDetailsDTO.cs": {
+    "mtime": 1791020196.2335143,
+    "seen": 1791020522.7848418,
+    "ast_hash": "b1e007b2b4d511393057f66be270e897",
+    "semantic_hash": ""
+  },
+  "WebAPI/DTO/Output/MatchesDTO.cs": {
+    "mtime": 1789154516.8958342,
+    "seen": 1789160545.5820813,
+    "ast_hash": "89d37c8a2af42df7493b1c7051df7a12",
+    "semantic_hash": ""
+  },
+  "WebAPI/DTO/Output/PlayerDTO.cs": {
+    "mtime": 1789164337.4749107,
+    "seen": 1789164759.0985985,
+    "ast_hash": "a5accdb0e6b7bf3f8207c1088ed6d5e7",
+    "semantic_hash": ""
+  },
+  "WebAPI/DTO/Output/SearchResultDTO.cs": {
+    "mtime": 1788959497.3876636,
+    "seen": 1789160545.582102,
+    "ast_hash": "62d1befe1c3528e7139271314cd114ac",
+    "semantic_hash": ""
+  },
+  "WebAPI/DTO/Output/TeamDTO.cs": {
+    "mtime": 1788959510.7892795,
+    "seen": 1789160545.582108,
+    "ast_hash": "baf27b38a0b3f3c6a246ce6033386726",
+    "semantic_hash": ""
+  },
+  "WebAPI/DTO/Output/UserProfileDTO.cs": {
+    "mtime": 1788526739.7649987,
+    "seen": 1788786869.0912466,
+    "ast_hash": "056ecdc236412c551f4ba7ffa5b59e11",
+    "semantic_hash": ""
+  },
+  "WebAPI/Helpers/MatchStateCalculator.cs": {
+    "mtime": 1789977035.1372952,
+    "seen": 1790027530.408864,
+    "ast_hash": "9c7f47bb06e5eb3d59b4db3bc2b23585",
+    "semantic_hash": ""
+  },
+  "DataAccess/Configurations/DeviceTokenConfiguration.cs": {
+    "mtime": 1788876988.3157296,
+    "seen": 1788879132.4913838,
+    "ast_hash": "6b4be70e1d9a36b9af51939d5d6c9d48",
+    "semantic_hash": ""
+  },
+  "DataAccess/Configurations/StandingsConfiguration.cs": {
+    "mtime": 1789158239.0661554,
+    "seen": 1789160545.5777974,
+    "ast_hash": "df20f42c8672f023cff41ab5fa3be581",
+    "semantic_hash": ""
+  },
+  "DataAccess/Migrations/ScoreHubDbContextModelSnapshot.cs": {
+    "mtime": 1791984730.836478,
+    "seen": 1791985033.3994236,
+    "ast_hash": "9380e0d2cb6433f61e0e27c7c18b7ed0",
+    "semantic_hash": ""
+  },
+  "Domain/Entities/DeviceToken.cs": {
+    "mtime": 1788876982.0838182,
+    "seen": 1788879132.4914827,
+    "ast_hash": "defe5f6366b583dfd3c08f55abccc989",
+    "semantic_hash": ""
+  },
+  "Domain/Entities/Standings.cs": {
+    "mtime": 1788797971.098063,
+    "seen": 1788879132.4915223,
+    "ast_hash": "c6c1dedd2f3a6367a9405fb41559c598",
+    "semantic_hash": ""
+  },
+  "Infrastructure/Integrations/DTO/SportsDbStanding.cs": {
+    "mtime": 1788798912.480677,
+    "seen": 1788879132.4915864,
+    "ast_hash": "38902109aae4d154a885160d6e3c733b",
+    "semantic_hash": ""
+  },
+  "Infrastructure/Push/FcmPushNotificationService.cs": {
+    "mtime": 1788985272.1798818,
+    "seen": 1789160545.578319,
+    "ast_hash": "1da3b9b065542f21263241e10c9b6044",
+    "semantic_hash": ""
+  },
+  "Infrastructure/Push/FirebaseOptions.cs": {
+    "mtime": 1788877413.8196084,
+    "seen": 1788879132.491606,
+    "ast_hash": "e66bee5d182abd6056969836616ef2f9",
+    "semantic_hash": ""
+  },
+  "Infrastructure/Push/IMatchNotificationService.cs": {
+    "mtime": 1788877484.3825028,
+    "seen": 1788879132.4916081,
+    "ast_hash": "d2942bee1ba484413ec8cf745f43aa06",
+    "semantic_hash": ""
+  },
+  "Infrastructure/Push/IPushNotificationService.cs": {
+    "mtime": 1788877466.5525362,
+    "seen": 1788879132.49161,
+    "ast_hash": "5864b28680c227b17c1699caed2533bc",
+    "semantic_hash": ""
+  },
+  "Infrastructure/Push/MatchNotificationService.cs": {
+    "mtime": 1791981054.8956552,
+    "seen": 1791981462.1584785,
+    "ast_hash": "0637bd108ccc68386d43a65e2e41a8c7",
+    "semantic_hash": ""
+  },
+  "Infrastructure/Sync/MatchNotificationBackgroundService.cs": {
+    "mtime": 1788959993.2635121,
+    "seen": 1789160545.578367,
+    "ast_hash": "1e9220b67b5b2a9a87bfaaee8045386d",
+    "semantic_hash": ""
+  },
+  "MAUI/DTO/Input/DeviceTokenDTO.cs": {
+    "mtime": 1788877826.6226497,
+    "seen": 1788879132.491668,
+    "ast_hash": "a7ccbbd9c9fe82ac2436d9d3071bcf47",
+    "semantic_hash": ""
+  },
+  "MAUI/DTO/Input/FavoriteTeamDTO.cs": {
+    "mtime": 1788874345.407169,
+    "seen": 1788879132.491673,
+    "ast_hash": "4364f83d84a0501f45ea3c5430956188",
+    "semantic_hash": ""
+  },
+  "MAUI/DTO/Input/LeagueDetailsDTO.cs": {
+    "mtime": 1790768586.4685311,
+    "seen": 1790768951.8346899,
+    "ast_hash": "f60b3682c45f19dc9116b6117538d920",
+    "semantic_hash": ""
+  },
+  "MAUI/Services/DeviceTokenApiService.cs": {
+    "mtime": 1788877840.879301,
+    "seen": 1788879132.491758,
+    "ast_hash": "72d3d64d9b2c1fa33bc4a0e7ffac5c8c",
+    "semantic_hash": ""
+  },
+  "MAUI/Services/Interfaces/IDeviceTokenApiService.cs": {
+    "mtime": 1788877831.254353,
+    "seen": 1788879132.491768,
+    "ast_hash": "72917f294e35472cf8f11649d9cf8e8c",
+    "semantic_hash": ""
+  },
+  "MAUI/Services/Interfaces/IPushNotificationService.cs": {
+    "mtime": 1788878562.1214569,
+    "seen": 1788879132.4917805,
+    "ast_hash": "f8820a5c5019a23e48fe0005aba0c0c9",
+    "semantic_hash": ""
+  },
+  "MAUI/Services/PushNotificationService.cs": {
+    "mtime": 1789483322.3456137,
+    "seen": 1789909358.0829794,
+    "ast_hash": "a38e004ee74e7fce8672d3ee0db2c849",
+    "semantic_hash": ""
+  },
+  "MAUI/ViewModel/LeagueViewModel.cs": {
+    "mtime": 1789469764.548413,
+    "seen": 1789909358.0830436,
+    "ast_hash": "8e2ac4c4f9a4df77824a2407e8898f71",
+    "semantic_hash": ""
+  },
+  "MAUI/Views/LeaguePage.xaml": {
+    "mtime": 1791018726.7158616,
+    "seen": 1791018914.880473,
+    "ast_hash": "111f087df94532598d7fbe2754650394",
+    "semantic_hash": ""
+  },
+  "MAUI/Views/LeaguePage.xaml.cs": {
+    "mtime": 1788950894.8452673,
+    "seen": 1788951363.7294009,
+    "ast_hash": "8f985115770aaddfe930bb6693ed629e",
+    "semantic_hash": ""
+  },
+  "WebAPI/DTO/Input/DeviceTokenDTO.cs": {
+    "mtime": 1788877379.4570463,
+    "seen": 1788879132.4929147,
+    "ast_hash": "6c2ed13df48e54cc53fe81e0bbcfe7c7",
+    "semantic_hash": ""
+  },
+  "WebAPI/DTO/Output/FavoriteTeamDTO.cs": {
+    "mtime": 1788874223.3810878,
+    "seen": 1788879132.492934,
+    "ast_hash": "0441b6fa274c71d4661e76f6a75db435",
+    "semantic_hash": ""
+  },
+  "WebAPI/DTO/Output/LeagueDetailsDTO.cs": {
+    "mtime": 1790768531.5670538,
+    "seen": 1790768951.8382142,
+    "ast_hash": "02c0666a94e40674b19edd96e0d5db3d",
+    "semantic_hash": ""
+  },
+  "Infrastructure/Integrations/DTO/SportsDbLiveScore.cs": {
+    "mtime": 1789154301.2893193,
+    "seen": 1789160545.578214,
+    "ast_hash": "a0e3da081a6133b1f6d290976611ecd2",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/AppIcon/scorehub_icon.svg": {
+    "mtime": 1788951384.3343678,
+    "seen": 1789160545.584253,
+    "ast_hash": "4789f2b970270dea526f47fc54fcf9d9",
+    "semantic_hash": ""
+  },
+  "MAUI/DTO/Input/PredictionDTO.cs": {
+    "mtime": 1791983200.9725723,
+    "seen": 1791983564.912475,
+    "ast_hash": "829c595da2cc9d29f2e0586ebfefe62b",
+    "semantic_hash": ""
+  },
+  "MAUI/DTO/Output/SavePredictionRequestDTO.cs": {
+    "mtime": 1789908986.435739,
+    "seen": 1789909358.082687,
+    "ast_hash": "de5a733a3bedd8208afa6976b82eb6e3",
+    "semantic_hash": ""
+  },
+  "MAUI/Services/Interfaces/IPredictionApiService.cs": {
+    "mtime": 1791986409.7620096,
+    "seen": 1791986995.6623957,
+    "ast_hash": "d3231101b4528e6710e7e737813f5803",
+    "semantic_hash": ""
+  },
+  "MAUI/Services/PredictionApiService.cs": {
+    "mtime": 1791986409.9167516,
+    "seen": 1791986995.6624823,
+    "ast_hash": "cee5ce95dd0182be12a7de7dca3efc1b",
+    "semantic_hash": ""
+  },
+  "WebAPI/Controllers/PredictionsController.cs": {
+    "mtime": 1791986349.2960196,
+    "seen": 1791986995.6628916,
+    "ast_hash": "8c9253fb4ce0b9e925ec9f8263e6137b",
+    "semantic_hash": ""
+  },
+  "WebAPI/DTO/Input/SavePredictionDTO.cs": {
+    "mtime": 1789908920.7923665,
+    "seen": 1789909358.085109,
+    "ast_hash": "8c595deb23de8b1a1252fcc45777ff88",
+    "semantic_hash": ""
+  },
+  "WebAPI/DTO/Output/PredictionDTO.cs": {
+    "mtime": 1791983200.7826822,
+    "seen": 1791983564.9135468,
+    "ast_hash": "7c9e2ec6ec13f69eb84654749bcd97a7",
+    "semantic_hash": ""
+  },
+  "MAUI/DTO/Input/MyPredictionDTO.cs": {
+    "mtime": 1791981144.2099743,
+    "seen": 1791981462.1586547,
+    "ast_hash": "2a5c003e1f9dafc7f0231e3dfb9d2343",
+    "semantic_hash": ""
+  },
+  "WebAPI/DTO/Output/MyPredictionDTO.cs": {
+    "mtime": 1791980952.2134473,
+    "seen": 1791981462.1595738,
+    "ast_hash": "d41b13544161b767abe8ac21e3b78a1e",
+    "semantic_hash": ""
+  },
+  "DataAccess/Configurations/ChannelConfiguration.cs": {
+    "mtime": 1790165428.1904263,
+    "seen": 1790166147.5791,
+    "ast_hash": "f76c0301eff0444c32ab9d75883b0252",
+    "semantic_hash": ""
+  },
+  "DataAccess/Configurations/EventTvConfiguration.cs": {
+    "mtime": 1790165433.8297844,
+    "seen": 1790166147.5791547,
+    "ast_hash": "525e5cf51973e9c3abf6b6aaafa3e544",
+    "semantic_hash": ""
+  },
+  "DataAccess/Migrations/20260923121828_Baseline_PreEventTv.Designer.cs": {
+    "mtime": 1790165908.8204947,
+    "seen": 1790166147.5794234,
+    "ast_hash": "669f9d8e64447bed1678eb0a5f4eb293",
+    "semantic_hash": ""
+  },
+  "DataAccess/Migrations/20260923121828_Baseline_PreEventTv.cs": {
+    "mtime": 1790165908.8124573,
+    "seen": 1790166147.5794356,
+    "ast_hash": "a760d2b1310088798790f168f8ccdd53",
+    "semantic_hash": ""
+  },
+  "DataAccess/Migrations/20260923122006_AddEventTv.Designer.cs": {
+    "mtime": 1790166006.8982286,
+    "seen": 1790166147.5794473,
+    "ast_hash": "3d3e7d23fa5151cbc3357c60b8ee1bc1",
+    "semantic_hash": ""
+  },
+  "DataAccess/Migrations/20260923122006_AddEventTv.cs": {
+    "mtime": 1790166006.8962138,
+    "seen": 1790166147.579458,
+    "ast_hash": "7ebf062728d76e23227edc265e9f5c03",
+    "semantic_hash": ""
+  },
+  "Domain/Entities/Channel.cs": {
+    "mtime": 1790165417.372085,
+    "seen": 1790166147.5796165,
+    "ast_hash": "d25ec8e8fe3accc75dc577551ebfda83",
+    "semantic_hash": ""
+  },
+  "Domain/Entities/EventTv.cs": {
+    "mtime": 1790167539.511518,
+    "seen": 1790170746.0582767,
+    "ast_hash": "4e89af2bae095c221c669a522f3e0e6b",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ad.svg": {
+    "mtime": 1790158572.0,
+    "seen": 1790166147.5909872,
+    "ast_hash": "ecd056d068548937c4eefbce56fb332d",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ae.svg": {
+    "mtime": 1790158572.0,
+    "seen": 1790166147.5909944,
+    "ast_hash": "956b4f4b79831a21d5fe73b02fc746a2",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/af.svg": {
+    "mtime": 1790158572.0,
+    "seen": 1790166147.5909991,
+    "ast_hash": "645254d672bdd95806931d704441f47a",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ag.svg": {
+    "mtime": 1790158572.0,
+    "seen": 1790166147.591003,
+    "ast_hash": "2b9abaa53a66d1296f5a91ef98ad4ab9",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ai.svg": {
+    "mtime": 1790158572.0,
+    "seen": 1790166147.5910072,
+    "ast_hash": "17bc6c4d31ff1956f00a5e27474f4a49",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/al.svg": {
+    "mtime": 1790158572.0,
+    "seen": 1790166147.5910113,
+    "ast_hash": "6eef7622cecbab02f24192d8eba30bf7",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/am.svg": {
+    "mtime": 1790158572.0,
+    "seen": 1790166147.5910153,
+    "ast_hash": "39c5d05ed3ce2660746bf8ea995af707",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ao.svg": {
+    "mtime": 1790158572.0,
+    "seen": 1790166147.5910192,
+    "ast_hash": "a4970184e6f40587cf55192fc1f8c1a8",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/aq.svg": {
+    "mtime": 1790158572.0,
+    "seen": 1790166147.5910237,
+    "ast_hash": "5c7ea30ed8bb10bfb23c642051fa6b7e",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ar.svg": {
+    "mtime": 1790158572.0,
+    "seen": 1790166147.5910277,
+    "ast_hash": "1d7e00ff9865ea89b08d028b42baa503",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/arab.svg": {
+    "mtime": 1790158572.0,
+    "seen": 1790166147.5910318,
+    "ast_hash": "e793cfb17dafdb4d3e2c9dacc4a37142",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/as.svg": {
+    "mtime": 1790158572.0,
+    "seen": 1790166147.5910373,
+    "ast_hash": "f4e9b503f714fc513af5f1ea63f6b9ad",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/asean.svg": {
+    "mtime": 1790158572.0,
+    "seen": 1790166147.5910416,
+    "ast_hash": "ee4bca89d7823f3752da067d45208b78",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/at.svg": {
+    "mtime": 1790158572.0,
+    "seen": 1790166147.5910466,
+    "ast_hash": "a0e5865313bbfd0ee7411ad59832192b",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/au.svg": {
+    "mtime": 1790158572.0,
+    "seen": 1790166147.5910513,
+    "ast_hash": "26b17d670b64aafb25fdaecf3b74e934",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/aw.svg": {
+    "mtime": 1790158572.0,
+    "seen": 1790166147.5910554,
+    "ast_hash": "76fe9474d96a84a4f984697f84812eb2",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ax.svg": {
+    "mtime": 1790158572.0,
+    "seen": 1790166147.591059,
+    "ast_hash": "62ea912b0e8803281b06875985d1c656",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/az.svg": {
+    "mtime": 1790158572.0,
+    "seen": 1790166147.5910625,
+    "ast_hash": "e22a754269058c7dc7ba83044de5ede0",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ba.svg": {
+    "mtime": 1790158572.0,
+    "seen": 1790166147.5910661,
+    "ast_hash": "010ce0adb7de5e927813a3e1ad0eb39c",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/bb.svg": {
+    "mtime": 1790158572.0,
+    "seen": 1790166147.5910702,
+    "ast_hash": "26b1f97e2fd0732b7073d7d3d0331aec",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/bd.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.5910742,
+    "ast_hash": "e99cb11fdae12d94bce83d228b052dc3",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/be.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.591079,
+    "ast_hash": "0d72048ba90512a794c881b1b26fb5e0",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/bf.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.591083,
+    "ast_hash": "4755cc0eeffc214e72703111d483703f",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/bg.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.591087,
+    "ast_hash": "813f4105785ca18d96247198003fb0c2",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/bh.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.591092,
+    "ast_hash": "86725006a063c2db6d6b0ae08d2a2ae5",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/bi.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.5910969,
+    "ast_hash": "3f52178a68c68470929390c75a5b3d39",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/bj.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.5911014,
+    "ast_hash": "7f6166b56e8697232afee3eec2516b3e",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/bl.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.591106,
+    "ast_hash": "9dc30a69d4ead9865c5237c7855dd278",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/bm.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.59111,
+    "ast_hash": "32ab7b906816f99ea0318484ce768230",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/bn.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.591114,
+    "ast_hash": "1c077085a0ab3916ed5f6e73cfc3724d",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/bo.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.5911179,
+    "ast_hash": "710e9645532beaef5465fcf9d2c641d5",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/bq.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.5911229,
+    "ast_hash": "63fa6eef889e055a5af0496cf8c8adfe",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/br.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.5911279,
+    "ast_hash": "5fc02ad513bf2a2e04713f6a61daaa41",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/bs.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.5911326,
+    "ast_hash": "9fc1437aae317caf48c9cf57506978ab",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/bt.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.5911367,
+    "ast_hash": "db2d8ae2c0817bd2c05689bdcd47fda2",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/bv.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.5911405,
+    "ast_hash": "4a3cbeed34e0e6032a444b5069a94ff3",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/bw.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.5911448,
+    "ast_hash": "2f0ecfbb57512a7aa257a9695003e7d8",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/by.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.5911496,
+    "ast_hash": "eeab32ea4ba4bb9ed518ef5e26f0e409",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/bz.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.5911546,
+    "ast_hash": "dde2970543218e1a1d5448d1080f25ff",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ca.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.5911589,
+    "ast_hash": "8ce7bacf57b7f970b82fff0c1ee2e38f",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/cc.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.5911627,
+    "ast_hash": "4c518275a559ec514d2fdb4ac30e3f1f",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/cd.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.5911667,
+    "ast_hash": "b0b418db3a598e6fc240fe6dbda56de0",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/cefta.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.5911715,
+    "ast_hash": "e0e7f32f0b2bfa01a5ff612eaa23e8c7",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/cf.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.5911763,
+    "ast_hash": "99c6b22d8c18aaab72d05274aad88b9a",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/cg.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.5911798,
+    "ast_hash": "9a9941443b3fb1958cee56c5a5c41915",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ch.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.5911837,
+    "ast_hash": "269ddab4d19b9c60a6459c09ddfd48c9",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ci.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.591188,
+    "ast_hash": "71b3f6b842edddfcbd0c964f6c45d7f1",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ck.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.591192,
+    "ast_hash": "ae3ea163a41e7acc6ec68d293ee62911",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/cl.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.5911968,
+    "ast_hash": "e9b67a59841886e9b55fff67f1260909",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/cm.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.591201,
+    "ast_hash": "e97d922e36f1702627e033b6d936f143",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/cn.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.591205,
+    "ast_hash": "347824ed3b1806718c8881e7e2f13697",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/co.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.5912087,
+    "ast_hash": "eefa6c2cd269ce7da90dc5ac0d78a48a",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/cp.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.5912151,
+    "ast_hash": "8621f432232c7d0fe0a2660d04ed684c",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/cr.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.5912192,
+    "ast_hash": "8f9e3dcc8f47407f57dd2eca6721d415",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/cu.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.5912232,
+    "ast_hash": "1f1e7f63d2df2bece82506bfe888e15d",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/cv.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.591227,
+    "ast_hash": "f0add59ff3bbb8991c713261ccab8cb2",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/cw.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.5912316,
+    "ast_hash": "fa095496b50c4e4daca119cc11338051",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/cx.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.591236,
+    "ast_hash": "fa24dc0815520db2d8ad8aafa8a98fe1",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/cy.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.5912406,
+    "ast_hash": "11f5dd5f329227cfa7ea462821ad92d6",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/cz.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.5912447,
+    "ast_hash": "859f18a5acfd4e8d702a9b3d539dfd2d",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/de.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.591357,
+    "ast_hash": "e88d88604d655d0bd7059cf1fbd59ec2",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/dg.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.591362,
+    "ast_hash": "30a726a28a74b868170aecba714c3af4",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/dj.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.591366,
+    "ast_hash": "a77a7f76b479379c259d5e7f38462cd8",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/dk.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.5913706,
+    "ast_hash": "33bba71c12896b2df18901d98cf2b62c",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/dm.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.5913746,
+    "ast_hash": "bffb3422c8e72c85918baca34e21937c",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/do.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.5913794,
+    "ast_hash": "297d8d321e21a475f703e2b050ef41b4",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/dz.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.5913835,
+    "ast_hash": "b37c4fcf5782f19c46c24f834a141bb1",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/eac.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.591388,
+    "ast_hash": "16f19f09d1dfc195df7b1ce7f986d44b",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ec.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.5913925,
+    "ast_hash": "670e1025534132cdcef6dae7930de81a",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ee.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5913966,
+    "ast_hash": "cb347ee463040a1f730374ff29beb730",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/eg.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.591401,
+    "ast_hash": "d7bb81afd5a3c3bb54dd3477f4777315",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/eh.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5914056,
+    "ast_hash": "9429f8630905a34bf96fa1631dfeb847",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/er.svg": {
+    "mtime": 1790158574.0,
+    "seen": 1790166147.59141,
+    "ast_hash": "6d661bc292974a5050962bd98323e09a",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/es-ct.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.591414,
+    "ast_hash": "3eb3a35a978070fd4a68db545c527b54",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/es-ga.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5914178,
+    "ast_hash": "ef99a555b2717706ad773de500a9e244",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/es-pv.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5914226,
+    "ast_hash": "b98fc13308678165cb8230b1e4bea60a",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/es.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5914264,
+    "ast_hash": "e3ee044c3d0dd611613075a24e7639ae",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/et.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5914311,
+    "ast_hash": "4e95cb382ed9d13e3e6be16c2ad09a18",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/eu.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5914364,
+    "ast_hash": "2eba7797bc8552cb2b4cc1e200657bff",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/fi.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5914407,
+    "ast_hash": "0e5ef3f583daa1a415330bed83ce8c4a",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/fj.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5914447,
+    "ast_hash": "5487b64cfff710d75493227f1085cf1f",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/fk.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5914485,
+    "ast_hash": "4a7ecaccb62942ddb363240698d44dbb",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/fm.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.591453,
+    "ast_hash": "97c5bb37d4fd9285c80c3809c9dedde6",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/fo.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5914588,
+    "ast_hash": "3f2be9ccbe5a3d0cef9da5c7044bba60",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/fr.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5914629,
+    "ast_hash": "ed733e43e399b1c35945f2c87bfc57f0",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ga.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5914674,
+    "ast_hash": "f64e29ed68d2165d3620d53978933bb6",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/gb-eng.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5914714,
+    "ast_hash": "7caecb785400d1cca7b319887a9d81bf",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/gb-nir.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5914755,
+    "ast_hash": "d7bd7dfda1671592433372c74ac7adf3",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/gb-sct.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5914798,
+    "ast_hash": "ade55ed456211d6577b2f80c06e40c51",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/gb-wls.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5914838,
+    "ast_hash": "a9f3880f26c469eb5031cce59fef8cc4",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/gb.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5914884,
+    "ast_hash": "6dcadf6916764560c2f1fec586e2c1de",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/gd.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.591493,
+    "ast_hash": "9c4ac524465c01439a799491819b6336",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ge.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5914967,
+    "ast_hash": "e7868570044eb45c42c248f5c6c0b9fb",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/gf.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.591501,
+    "ast_hash": "333751e55034c41c3e59a55e47c2edb1",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/gg.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5915048,
+    "ast_hash": "6a608369d5207ef50ef840171aef8d40",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/gh.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.591509,
+    "ast_hash": "a64592b4513a2648c11e6e00d1a1d158",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/gi.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5915127,
+    "ast_hash": "5a955a33f6273d071c177fc51a7a3ba3",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/gl.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.591517,
+    "ast_hash": "c6090a99ab0402116f4ab70719eb034a",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/gm.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5915213,
+    "ast_hash": "21b07ec656b24882173b9760792b7691",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/gn.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.591525,
+    "ast_hash": "f1d6c153def70087cff4f84c49ee2fb2",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/gp.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.59153,
+    "ast_hash": "0973d50eb05aff4255d8e499c45c5ed3",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/gq.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5915344,
+    "ast_hash": "b6c53ed0903ff6ab665b7dd6dce6f627",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/gr.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5915382,
+    "ast_hash": "71452bbd08d693543125cc15f5943637",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/gs.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.591542,
+    "ast_hash": "136357c70b0710ea49cb4323b2cee08b",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/gt.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5915458,
+    "ast_hash": "8e3df51f8ddc895d72a5450e7ac0e0a7",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/gu.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5915499,
+    "ast_hash": "9a7232b684321a8d4fdc07a6417b1fa3",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/gw.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5915537,
+    "ast_hash": "9e32ba13d46c36531bfc3511d54e521d",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/gy.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.591558,
+    "ast_hash": "6cd4096e5ba2f34748e7938f6f1b075c",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/hk.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5915618,
+    "ast_hash": "406844d22310061e566f2e82f743e014",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/hm.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5915656,
+    "ast_hash": "d13f9cb35336040cbd9648c88f9d4ada",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/hn.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5915694,
+    "ast_hash": "57160f534d227ae78c5cb8381a75a37b",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/hr.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5915732,
+    "ast_hash": "5314bd175ad41aa5c42b8e41e2af7173",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ht.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.591577,
+    "ast_hash": "a236a3c5e1a7a5de7aec84e97442e609",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/hu.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.591581,
+    "ast_hash": "68ec601ef40d20102c56813e84d99bec",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ic.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5915854,
+    "ast_hash": "bdc9877c5d42dfa5adcfb488fcbf153c",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/id.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.59159,
+    "ast_hash": "f5aa812145ee85fa05e5f2b62bdf030e",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ie.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.591594,
+    "ast_hash": "1c12635a2932de4b8036779933a84d97",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/il.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5915978,
+    "ast_hash": "c0a0925b76528c896afcf1b113bcc366",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/im.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5916016,
+    "ast_hash": "4843ed7a5eb0ba3f583bf434c8ef6ac9",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/in.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5916054,
+    "ast_hash": "230b82c4b877a6af4ea17b5e9d751b9a",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/io.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5916092,
+    "ast_hash": "8b90fd988d46280c2cf199d77ec24c6d",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/iq.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5916133,
+    "ast_hash": "6cd7b49b35b15d74cdcfce844064d132",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ir.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5916173,
+    "ast_hash": "1348920da6e96ada40978fd661eba1f9",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/is.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5916214,
+    "ast_hash": "dd9622551b169bddb9e9f99d9b97cb54",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/it.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5916252,
+    "ast_hash": "1d72a5dec3acd073763570e3e5fdf784",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/je.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5916288,
+    "ast_hash": "002cf78b1f53c47a4c353292af6b4709",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/jm.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5916328,
+    "ast_hash": "4370e5279f135a52435cb1435fb51d25",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/jo.svg": {
+    "mtime": 1790158576.0,
+    "seen": 1790166147.5916367,
+    "ast_hash": "8523785fa25192569f1fad7b5b4d2d57",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/jp.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5916402,
+    "ast_hash": "22e3b3a4abbb24945620817fd27ed7db",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ke.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.591644,
+    "ast_hash": "6e6a47cb574c6895a0e7086cb52390a1",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/kg.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.591648,
+    "ast_hash": "4dcff8d78decbebe37a365bd423475be",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/kh.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.591652,
+    "ast_hash": "1732afe3e1a37bb2f1992690653b2337",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ki.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5916564,
+    "ast_hash": "f5ac88c13d4fa16a406c5c7c3bd56da0",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/km.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5916603,
+    "ast_hash": "a68238693856a7f909ce0bad9ab9e8fd",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/kn.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5916646,
+    "ast_hash": "170a2ee40bdc3edacff21c6dacd1964b",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/kp.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5916684,
+    "ast_hash": "de1ff54929a738623cb053e25d98c806",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/kr.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5916727,
+    "ast_hash": "2a183310b78d3d4fe57f88abcc491fcd",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/kw.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5916765,
+    "ast_hash": "2e0484c010807a0dca638bca095f76f5",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ky.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5916812,
+    "ast_hash": "4351dd3144851b98b81e45000597427b",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/kz.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5916858,
+    "ast_hash": "b048e9ddace203518e64f4999bf9df8e",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/la.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5916896,
+    "ast_hash": "038868d86f685b19f34bad6d7169c4df",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/lb.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5916936,
+    "ast_hash": "8ac6140b65128cd68fc10e8c9c072ded",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/lc.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5916975,
+    "ast_hash": "dfc467ded9d00d68e775e15337fe5214",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/li.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5917015,
+    "ast_hash": "e2d8b339351d627308fc46ce3d4a61b4",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/lk.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5917056,
+    "ast_hash": "b36959d910d1aed36bf660fe2cb0f60d",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/lr.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5917096,
+    "ast_hash": "8483351ab6b981aae3b236c79ac62753",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ls.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.591714,
+    "ast_hash": "0ed298ed0de87d001d82365008bbcdd2",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/lt.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5917175,
+    "ast_hash": "7e7110b65bbe5cbfb8a84a0e5f68284e",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/lu.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5917213,
+    "ast_hash": "e2fc15cc49d1afe3ef9fc92004464f19",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/lv.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5917253,
+    "ast_hash": "58bcf8e17f8f15747b78d4dc4cedbeca",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ly.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5917296,
+    "ast_hash": "b180a3a13fbcd16816afecf0cf994609",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ma.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5917337,
+    "ast_hash": "a2e6a76e5f38058fd28b706beeb6a1b7",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/mc.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5917377,
+    "ast_hash": "acbf04f75fb877d1c2aef0f553c8d629",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/md.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.591742,
+    "ast_hash": "b8414a95271e7968e46f622b37737a08",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/me.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5917463,
+    "ast_hash": "80c3a3fe41ea4233fe8558ac3938bc07",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/mf.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5917504,
+    "ast_hash": "308936fb3b99c9f642a531cb98876560",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/mg.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5917544,
+    "ast_hash": "7a54f12dc753217b1c0aaa7bf685f9fe",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/mh.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5917585,
+    "ast_hash": "b4e4c149e97d696789949136387f2840",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/mk.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5917625,
+    "ast_hash": "b96b8a63c2939ef1e4cebb9585908591",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ml.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5917666,
+    "ast_hash": "1dd7a9ccbcd179a5a3fba550970ad75c",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/mm.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5917702,
+    "ast_hash": "c22f7c51912ae5c86cc9b9a61def3be9",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/mn.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5917747,
+    "ast_hash": "e6640c18ac6f349b6400f596c42d6c6b",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/mo.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5917785,
+    "ast_hash": "7df71c725bcb0587a7918896aad378c8",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/mp.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5917826,
+    "ast_hash": "7dfee37acc6938a50e59d0419c4c17eb",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/mq.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5917864,
+    "ast_hash": "1a77ee1805087d17c9b4bf21ad372a1b",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/mr.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5917914,
+    "ast_hash": "e06ac425a27488d82d93de2e9ac05293",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ms.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5917962,
+    "ast_hash": "324434779ce1bbe0f611ae7c5c3a1755",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/mt.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5918002,
+    "ast_hash": "222b42d001de2a0f071a27621cb038e5",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/mu.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5918038,
+    "ast_hash": "46514c8008dc3564e49eaa790f28e255",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/mv.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.591808,
+    "ast_hash": "44a3b21f0ab17367c095a8798f7cc4da",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/mw.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5918114,
+    "ast_hash": "59ec0e8339665d309116b12d39b9baf1",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/mx.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5918155,
+    "ast_hash": "281bf244efba667fefc3479788b0f01f",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/my.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5918195,
+    "ast_hash": "6175b67f2c004626cbb214c9b52c5bc4",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/mz.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5918238,
+    "ast_hash": "966fd28d247169146755072b86b90668",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/na.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5918279,
+    "ast_hash": "f770c272591ef4e6a20819cb32532799",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/nc.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.591832,
+    "ast_hash": "40f05fd024c99dbd3cf08dcca093c98f",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ne.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.591836,
+    "ast_hash": "5c109026a107f910512b09e208a90538",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/nf.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5918403,
+    "ast_hash": "8f7397ffa12755119ef349fddd280e8f",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ng.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5918448,
+    "ast_hash": "9eea84efdc0eb2553b9d3502feac044d",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ni.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5918486,
+    "ast_hash": "616b5049f9d7f851e9b961c848214537",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/nl.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5918534,
+    "ast_hash": "8c9bb5ae9234eb56f35372409f204c95",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/no.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5918574,
+    "ast_hash": "859a13561a1b24bfa65fb1a03835da49",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/np.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5918622,
+    "ast_hash": "218bd7570bc9da97ffa7abec43ab5b63",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/nr.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.5918667,
+    "ast_hash": "b3fdadbc923b5a447ec89bca7c69d213",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/nu.svg": {
+    "mtime": 1790158578.0,
+    "seen": 1790166147.591871,
+    "ast_hash": "bfd6de48e40574ec6d86c6e0589baa48",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/nz.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5918748,
+    "ast_hash": "229d2fadba8d00df102927eae199d46f",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/om.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5918791,
+    "ast_hash": "1c751fd3d5fe291da7bde71c3d4e9a36",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/pa.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.591883,
+    "ast_hash": "429c3af6225d19ace066318045360d30",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/pc.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5918868,
+    "ast_hash": "008b14946b0305744becdc2bdaf18016",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/pe.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.591891,
+    "ast_hash": "5156eee1494fa9ccb9ff78c95f6053d0",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/pf.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5918958,
+    "ast_hash": "099cb9160e10e223f4aad5aea9ee83b4",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/pg.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5918999,
+    "ast_hash": "dbf16b180cf775e38aae810eb84357be",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ph.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5919034,
+    "ast_hash": "d8046bd209c4750f7a67beb68f780dd1",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/pk.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5919075,
+    "ast_hash": "85c810a1e00ecd4abd72535308d492af",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/pl.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5919118,
+    "ast_hash": "eb78891d42816fa7daa1957fa56bbe3a",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/pm.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5919156,
+    "ast_hash": "6999a852eb77bd0a5218ccc09be1c215",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/pn.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5919192,
+    "ast_hash": "a7dcc7fff87666cff39c724f73ec54e4",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/pr.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.591923,
+    "ast_hash": "3d6afa7282f19e68fe5ef48648bc6dce",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ps.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5919268,
+    "ast_hash": "5565202f90be94cb7a0e3dd6d6c7a771",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/pt.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.591931,
+    "ast_hash": "f0f95b343296722c38dc0857f3a4c73d",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/pw.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.591935,
+    "ast_hash": "98481f768696b21b1cefe1c2a3c83fb7",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/py.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5919397,
+    "ast_hash": "7253dbde29c1216a996c9ea9853df2c0",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/qa.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5919442,
+    "ast_hash": "6b0bfc63e28cf03deb8794d8c8ad8460",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/re.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5919483,
+    "ast_hash": "93aac5219d4b4cce2df6460ee023daed",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ro.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5919518,
+    "ast_hash": "e9130a28a9ba2b93433f21a2cd5971f3",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/rs.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5919552,
+    "ast_hash": "364865911c6e1ae8992ccd031eb5a7af",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ru.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5919585,
+    "ast_hash": "8b2aa18f6e17aa2982e800c462781698",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/rw.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.591962,
+    "ast_hash": "32931738c195dc60323ab760f3b3b720",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/sa.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5919662,
+    "ast_hash": "242c5a79405f4d1e5bd9ef1b82caa9cc",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/sb.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5919702,
+    "ast_hash": "54215c8c6e4973b16535240f796b55a6",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/sc.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5919743,
+    "ast_hash": "ab4767bc4088728a6841e7e578f6c7a8",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/sd.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5919785,
+    "ast_hash": "00f69acaade5d14c00e36d841b5e9b23",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/se.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5919826,
+    "ast_hash": "79da0f189e8fb82d6e148a77b5690e14",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/sg.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5919874,
+    "ast_hash": "b8d345820ac52f8187155ff5c79ef5b0",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/sh-ac.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5919917,
+    "ast_hash": "4f7d31d4de0ea70ab4472b4ec753c676",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/sh-hl.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5919964,
+    "ast_hash": "2a642f9a803833cd884c3f336d60652f",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/sh-ta.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5920002,
+    "ast_hash": "f4b69bfde175eb7418b6d5f8882ac6c2",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/sh.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.592005,
+    "ast_hash": "d264f1845336248617b786cb0e07d5aa",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/si.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.592009,
+    "ast_hash": "f6c5b9027d884d9d96ad22cc65a83a49",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/sj.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5920131,
+    "ast_hash": "5b6dddaf6a82ad8090d313f3088b7e2d",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/sk.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5920174,
+    "ast_hash": "2c0bed77082c2e388a9b3d8bfed51be3",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/sl.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.592021,
+    "ast_hash": "af0884d411f36ff8e0fb199a00b70691",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/sm.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5920246,
+    "ast_hash": "253adf4b0d2ac68733caea280eacb1a1",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/sn.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5920286,
+    "ast_hash": "091e42c6f8d95a1740ff343dcec62c7a",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/so.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5920336,
+    "ast_hash": "3f60af6c70394d4b58d19f9873151a82",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/sr.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.592038,
+    "ast_hash": "07e91c157e4b9e240d9b004da3529f08",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ss.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.592042,
+    "ast_hash": "0678d330e69d1c83ed22e43b987a8554",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/st.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5920465,
+    "ast_hash": "7435c1629c29775dd2c9a81bb858a9e2",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/sv.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5920498,
+    "ast_hash": "e22d24982ee97b270ce1fc04c238dc2a",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/sx.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5920534,
+    "ast_hash": "dc1d74ce5dbf399e5692d0e9bc7b3d18",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/sy.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.592057,
+    "ast_hash": "3eb9d0f06233d918805e757d70d66840",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/sz.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5920606,
+    "ast_hash": "6b46b244d5da5de47b9710d86d2a1d11",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/tc.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.592064,
+    "ast_hash": "ffc069871ba7771c6439182ca40d1078",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/td.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5920675,
+    "ast_hash": "983e8a4ce97f1e3c1cf0e01ee2bc1a74",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/tf.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.592071,
+    "ast_hash": "3cdeba0c214a07003512752047e6ed9f",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/tg.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5920749,
+    "ast_hash": "0d34bdaacc8417e527320642b4c1c691",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/th.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5920777,
+    "ast_hash": "bcc03a3cd1a367274a2444aff71c0a68",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/tj.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5920813,
+    "ast_hash": "7321ab191e13ad2f8956ae31fc3d356a",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/tk.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5920844,
+    "ast_hash": "c868bd901f17042f63d97266d2f3055f",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/tl.svg": {
+    "mtime": 1790158580.0,
+    "seen": 1790166147.5920882,
+    "ast_hash": "ed0c55931d9e4acaa3232a6fd90ecdd1",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/tm.svg": {
+    "mtime": 1790158582.0,
+    "seen": 1790166147.5920916,
+    "ast_hash": "04873ec1b2d0f87010981399f92e4cbe",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/tn.svg": {
+    "mtime": 1790158582.0,
+    "seen": 1790166147.5920951,
+    "ast_hash": "1e2cfb1bfd06ab00b1a5ac9263b7c444",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/to.svg": {
+    "mtime": 1790158582.0,
+    "seen": 1790166147.5921,
+    "ast_hash": "cccdba4c3dfd080aeda7302c23588c7a",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/tr.svg": {
+    "mtime": 1790158582.0,
+    "seen": 1790166147.5921037,
+    "ast_hash": "a00c7dfb9e8aad298b6bc1ce656dd9ef",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/tt.svg": {
+    "mtime": 1790158582.0,
+    "seen": 1790166147.592107,
+    "ast_hash": "12c225a0602ef42490ab814b5ade9274",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/tv.svg": {
+    "mtime": 1790158582.0,
+    "seen": 1790166147.5921104,
+    "ast_hash": "c75afdde63ae0e1e205c5dfd653afffe",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/tw.svg": {
+    "mtime": 1790158582.0,
+    "seen": 1790166147.5921142,
+    "ast_hash": "a4b47fff88d0596123054bb88aaa2ca2",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/tz.svg": {
+    "mtime": 1790158582.0,
+    "seen": 1790166147.5921183,
+    "ast_hash": "52d064016a82b03c1e59cdfc054ab303",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ua.svg": {
+    "mtime": 1790158582.0,
+    "seen": 1790166147.5921226,
+    "ast_hash": "2c111ca775580133f57a91988af3eb81",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ug.svg": {
+    "mtime": 1790158582.0,
+    "seen": 1790166147.592127,
+    "ast_hash": "5090179bc7a21448ec49d70179c8d074",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/um.svg": {
+    "mtime": 1790158582.0,
+    "seen": 1790166147.5921307,
+    "ast_hash": "f2ba7f8f8ad272e4335c51579b0b1025",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/un.svg": {
+    "mtime": 1790158582.0,
+    "seen": 1790166147.592134,
+    "ast_hash": "c3b2aac401d548c7cf39b27d8ec7d153",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/us.svg": {
+    "mtime": 1790158582.0,
+    "seen": 1790166147.5921376,
+    "ast_hash": "1d23b9509d0a0a828e3071096b0d2edf",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/uy.svg": {
+    "mtime": 1790158582.0,
+    "seen": 1790166147.5921414,
+    "ast_hash": "7942bb43f1e2a75c4d81d7a2c569faef",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/uz.svg": {
+    "mtime": 1790158582.0,
+    "seen": 1790166147.592145,
+    "ast_hash": "c4be51bb2b634168ef4325784b53bf62",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/va.svg": {
+    "mtime": 1790158582.0,
+    "seen": 1790166147.5921485,
+    "ast_hash": "84dec055eb4e7f2bb4ca324051eb892f",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/vc.svg": {
+    "mtime": 1790158582.0,
+    "seen": 1790166147.5921524,
+    "ast_hash": "4bde18df266caa82f34338109dc9dd95",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ve.svg": {
+    "mtime": 1790158582.0,
+    "seen": 1790166147.5921562,
+    "ast_hash": "5a76b2497118fb0435b2f5845717b9b0",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/vg.svg": {
+    "mtime": 1790158582.0,
+    "seen": 1790166147.59216,
+    "ast_hash": "21d0dec21e188f57a9d0f8e1ec0e4029",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/vi.svg": {
+    "mtime": 1790158582.0,
+    "seen": 1790166147.5921633,
+    "ast_hash": "72221c5155f9cad3ab2239068ab34f93",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/vn.svg": {
+    "mtime": 1790158582.0,
+    "seen": 1790166147.5921674,
+    "ast_hash": "076d59568fc7a8ab59bc51ee7a39f956",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/vu.svg": {
+    "mtime": 1790158582.0,
+    "seen": 1790166147.5921717,
+    "ast_hash": "14e6f23d4af642dadbed0ff480a8128b",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/wf.svg": {
+    "mtime": 1790158582.0,
+    "seen": 1790166147.5921757,
+    "ast_hash": "a3008b9d6f65356b95cf8f465b3eddc4",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ws.svg": {
+    "mtime": 1790158582.0,
+    "seen": 1790166147.5921798,
+    "ast_hash": "096fc50015e936e5ef310183baab82ca",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/xk.svg": {
+    "mtime": 1790158582.0,
+    "seen": 1790166147.592184,
+    "ast_hash": "a8e4f500a18c4ec5e8dec2540dbe2c55",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/xx.svg": {
+    "mtime": 1790158582.0,
+    "seen": 1790166147.5921884,
+    "ast_hash": "c15ffa45806fe02417d2bd22e6bd4fca",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/ye.svg": {
+    "mtime": 1790158582.0,
+    "seen": 1790166147.5921917,
+    "ast_hash": "b45153c68c2d4ccaea6553357ca603c7",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/yt.svg": {
+    "mtime": 1790158582.0,
+    "seen": 1790166147.5921955,
+    "ast_hash": "38abb75fbdee89e313565bf814710692",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/za.svg": {
+    "mtime": 1790158582.0,
+    "seen": 1790166147.5921993,
+    "ast_hash": "da9e50f2ae3cc80343b9be4f2a5f599d",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/zm.svg": {
+    "mtime": 1790158582.0,
+    "seen": 1790166147.592203,
+    "ast_hash": "14fe4bb777477c582f360befb3034ec6",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags svgs/zw.svg": {
+    "mtime": 1790158582.0,
+    "seen": 1790166147.5922062,
+    "ast_hash": "bcaa4841520ad37f49b24fbac83307c7",
+    "semantic_hash": ""
+  },
+  "Infrastructure/Integrations/DTO/SportsDbEventTv.cs": {
+    "mtime": 1790367627.0039256,
+    "seen": 1790367761.8141763,
+    "ast_hash": "2bba8116af4af4cf1dc1c914cf0de317",
+    "semantic_hash": ""
+  },
+  "MAUI/Helpers/CountryFlagHelper.cs": {
+    "mtime": 1790367358.4544797,
+    "seen": 1790367761.8146343,
+    "ast_hash": "dd26d0b0b1254a0bbd0c8560e0424efb",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ad.svg": {
+    "mtime": 1790367357.564498,
+    "seen": 1790367761.8255818,
+    "ast_hash": "ecd056d068548937c4eefbce56fb332d",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ae.svg": {
+    "mtime": 1790367357.564498,
+    "seen": 1790367761.8255887,
+    "ast_hash": "956b4f4b79831a21d5fe73b02fc746a2",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_af.svg": {
+    "mtime": 1790367357.564498,
+    "seen": 1790367761.8255942,
+    "ast_hash": "645254d672bdd95806931d704441f47a",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ag.svg": {
+    "mtime": 1790367357.57254,
+    "seen": 1790367761.8255992,
+    "ast_hash": "2b9abaa53a66d1296f5a91ef98ad4ab9",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ai.svg": {
+    "mtime": 1790367357.574565,
+    "seen": 1790367761.8256042,
+    "ast_hash": "17bc6c4d31ff1956f00a5e27474f4a49",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_al.svg": {
+    "mtime": 1790367357.574565,
+    "seen": 1790367761.8256094,
+    "ast_hash": "6eef7622cecbab02f24192d8eba30bf7",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_am.svg": {
+    "mtime": 1790367357.574565,
+    "seen": 1790367761.8256147,
+    "ast_hash": "39c5d05ed3ce2660746bf8ea995af707",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ao.svg": {
+    "mtime": 1790367357.5825956,
+    "seen": 1790367761.8256202,
+    "ast_hash": "a4970184e6f40587cf55192fc1f8c1a8",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ar.svg": {
+    "mtime": 1790367357.5846243,
+    "seen": 1790367761.8256266,
+    "ast_hash": "1d7e00ff9865ea89b08d028b42baa503",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_as.svg": {
+    "mtime": 1790367357.5846243,
+    "seen": 1790367761.8256314,
+    "ast_hash": "f4e9b503f714fc513af5f1ea63f6b9ad",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_at.svg": {
+    "mtime": 1790367357.5846243,
+    "seen": 1790367761.8256361,
+    "ast_hash": "a0e5865313bbfd0ee7411ad59832192b",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_au.svg": {
+    "mtime": 1790367357.5846243,
+    "seen": 1790367761.8256416,
+    "ast_hash": "26b17d670b64aafb25fdaecf3b74e934",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_aw.svg": {
+    "mtime": 1790367357.594704,
+    "seen": 1790367761.825647,
+    "ast_hash": "76fe9474d96a84a4f984697f84812eb2",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_az.svg": {
+    "mtime": 1790367357.594704,
+    "seen": 1790367761.8256521,
+    "ast_hash": "e22a754269058c7dc7ba83044de5ede0",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ba.svg": {
+    "mtime": 1790367357.594704,
+    "seen": 1790367761.8256571,
+    "ast_hash": "010ce0adb7de5e927813a3e1ad0eb39c",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_bb.svg": {
+    "mtime": 1790367357.594704,
+    "seen": 1790367761.8256626,
+    "ast_hash": "26b1f97e2fd0732b7073d7d3d0331aec",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_bd.svg": {
+    "mtime": 1790367357.6027298,
+    "seen": 1790367761.825668,
+    "ast_hash": "e99cb11fdae12d94bce83d228b052dc3",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_be.svg": {
+    "mtime": 1790367357.604752,
+    "seen": 1790367761.825673,
+    "ast_hash": "0d72048ba90512a794c881b1b26fb5e0",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_bf.svg": {
+    "mtime": 1790367357.604752,
+    "seen": 1790367761.825679,
+    "ast_hash": "4755cc0eeffc214e72703111d483703f",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_bg.svg": {
+    "mtime": 1790367357.604752,
+    "seen": 1790367761.825685,
+    "ast_hash": "813f4105785ca18d96247198003fb0c2",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_bh.svg": {
+    "mtime": 1790367357.6148329,
+    "seen": 1790367761.8256912,
+    "ast_hash": "86725006a063c2db6d6b0ae08d2a2ae5",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_bi.svg": {
+    "mtime": 1790367357.622859,
+    "seen": 1790367761.8257675,
+    "ast_hash": "3f52178a68c68470929390c75a5b3d39",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_bj.svg": {
+    "mtime": 1790367357.6298985,
+    "seen": 1790367761.8257818,
+    "ast_hash": "7f6166b56e8697232afee3eec2516b3e",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_bm.svg": {
+    "mtime": 1790367357.634946,
+    "seen": 1790367761.8257875,
+    "ast_hash": "32ab7b906816f99ea0318484ce768230",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_bn.svg": {
+    "mtime": 1790367357.644994,
+    "seen": 1790367761.8257933,
+    "ast_hash": "1c077085a0ab3916ed5f6e73cfc3724d",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_bo.svg": {
+    "mtime": 1790367357.644994,
+    "seen": 1790367761.8258002,
+    "ast_hash": "710e9645532beaef5465fcf9d2c641d5",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_br.svg": {
+    "mtime": 1790367357.644994,
+    "seen": 1790367761.8258564,
+    "ast_hash": "5fc02ad513bf2a2e04713f6a61daaa41",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_bs.svg": {
+    "mtime": 1790367357.6550665,
+    "seen": 1790367761.8258655,
+    "ast_hash": "9fc1437aae317caf48c9cf57506978ab",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_bt.svg": {
+    "mtime": 1790367357.6550665,
+    "seen": 1790367761.8258705,
+    "ast_hash": "db2d8ae2c0817bd2c05689bdcd47fda2",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_bw.svg": {
+    "mtime": 1790367357.6550665,
+    "seen": 1790367761.8259056,
+    "ast_hash": "2f0ecfbb57512a7aa257a9695003e7d8",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_by.svg": {
+    "mtime": 1790367357.6550665,
+    "seen": 1790367761.825919,
+    "ast_hash": "eeab32ea4ba4bb9ed518ef5e26f0e409",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_bz.svg": {
+    "mtime": 1790367357.6651142,
+    "seen": 1790367761.8259254,
+    "ast_hash": "dde2970543218e1a1d5448d1080f25ff",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ca.svg": {
+    "mtime": 1790367357.6651142,
+    "seen": 1790367761.825931,
+    "ast_hash": "8ce7bacf57b7f970b82fff0c1ee2e38f",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_cd.svg": {
+    "mtime": 1790367357.6651142,
+    "seen": 1790367761.8259363,
+    "ast_hash": "b0b418db3a598e6fc240fe6dbda56de0",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_cf.svg": {
+    "mtime": 1790367357.6651142,
+    "seen": 1790367761.8259418,
+    "ast_hash": "99c6b22d8c18aaab72d05274aad88b9a",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_cg.svg": {
+    "mtime": 1790367357.6651142,
+    "seen": 1790367761.8259473,
+    "ast_hash": "9a9941443b3fb1958cee56c5a5c41915",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ch.svg": {
+    "mtime": 1790367357.6751757,
+    "seen": 1790367761.8259537,
+    "ast_hash": "269ddab4d19b9c60a6459c09ddfd48c9",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ci.svg": {
+    "mtime": 1790367357.6751757,
+    "seen": 1790367761.8259597,
+    "ast_hash": "71b3f6b842edddfcbd0c964f6c45d7f1",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ck.svg": {
+    "mtime": 1790367357.6751757,
+    "seen": 1790367761.8259652,
+    "ast_hash": "ae3ea163a41e7acc6ec68d293ee62911",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_cl.svg": {
+    "mtime": 1790367357.6832004,
+    "seen": 1790367761.825971,
+    "ast_hash": "e9b67a59841886e9b55fff67f1260909",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_cm.svg": {
+    "mtime": 1790367357.6852238,
+    "seen": 1790367761.8259764,
+    "ast_hash": "e97d922e36f1702627e033b6d936f143",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_cn.svg": {
+    "mtime": 1790367357.6852238,
+    "seen": 1790367761.8259816,
+    "ast_hash": "347824ed3b1806718c8881e7e2f13697",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_co.svg": {
+    "mtime": 1790367357.6852238,
+    "seen": 1790367761.8259869,
+    "ast_hash": "eefa6c2cd269ce7da90dc5ac0d78a48a",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_cr.svg": {
+    "mtime": 1790367357.6852238,
+    "seen": 1790367761.825992,
+    "ast_hash": "8f9e3dcc8f47407f57dd2eca6721d415",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_cu.svg": {
+    "mtime": 1790367357.6932764,
+    "seen": 1790367761.8259969,
+    "ast_hash": "1f1e7f63d2df2bece82506bfe888e15d",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_cv.svg": {
+    "mtime": 1790367357.6952991,
+    "seen": 1790367761.8260024,
+    "ast_hash": "f0add59ff3bbb8991c713261ccab8cb2",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_cw.svg": {
+    "mtime": 1790367357.6952991,
+    "seen": 1790367761.8260076,
+    "ast_hash": "fa095496b50c4e4daca119cc11338051",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_cy.svg": {
+    "mtime": 1790367357.6952991,
+    "seen": 1790367761.8260126,
+    "ast_hash": "11f5dd5f329227cfa7ea462821ad92d6",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_cz.svg": {
+    "mtime": 1790367357.703329,
+    "seen": 1790367761.826018,
+    "ast_hash": "859f18a5acfd4e8d702a9b3d539dfd2d",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_de.svg": {
+    "mtime": 1790367357.7053452,
+    "seen": 1790367761.8260233,
+    "ast_hash": "e88d88604d655d0bd7059cf1fbd59ec2",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_dj.svg": {
+    "mtime": 1790367357.7083662,
+    "seen": 1790367761.8260283,
+    "ast_hash": "a77a7f76b479379c259d5e7f38462cd8",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_dk.svg": {
+    "mtime": 1790367357.7083662,
+    "seen": 1790367761.8260338,
+    "ast_hash": "33bba71c12896b2df18901d98cf2b62c",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_dm.svg": {
+    "mtime": 1790367357.7133918,
+    "seen": 1790367761.826039,
+    "ast_hash": "bffb3422c8e72c85918baca34e21937c",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_do.svg": {
+    "mtime": 1790367357.7154183,
+    "seen": 1790367761.8260443,
+    "ast_hash": "297d8d321e21a475f703e2b050ef41b4",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_dz.svg": {
+    "mtime": 1790367357.7154183,
+    "seen": 1790367761.8260498,
+    "ast_hash": "b37c4fcf5782f19c46c24f834a141bb1",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ec.svg": {
+    "mtime": 1790367357.7154183,
+    "seen": 1790367761.8260555,
+    "ast_hash": "670e1025534132cdcef6dae7930de81a",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ee.svg": {
+    "mtime": 1790367357.7234502,
+    "seen": 1790367761.8260608,
+    "ast_hash": "cb347ee463040a1f730374ff29beb730",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_eg.svg": {
+    "mtime": 1790367357.725488,
+    "seen": 1790367761.8260663,
+    "ast_hash": "d7bb81afd5a3c3bb54dd3477f4777315",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_er.svg": {
+    "mtime": 1790367357.7300057,
+    "seen": 1790367761.8260722,
+    "ast_hash": "6d661bc292974a5050962bd98323e09a",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_es.svg": {
+    "mtime": 1790367357.7335348,
+    "seen": 1790367761.8260775,
+    "ast_hash": "e3ee044c3d0dd611613075a24e7639ae",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_et.svg": {
+    "mtime": 1790367357.735561,
+    "seen": 1790367761.8260822,
+    "ast_hash": "4e95cb382ed9d13e3e6be16c2ad09a18",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_fi.svg": {
+    "mtime": 1790367357.735561,
+    "seen": 1790367761.8260872,
+    "ast_hash": "0e5ef3f583daa1a415330bed83ce8c4a",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_fj.svg": {
+    "mtime": 1790367357.735561,
+    "seen": 1790367761.8260922,
+    "ast_hash": "5487b64cfff710d75493227f1085cf1f",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_fk.svg": {
+    "mtime": 1790367357.735561,
+    "seen": 1790367761.8260975,
+    "ast_hash": "4a7ecaccb62942ddb363240698d44dbb",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_fm.svg": {
+    "mtime": 1790367357.745634,
+    "seen": 1790367761.8261023,
+    "ast_hash": "97c5bb37d4fd9285c80c3809c9dedde6",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_fo.svg": {
+    "mtime": 1790367357.745634,
+    "seen": 1790367761.8261085,
+    "ast_hash": "3f2be9ccbe5a3d0cef9da5c7044bba60",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_fr.svg": {
+    "mtime": 1790367357.745634,
+    "seen": 1790367761.8261144,
+    "ast_hash": "ed733e43e399b1c35945f2c87bfc57f0",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ga.svg": {
+    "mtime": 1790367357.745634,
+    "seen": 1790367761.8261197,
+    "ast_hash": "f64e29ed68d2165d3620d53978933bb6",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_gb.svg": {
+    "mtime": 1790367357.745634,
+    "seen": 1790367761.826125,
+    "ast_hash": "6dcadf6916764560c2f1fec586e2c1de",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_gb_eng.svg": {
+    "mtime": 1790367357.7556827,
+    "seen": 1790367761.82613,
+    "ast_hash": "7caecb785400d1cca7b319887a9d81bf",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_gb_nir.svg": {
+    "mtime": 1790367357.7657492,
+    "seen": 1790367761.8261354,
+    "ast_hash": "d7bd7dfda1671592433372c74ac7adf3",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_gb_sct.svg": {
+    "mtime": 1790367357.7657492,
+    "seen": 1790367761.8261404,
+    "ast_hash": "ade55ed456211d6577b2f80c06e40c51",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_gb_wls.svg": {
+    "mtime": 1790367357.7657492,
+    "seen": 1790367761.8261683,
+    "ast_hash": "a9f3880f26c469eb5031cce59fef8cc4",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_gd.svg": {
+    "mtime": 1790367357.7737753,
+    "seen": 1790367761.8261755,
+    "ast_hash": "9c4ac524465c01439a799491819b6336",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ge.svg": {
+    "mtime": 1790367357.7757976,
+    "seen": 1790367761.8261795,
+    "ast_hash": "e7868570044eb45c42c248f5c6c0b9fb",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_gf.svg": {
+    "mtime": 1790367357.7757976,
+    "seen": 1790367761.826184,
+    "ast_hash": "333751e55034c41c3e59a55e47c2edb1",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_gg.svg": {
+    "mtime": 1790367357.7757976,
+    "seen": 1790367761.8261886,
+    "ast_hash": "6a608369d5207ef50ef840171aef8d40",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_gh.svg": {
+    "mtime": 1790367357.7757976,
+    "seen": 1790367761.8261933,
+    "ast_hash": "a64592b4513a2648c11e6e00d1a1d158",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_gi.svg": {
+    "mtime": 1790367357.7838326,
+    "seen": 1790367761.8261988,
+    "ast_hash": "5a955a33f6273d071c177fc51a7a3ba3",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_gl.svg": {
+    "mtime": 1790367357.785858,
+    "seen": 1790367761.8262033,
+    "ast_hash": "c6090a99ab0402116f4ab70719eb034a",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_gm.svg": {
+    "mtime": 1790367357.785858,
+    "seen": 1790367761.8262088,
+    "ast_hash": "21b07ec656b24882173b9760792b7691",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_gn.svg": {
+    "mtime": 1790367357.785858,
+    "seen": 1790367761.8262134,
+    "ast_hash": "f1d6c153def70087cff4f84c49ee2fb2",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_gp.svg": {
+    "mtime": 1790367357.785858,
+    "seen": 1790367761.8262196,
+    "ast_hash": "0973d50eb05aff4255d8e499c45c5ed3",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_gq.svg": {
+    "mtime": 1790367357.7938867,
+    "seen": 1790367761.8262246,
+    "ast_hash": "b6c53ed0903ff6ab665b7dd6dce6f627",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_gr.svg": {
+    "mtime": 1790367357.7959135,
+    "seen": 1790367761.8262303,
+    "ast_hash": "71452bbd08d693543125cc15f5943637",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_gt.svg": {
+    "mtime": 1790367357.7959135,
+    "seen": 1790367761.8262355,
+    "ast_hash": "8e3df51f8ddc895d72a5450e7ac0e0a7",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_gu.svg": {
+    "mtime": 1790367357.7959135,
+    "seen": 1790367761.826241,
+    "ast_hash": "9a7232b684321a8d4fdc07a6417b1fa3",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_gw.svg": {
+    "mtime": 1790367357.8039923,
+    "seen": 1790367761.8262458,
+    "ast_hash": "9e32ba13d46c36531bfc3511d54e521d",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_gy.svg": {
+    "mtime": 1790367357.8060176,
+    "seen": 1790367761.8262515,
+    "ast_hash": "6cd4096e5ba2f34748e7938f6f1b075c",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_hk.svg": {
+    "mtime": 1790367357.8060176,
+    "seen": 1790367761.826257,
+    "ast_hash": "406844d22310061e566f2e82f743e014",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_hn.svg": {
+    "mtime": 1790367357.814043,
+    "seen": 1790367761.8262622,
+    "ast_hash": "57160f534d227ae78c5cb8381a75a37b",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_hr.svg": {
+    "mtime": 1790367357.8160684,
+    "seen": 1790367761.8262677,
+    "ast_hash": "5314bd175ad41aa5c42b8e41e2af7173",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ht.svg": {
+    "mtime": 1790367357.8160684,
+    "seen": 1790367761.8262727,
+    "ast_hash": "a236a3c5e1a7a5de7aec84e97442e609",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_hu.svg": {
+    "mtime": 1790367357.8160684,
+    "seen": 1790367761.8262777,
+    "ast_hash": "68ec601ef40d20102c56813e84d99bec",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_id.svg": {
+    "mtime": 1790367357.8307502,
+    "seen": 1790367761.8262827,
+    "ast_hash": "f5aa812145ee85fa05e5f2b62bdf030e",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ie.svg": {
+    "mtime": 1790367357.831289,
+    "seen": 1790367761.8262875,
+    "ast_hash": "1c12635a2932de4b8036779933a84d97",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_il.svg": {
+    "mtime": 1790367357.834319,
+    "seen": 1790367761.826293,
+    "ast_hash": "c0a0925b76528c896afcf1b113bcc366",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_im.svg": {
+    "mtime": 1790367357.8363457,
+    "seen": 1790367761.8262994,
+    "ast_hash": "4843ed7a5eb0ba3f583bf434c8ef6ac9",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_in.svg": {
+    "mtime": 1790367357.8363457,
+    "seen": 1790367761.8263056,
+    "ast_hash": "230b82c4b877a6af4ea17b5e9d751b9a",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_iq.svg": {
+    "mtime": 1790367357.8363457,
+    "seen": 1790367761.8263113,
+    "ast_hash": "6cd7b49b35b15d74cdcfce844064d132",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ir.svg": {
+    "mtime": 1790367357.8443718,
+    "seen": 1790367761.826317,
+    "ast_hash": "1348920da6e96ada40978fd661eba1f9",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_is.svg": {
+    "mtime": 1790367357.8464193,
+    "seen": 1790367761.826322,
+    "ast_hash": "dd9622551b169bddb9e9f99d9b97cb54",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_it.svg": {
+    "mtime": 1790367357.8544555,
+    "seen": 1790367761.826327,
+    "ast_hash": "1d72a5dec3acd073763570e3e5fdf784",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_je.svg": {
+    "mtime": 1790367357.8622193,
+    "seen": 1790367761.8263323,
+    "ast_hash": "002cf78b1f53c47a4c353292af6b4709",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_jm.svg": {
+    "mtime": 1790367357.864218,
+    "seen": 1790367761.8263373,
+    "ast_hash": "4370e5279f135a52435cb1435fb51d25",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_jo.svg": {
+    "mtime": 1790367357.8668272,
+    "seen": 1790367761.8263423,
+    "ast_hash": "8523785fa25192569f1fad7b5b4d2d57",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_jp.svg": {
+    "mtime": 1790367357.8685231,
+    "seen": 1790367761.8263476,
+    "ast_hash": "22e3b3a4abbb24945620817fd27ed7db",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ke.svg": {
+    "mtime": 1790367357.8705218,
+    "seen": 1790367761.8263562,
+    "ast_hash": "6e6a47cb574c6895a0e7086cb52390a1",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_kg.svg": {
+    "mtime": 1790367357.8735201,
+    "seen": 1790367761.8263624,
+    "ast_hash": "4dcff8d78decbebe37a365bd423475be",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_kh.svg": {
+    "mtime": 1790367357.8755195,
+    "seen": 1790367761.826368,
+    "ast_hash": "1732afe3e1a37bb2f1992690653b2337",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ki.svg": {
+    "mtime": 1790367357.8782852,
+    "seen": 1790367761.826374,
+    "ast_hash": "f5ac88c13d4fa16a406c5c7c3bd56da0",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_km.svg": {
+    "mtime": 1790367357.8802843,
+    "seen": 1790367761.8263795,
+    "ast_hash": "a68238693856a7f909ce0bad9ab9e8fd",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_kn.svg": {
+    "mtime": 1790367357.8829913,
+    "seen": 1790367761.8263843,
+    "ast_hash": "170a2ee40bdc3edacff21c6dacd1964b",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_kp.svg": {
+    "mtime": 1790367357.885993,
+    "seen": 1790367761.8263896,
+    "ast_hash": "de1ff54929a738623cb053e25d98c806",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_kr.svg": {
+    "mtime": 1790367357.8888228,
+    "seen": 1790367761.8263948,
+    "ast_hash": "2a183310b78d3d4fe57f88abcc491fcd",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_kw.svg": {
+    "mtime": 1790367357.896668,
+    "seen": 1790367761.8264008,
+    "ast_hash": "2e0484c010807a0dca638bca095f76f5",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ky.svg": {
+    "mtime": 1790367357.8986921,
+    "seen": 1790367761.826406,
+    "ast_hash": "4351dd3144851b98b81e45000597427b",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_kz.svg": {
+    "mtime": 1790367357.912037,
+    "seen": 1790367761.8264115,
+    "ast_hash": "b048e9ddace203518e64f4999bf9df8e",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_la.svg": {
+    "mtime": 1790367357.9160678,
+    "seen": 1790367761.8264174,
+    "ast_hash": "038868d86f685b19f34bad6d7169c4df",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_lb.svg": {
+    "mtime": 1790367357.9180677,
+    "seen": 1790367761.8264227,
+    "ast_hash": "8ac6140b65128cd68fc10e8c9c072ded",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_lc.svg": {
+    "mtime": 1790367357.9210653,
+    "seen": 1790367761.8264277,
+    "ast_hash": "dfc467ded9d00d68e775e15337fe5214",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_li.svg": {
+    "mtime": 1790367357.9249322,
+    "seen": 1790367761.826433,
+    "ast_hash": "e2d8b339351d627308fc46ce3d4a61b4",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_lk.svg": {
+    "mtime": 1790367357.9309316,
+    "seen": 1790367761.8264391,
+    "ast_hash": "b36959d910d1aed36bf660fe2cb0f60d",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_lr.svg": {
+    "mtime": 1790367357.9339309,
+    "seen": 1790367761.8264444,
+    "ast_hash": "8483351ab6b981aae3b236c79ac62753",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ls.svg": {
+    "mtime": 1790367357.935931,
+    "seen": 1790367761.8264494,
+    "ast_hash": "0ed298ed0de87d001d82365008bbcdd2",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_lt.svg": {
+    "mtime": 1790367357.9404378,
+    "seen": 1790367761.8264549,
+    "ast_hash": "7e7110b65bbe5cbfb8a84a0e5f68284e",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_lu.svg": {
+    "mtime": 1790367357.9474914,
+    "seen": 1790367761.82646,
+    "ast_hash": "e2fc15cc49d1afe3ef9fc92004464f19",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_lv.svg": {
+    "mtime": 1790367357.9495158,
+    "seen": 1790367761.8264797,
+    "ast_hash": "58bcf8e17f8f15747b78d4dc4cedbeca",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ly.svg": {
+    "mtime": 1790367357.9495158,
+    "seen": 1790367761.8264887,
+    "ast_hash": "b180a3a13fbcd16816afecf0cf994609",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ma.svg": {
+    "mtime": 1790367357.9495158,
+    "seen": 1790367761.8264947,
+    "ast_hash": "a2e6a76e5f38058fd28b706beeb6a1b7",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_mc.svg": {
+    "mtime": 1790367357.9698036,
+    "seen": 1790367761.8265004,
+    "ast_hash": "acbf04f75fb877d1c2aef0f553c8d629",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_md.svg": {
+    "mtime": 1790367357.9698036,
+    "seen": 1790367761.8265443,
+    "ast_hash": "b8414a95271e7968e46f622b37737a08",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_me.svg": {
+    "mtime": 1790367357.9772635,
+    "seen": 1790367761.826557,
+    "ast_hash": "80c3a3fe41ea4233fe8558ac3938bc07",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_mg.svg": {
+    "mtime": 1790367357.980264,
+    "seen": 1790367761.8265665,
+    "ast_hash": "7a54f12dc753217b1c0aaa7bf685f9fe",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_mh.svg": {
+    "mtime": 1790367357.9822614,
+    "seen": 1790367761.8265748,
+    "ast_hash": "b4e4c149e97d696789949136387f2840",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_mk.svg": {
+    "mtime": 1790367357.9842603,
+    "seen": 1790367761.8266249,
+    "ast_hash": "b96b8a63c2939ef1e4cebb9585908591",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ml.svg": {
+    "mtime": 1790367357.9844832,
+    "seen": 1790367761.8266335,
+    "ast_hash": "1dd7a9ccbcd179a5a3fba550970ad75c",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_mm.svg": {
+    "mtime": 1790367357.9844832,
+    "seen": 1790367761.826639,
+    "ast_hash": "c22f7c51912ae5c86cc9b9a61def3be9",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_mn.svg": {
+    "mtime": 1790367357.988518,
+    "seen": 1790367761.826645,
+    "ast_hash": "e6640c18ac6f349b6400f596c42d6c6b",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_mo.svg": {
+    "mtime": 1790367357.990544,
+    "seen": 1790367761.8266506,
+    "ast_hash": "7df71c725bcb0587a7918896aad378c8",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_mp.svg": {
+    "mtime": 1790367357.990544,
+    "seen": 1790367761.8266568,
+    "ast_hash": "7dfee37acc6938a50e59d0419c4c17eb",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_mq.svg": {
+    "mtime": 1790367357.990544,
+    "seen": 1790367761.8266623,
+    "ast_hash": "1a77ee1805087d17c9b4bf21ad372a1b",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_mr.svg": {
+    "mtime": 1790367357.9985754,
+    "seen": 1790367761.8266675,
+    "ast_hash": "e06ac425a27488d82d93de2e9ac05293",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ms.svg": {
+    "mtime": 1790367358.0006187,
+    "seen": 1790367761.8266728,
+    "ast_hash": "324434779ce1bbe0f611ae7c5c3a1755",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_mt.svg": {
+    "mtime": 1790367358.0106716,
+    "seen": 1790367761.8266783,
+    "ast_hash": "222b42d001de2a0f071a27621cb038e5",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_mu.svg": {
+    "mtime": 1790367358.0207434,
+    "seen": 1790367761.826684,
+    "ast_hash": "46514c8008dc3564e49eaa790f28e255",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_mv.svg": {
+    "mtime": 1790367358.0514252,
+    "seen": 1790367761.826689,
+    "ast_hash": "44a3b21f0ab17367c095a8798f7cc4da",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_mw.svg": {
+    "mtime": 1790367358.0614939,
+    "seen": 1790367761.8266947,
+    "ast_hash": "59ec0e8339665d309116b12d39b9baf1",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_mx.svg": {
+    "mtime": 1790367358.0715437,
+    "seen": 1790367761.8266995,
+    "ast_hash": "281bf244efba667fefc3479788b0f01f",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_my.svg": {
+    "mtime": 1790367358.0715437,
+    "seen": 1790367761.8267047,
+    "ast_hash": "6175b67f2c004626cbb214c9b52c5bc4",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_mz.svg": {
+    "mtime": 1790367358.0715437,
+    "seen": 1790367761.82671,
+    "ast_hash": "966fd28d247169146755072b86b90668",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_na.svg": {
+    "mtime": 1790367358.0795813,
+    "seen": 1790367761.8267155,
+    "ast_hash": "f770c272591ef4e6a20819cb32532799",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_nc.svg": {
+    "mtime": 1790367358.081608,
+    "seen": 1790367761.826721,
+    "ast_hash": "40f05fd024c99dbd3cf08dcca093c98f",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ne.svg": {
+    "mtime": 1790367358.081608,
+    "seen": 1790367761.8267264,
+    "ast_hash": "5c109026a107f910512b09e208a90538",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ng.svg": {
+    "mtime": 1790367358.081608,
+    "seen": 1790367761.8267314,
+    "ast_hash": "9eea84efdc0eb2553b9d3502feac044d",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ni.svg": {
+    "mtime": 1790367358.081608,
+    "seen": 1790367761.8267372,
+    "ast_hash": "616b5049f9d7f851e9b961c848214537",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_nl.svg": {
+    "mtime": 1790367358.0896401,
+    "seen": 1790367761.8267424,
+    "ast_hash": "8c9bb5ae9234eb56f35372409f204c95",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_no.svg": {
+    "mtime": 1790367358.09167,
+    "seen": 1790367761.826748,
+    "ast_hash": "859a13561a1b24bfa65fb1a03835da49",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_np.svg": {
+    "mtime": 1790367358.09167,
+    "seen": 1790367761.8267539,
+    "ast_hash": "218bd7570bc9da97ffa7abec43ab5b63",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_nr.svg": {
+    "mtime": 1790367358.09167,
+    "seen": 1790367761.8267603,
+    "ast_hash": "b3fdadbc923b5a447ec89bca7c69d213",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_nu.svg": {
+    "mtime": 1790367358.09167,
+    "seen": 1790367761.8267658,
+    "ast_hash": "bfd6de48e40574ec6d86c6e0589baa48",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_nz.svg": {
+    "mtime": 1790367358.1749456,
+    "seen": 1790367761.8267713,
+    "ast_hash": "229d2fadba8d00df102927eae199d46f",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_om.svg": {
+    "mtime": 1790367358.2793152,
+    "seen": 1790367761.826777,
+    "ast_hash": "1c751fd3d5fe291da7bde71c3d4e9a36",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_pa.svg": {
+    "mtime": 1790367358.2813141,
+    "seen": 1790367761.8267827,
+    "ast_hash": "429c3af6225d19ace066318045360d30",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_pe.svg": {
+    "mtime": 1790367358.284313,
+    "seen": 1790367761.8267882,
+    "ast_hash": "5156eee1494fa9ccb9ff78c95f6053d0",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_pf.svg": {
+    "mtime": 1790367358.2863126,
+    "seen": 1790367761.8267937,
+    "ast_hash": "099cb9160e10e223f4aad5aea9ee83b4",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_pg.svg": {
+    "mtime": 1790367358.2883103,
+    "seen": 1790367761.8267992,
+    "ast_hash": "dbf16b180cf775e38aae810eb84357be",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ph.svg": {
+    "mtime": 1790367358.291309,
+    "seen": 1790367761.8268044,
+    "ast_hash": "d8046bd209c4750f7a67beb68f780dd1",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_pk.svg": {
+    "mtime": 1790367358.293309,
+    "seen": 1790367761.8268101,
+    "ast_hash": "85c810a1e00ecd4abd72535308d492af",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_pl.svg": {
+    "mtime": 1790367358.296306,
+    "seen": 1790367761.826815,
+    "ast_hash": "eb78891d42816fa7daa1957fa56bbe3a",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_pm.svg": {
+    "mtime": 1790367358.2983048,
+    "seen": 1790367761.8268204,
+    "ast_hash": "6999a852eb77bd0a5218ccc09be1c215",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_pr.svg": {
+    "mtime": 1790367358.3003037,
+    "seen": 1790367761.8268254,
+    "ast_hash": "3d6afa7282f19e68fe5ef48648bc6dce",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ps.svg": {
+    "mtime": 1790367358.3023024,
+    "seen": 1790367761.8268306,
+    "ast_hash": "5565202f90be94cb7a0e3dd6d6c7a771",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_pt.svg": {
+    "mtime": 1790367358.3043025,
+    "seen": 1790367761.8268356,
+    "ast_hash": "f0f95b343296722c38dc0857f3a4c73d",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_pw.svg": {
+    "mtime": 1790367358.3073015,
+    "seen": 1790367761.826841,
+    "ast_hash": "98481f768696b21b1cefe1c2a3c83fb7",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_py.svg": {
+    "mtime": 1790367358.3106124,
+    "seen": 1790367761.8268468,
+    "ast_hash": "7253dbde29c1216a996c9ea9853df2c0",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_qa.svg": {
+    "mtime": 1790367358.312613,
+    "seen": 1790367761.8268523,
+    "ast_hash": "6b0bfc63e28cf03deb8794d8c8ad8460",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_re.svg": {
+    "mtime": 1790367358.3156111,
+    "seen": 1790367761.826858,
+    "ast_hash": "93aac5219d4b4cce2df6460ee023daed",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ro.svg": {
+    "mtime": 1790367358.31761,
+    "seen": 1790367761.8268633,
+    "ast_hash": "e9130a28a9ba2b93433f21a2cd5971f3",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_rs.svg": {
+    "mtime": 1790367358.3206074,
+    "seen": 1790367761.8269074,
+    "ast_hash": "364865911c6e1ae8992ccd031eb5a7af",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ru.svg": {
+    "mtime": 1790367358.3235755,
+    "seen": 1790367761.826916,
+    "ast_hash": "8b2aa18f6e17aa2982e800c462781698",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_rw.svg": {
+    "mtime": 1790367358.3255599,
+    "seen": 1790367761.8269222,
+    "ast_hash": "32931738c195dc60323ab760f3b3b720",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_sa.svg": {
+    "mtime": 1790367358.3281667,
+    "seen": 1790367761.826973,
+    "ast_hash": "242c5a79405f4d1e5bd9ef1b82caa9cc",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_sb.svg": {
+    "mtime": 1790367358.3301666,
+    "seen": 1790367761.8269815,
+    "ast_hash": "54215c8c6e4973b16535240f796b55a6",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_sc.svg": {
+    "mtime": 1790367358.332166,
+    "seen": 1790367761.8269873,
+    "ast_hash": "ab4767bc4088728a6841e7e578f6c7a8",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_sd.svg": {
+    "mtime": 1790367358.3336892,
+    "seen": 1790367761.826993,
+    "ast_hash": "00f69acaade5d14c00e36d841b5e9b23",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_se.svg": {
+    "mtime": 1790367358.3356762,
+    "seen": 1790367761.8269985,
+    "ast_hash": "79da0f189e8fb82d6e148a77b5690e14",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_sg.svg": {
+    "mtime": 1790367358.3376746,
+    "seen": 1790367761.827004,
+    "ast_hash": "b8d345820ac52f8187155ff5c79ef5b0",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_si.svg": {
+    "mtime": 1790367358.3396733,
+    "seen": 1790367761.827037,
+    "ast_hash": "f6c5b9027d884d9d96ad22cc65a83a49",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_sk.svg": {
+    "mtime": 1790367358.3416722,
+    "seen": 1790367761.827044,
+    "ast_hash": "2c0bed77082c2e388a9b3d8bfed51be3",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_sl.svg": {
+    "mtime": 1790367358.344682,
+    "seen": 1790367761.8270493,
+    "ast_hash": "af0884d411f36ff8e0fb199a00b70691",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_sm.svg": {
+    "mtime": 1790367358.3466804,
+    "seen": 1790367761.8270543,
+    "ast_hash": "253adf4b0d2ac68733caea280eacb1a1",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_sn.svg": {
+    "mtime": 1790367358.3486793,
+    "seen": 1790367761.8270595,
+    "ast_hash": "091e42c6f8d95a1740ff343dcec62c7a",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_so.svg": {
+    "mtime": 1790367358.350679,
+    "seen": 1790367761.8270648,
+    "ast_hash": "3f60af6c70394d4b58d19f9873151a82",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_sr.svg": {
+    "mtime": 1790367358.3526769,
+    "seen": 1790367761.82707,
+    "ast_hash": "07e91c157e4b9e240d9b004da3529f08",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ss.svg": {
+    "mtime": 1790367358.354864,
+    "seen": 1790367761.8270755,
+    "ast_hash": "0678d330e69d1c83ed22e43b987a8554",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_st.svg": {
+    "mtime": 1790367358.3566155,
+    "seen": 1790367761.8270807,
+    "ast_hash": "7435c1629c29775dd2c9a81bb858a9e2",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_sv.svg": {
+    "mtime": 1790367358.3595457,
+    "seen": 1790367761.827086,
+    "ast_hash": "e22d24982ee97b270ce1fc04c238dc2a",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_sx.svg": {
+    "mtime": 1790367358.361294,
+    "seen": 1790367761.8270915,
+    "ast_hash": "dc1d74ce5dbf399e5692d0e9bc7b3d18",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_sy.svg": {
+    "mtime": 1790367358.3634915,
+    "seen": 1790367761.827097,
+    "ast_hash": "3eb9d0f06233d918805e757d70d66840",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_sz.svg": {
+    "mtime": 1790367358.3664796,
+    "seen": 1790367761.827102,
+    "ast_hash": "6b46b244d5da5de47b9710d86d2a1d11",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_tc.svg": {
+    "mtime": 1790367358.3684783,
+    "seen": 1790367761.8271074,
+    "ast_hash": "ffc069871ba7771c6439182ca40d1078",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_td.svg": {
+    "mtime": 1790367358.3709724,
+    "seen": 1790367761.8271122,
+    "ast_hash": "983e8a4ce97f1e3c1cf0e01ee2bc1a74",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_tg.svg": {
+    "mtime": 1790367358.3719738,
+    "seen": 1790367761.8271182,
+    "ast_hash": "0d34bdaacc8417e527320642b4c1c691",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_th.svg": {
+    "mtime": 1790367358.3739722,
+    "seen": 1790367761.827124,
+    "ast_hash": "bcc03a3cd1a367274a2444aff71c0a68",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_tj.svg": {
+    "mtime": 1790367358.3767598,
+    "seen": 1790367761.8271298,
+    "ast_hash": "7321ab191e13ad2f8956ae31fc3d356a",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_tl.svg": {
+    "mtime": 1790367358.3789113,
+    "seen": 1790367761.8271358,
+    "ast_hash": "ed0c55931d9e4acaa3232a6fd90ecdd1",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_tm.svg": {
+    "mtime": 1790367358.3819106,
+    "seen": 1790367761.8271413,
+    "ast_hash": "04873ec1b2d0f87010981399f92e4cbe",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_tn.svg": {
+    "mtime": 1790367358.3839092,
+    "seen": 1790367761.8271468,
+    "ast_hash": "1e2cfb1bfd06ab00b1a5ac9263b7c444",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_to.svg": {
+    "mtime": 1790367358.385908,
+    "seen": 1790367761.827152,
+    "ast_hash": "cccdba4c3dfd080aeda7302c23588c7a",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_tr.svg": {
+    "mtime": 1790367358.387886,
+    "seen": 1790367761.8271577,
+    "ast_hash": "a00c7dfb9e8aad298b6bc1ce656dd9ef",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_tt.svg": {
+    "mtime": 1790367358.3908842,
+    "seen": 1790367761.8271632,
+    "ast_hash": "12c225a0602ef42490ab814b5ade9274",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_tv.svg": {
+    "mtime": 1790367358.3933914,
+    "seen": 1790367761.8271685,
+    "ast_hash": "c75afdde63ae0e1e205c5dfd653afffe",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_tw.svg": {
+    "mtime": 1790367358.3993354,
+    "seen": 1790367761.8271737,
+    "ast_hash": "a4b47fff88d0596123054bb88aaa2ca2",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_tz.svg": {
+    "mtime": 1790367358.4037535,
+    "seen": 1790367761.8271787,
+    "ast_hash": "52d064016a82b03c1e59cdfc054ab303",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ua.svg": {
+    "mtime": 1790367358.405775,
+    "seen": 1790367761.8271847,
+    "ast_hash": "2c111ca775580133f57a91988af3eb81",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ug.svg": {
+    "mtime": 1790367358.405775,
+    "seen": 1790367761.82719,
+    "ast_hash": "5090179bc7a21448ec49d70179c8d074",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_us.svg": {
+    "mtime": 1790367358.4113755,
+    "seen": 1790367761.8271954,
+    "ast_hash": "1d23b9509d0a0a828e3071096b0d2edf",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_uy.svg": {
+    "mtime": 1790367358.4143736,
+    "seen": 1790367761.8272011,
+    "ast_hash": "7942bb43f1e2a75c4d81d7a2c569faef",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_uz.svg": {
+    "mtime": 1790367358.4163716,
+    "seen": 1790367761.8272064,
+    "ast_hash": "c4be51bb2b634168ef4325784b53bf62",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_va.svg": {
+    "mtime": 1790367358.4183705,
+    "seen": 1790367761.827212,
+    "ast_hash": "84dec055eb4e7f2bb4ca324051eb892f",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_vc.svg": {
+    "mtime": 1790367358.4203703,
+    "seen": 1790367761.8272178,
+    "ast_hash": "4bde18df266caa82f34338109dc9dd95",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ve.svg": {
+    "mtime": 1790367358.4223683,
+    "seen": 1790367761.8272233,
+    "ast_hash": "5a76b2497118fb0435b2f5845717b9b0",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_vg.svg": {
+    "mtime": 1790367358.425367,
+    "seen": 1790367761.8272295,
+    "ast_hash": "21d0dec21e188f57a9d0f8e1ec0e4029",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_vi.svg": {
+    "mtime": 1790367358.4283652,
+    "seen": 1790367761.8272347,
+    "ast_hash": "72221c5155f9cad3ab2239068ab34f93",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_vn.svg": {
+    "mtime": 1790367358.4303641,
+    "seen": 1790367761.8272545,
+    "ast_hash": "076d59568fc7a8ab59bc51ee7a39f956",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_vu.svg": {
+    "mtime": 1790367358.4333618,
+    "seen": 1790367761.8272626,
+    "ast_hash": "14e6f23d4af642dadbed0ff480a8128b",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_wf.svg": {
+    "mtime": 1790367358.4363601,
+    "seen": 1790367761.8272686,
+    "ast_hash": "a3008b9d6f65356b95cf8f465b3eddc4",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ws.svg": {
+    "mtime": 1790367358.4383593,
+    "seen": 1790367761.8272743,
+    "ast_hash": "096fc50015e936e5ef310183baab82ca",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_xk.svg": {
+    "mtime": 1790367358.4403577,
+    "seen": 1790367761.8273194,
+    "ast_hash": "a8e4f500a18c4ec5e8dec2540dbe2c55",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_ye.svg": {
+    "mtime": 1790367358.4431274,
+    "seen": 1790367761.8273306,
+    "ast_hash": "b45153c68c2d4ccaea6553357ca603c7",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_yt.svg": {
+    "mtime": 1790367358.4463308,
+    "seen": 1790367761.827341,
+    "ast_hash": "38abb75fbdee89e313565bf814710692",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_za.svg": {
+    "mtime": 1790367358.4483194,
+    "seen": 1790367761.8273842,
+    "ast_hash": "da9e50f2ae3cc80343b9be4f2a5f599d",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_zm.svg": {
+    "mtime": 1790367358.4499474,
+    "seen": 1790367761.827393,
+    "ast_hash": "14fe4bb777477c582f360befb3034ec6",
+    "semantic_hash": ""
+  },
+  "MAUI/Resources/Images/Flags/flag_zw.svg": {
+    "mtime": 1790367358.4499474,
+    "seen": 1790367761.8274019,
+    "ast_hash": "bcaa4841520ad37f49b24fbac83307c7",
+    "semantic_hash": ""
+  },
+  "DataAccess/Migrations/20260926102529_AddMatchTvSyncedAt.Designer.cs": {
+    "mtime": 1790418329.5173292,
+    "seen": 1790418804.4172738,
+    "ast_hash": "c781429c84bd1815efa4ab5bb21a933a",
+    "semantic_hash": ""
+  },
+  "DataAccess/Migrations/20260926102529_AddMatchTvSyncedAt.cs": {
+    "mtime": 1790418329.5173292,
+    "seen": 1790418804.4172788,
+    "ast_hash": "9633ebbd39899f66c7c0d52fece848de",
+    "semantic_hash": ""
+  },
+  "Infrastructure/Sync/EventTvBackgroundService.cs": {
+    "mtime": 1790418451.444307,
+    "seen": 1790418804.4176643,
+    "ast_hash": "9c636e3325ca537a227ffea6d1f5ad19",
+    "semantic_hash": ""
+  },
+  "Infrastructure/Sync/EventTvSyncMode.cs": {
+    "mtime": 1790418425.9460158,
+    "seen": 1790418804.417671,
+    "ast_hash": "9d829dd23f23bcd3143bdfd3929ce14f",
+    "semantic_hash": ""
+  },
+  "MAUI/Views/Partials/BroadcastCell.xaml": {
+    "mtime": 1790424605.0393634,
+    "seen": 1790425675.0673213,
+    "ast_hash": "591e540805b748ce37c787dc9d148d7c",
+    "semantic_hash": ""
+  },
+  "MAUI/Views/Partials/BroadcastCell.xaml.cs": {
+    "mtime": 1790418511.229851,
+    "seen": 1790418804.4184773,
+    "ast_hash": "af862a617cf09fd8c71b31be0b2965ca",
+    "semantic_hash": ""
+  },
+  "DataAccess/Configurations/EventTimelineConfiguration.cs": {
+    "mtime": 1790426123.8675613,
+    "seen": 1790426274.9615915,
+    "ast_hash": "f913195c053609bc7ebc6b060351ffcf",
+    "semantic_hash": ""
+  },
+  "DataAccess/Migrations/20260926122407_AddEventTimeline.Designer.cs": {
+    "mtime": 1790425447.2258556,
+    "seen": 1790425675.0668416,
+    "ast_hash": "90924639a0f8d15bd943b92e1141930c",
+    "semantic_hash": ""
+  },
+  "DataAccess/Migrations/20260926122407_AddEventTimeline.cs": {
+    "mtime": 1790425447.212597,
+    "seen": 1790425675.0668442,
+    "ast_hash": "98a81908171e30887df463702af71cb1",
+    "semantic_hash": ""
+  },
+  "Domain/Entities/EventTimeline.cs": {
+    "mtime": 1790425924.4419935,
+    "seen": 1790426274.9618623,
+    "ast_hash": "d9476f27f9117a183d14f3f855fc2256",
+    "semantic_hash": ""
+  },
+  "Infrastructure/Integrations/DTO/SportsDbEventTimeline.cs": {
+    "mtime": 1790425330.209947,
+    "seen": 1790425675.0669699,
+    "ast_hash": "40f3e34f0ff090b26193694ba1ac1091",
+    "semantic_hash": ""
+  },
+  "Infrastructure/Sync/EventTimelineBackgroundService.cs": {
+    "mtime": 1790425388.5164776,
+    "seen": 1790425675.067033,
+    "ast_hash": "01f85984d73cca47f437f887c5efd29c",
+    "semantic_hash": ""
+  },
+  "Infrastructure/Sync/TimelineSyncMode.cs": {
+    "mtime": 1790425330.502239,
+    "seen": 1790425675.0670638,
+    "ast_hash": "857b2a7c8ddd22e6029ca57485ced953",
+    "semantic_hash": ""
+  },
+  "MAUI/Views/Partials/TimelineCell.xaml": {
+    "mtime": 1791025621.6098325,
+    "seen": 1791025926.3152692,
+    "ast_hash": "86d214b2610718a152bdf807752f24e6",
+    "semantic_hash": ""
+  },
+  "MAUI/Views/Partials/TimelineCell.xaml.cs": {
+    "mtime": 1790764413.4879916,
+    "seen": 1790764820.987087,
+    "ast_hash": "5fa8eb9e9d76c18f555bcca8f89ed7cd",
+    "semantic_hash": ""
+  },
+  "DataAccess/Migrations/20260926123554_RenameEventTimelineApiId.Designer.cs": {
+    "mtime": 1790426154.5460346,
+    "seen": 1790426274.9617682,
+    "ast_hash": "e38c5649ffd9bbc16aee4f0579ca809f",
+    "semantic_hash": ""
+  },
+  "DataAccess/Migrations/20260926123554_RenameEventTimelineApiId.cs": {
+    "mtime": 1790426154.5460346,
+    "seen": 1790426274.961774,
+    "ast_hash": "08e7a51c49c430f75241e197304f096e",
+    "semantic_hash": ""
+  },
+  "DataAccess/Configurations/UserSearchConfiguration.cs": {
+    "mtime": 1791018186.0615568,
+    "seen": 1791018914.8793137,
+    "ast_hash": "469da211b663fd9698c9194753932d33",
+    "semantic_hash": ""
+  },
+  "DataAccess/Migrations/20261003090450_AddUserSearch.Designer.cs": {
+    "mtime": 1791018290.2346919,
+    "seen": 1791018914.8793778,
+    "ast_hash": "e2a051282b7d650385fa0475f2aae392",
+    "semantic_hash": ""
+  },
+  "DataAccess/Migrations/20261003090450_AddUserSearch.cs": {
+    "mtime": 1791018290.2346919,
+    "seen": 1791018914.8793826,
+    "ast_hash": "4849594e18763d4da0add8b6f5a38e53",
+    "semantic_hash": ""
+  },
+  "Domain/Entities/UserSearch.cs": {
+    "mtime": 1791018185.6997206,
+    "seen": 1791018914.8796318,
+    "ast_hash": "deac782165c37cbbeac43f02d0f0fa6b",
+    "semantic_hash": ""
+  },
+  "MAUI/DTO/Input/RecentSearchDTO.cs": {
+    "mtime": 1791018366.7025213,
+    "seen": 1791018914.8800266,
+    "ast_hash": "2c3845f322bfa49fc6b3243e908ae361",
+    "semantic_hash": ""
+  },
+  "MAUI/DTO/Output/RecordSearchRequestDTO.cs": {
+    "mtime": 1791018366.91294,
+    "seen": 1791018914.8800545,
+    "ast_hash": "a4b71ca73f224690a119c4d3a6ba99d0",
+    "semantic_hash": ""
+  },
+  "MAUI/Services/Interfaces/ISearchHistoryApiService.cs": {
+    "mtime": 1791018367.106366,
+    "seen": 1791018914.8802958,
+    "ast_hash": "6c1643a2b7732ed85cfa9c3774b4e61a",
+    "semantic_hash": ""
+  },
+  "MAUI/Services/SearchHistoryApiService.cs": {
+    "mtime": 1791018367.2475011,
+    "seen": 1791018914.8803456,
+    "ast_hash": "1798ca4fa901af1e880f2e7cc408a54c",
+    "semantic_hash": ""
+  },
+  "MAUI/Views/Partials/LoadingOverlay.xaml": {
+    "mtime": 1791018702.2623386,
+    "seen": 1791018914.8805041,
+    "ast_hash": "bc33cce214d7b7c48505ddfe0854aaa3",
+    "semantic_hash": ""
+  },
+  "MAUI/Views/Partials/LoadingOverlay.xaml.cs": {
+    "mtime": 1791018702.577669,
+    "seen": 1791018914.880508,
+    "ast_hash": "a8065f98c8ab4a0c5e5510e87ce7dfd1",
+    "semantic_hash": ""
+  },
+  "WebAPI/Controllers/SearchHistoryController.cs": {
+    "mtime": 1791018220.7531266,
+    "seen": 1791018914.8826737,
+    "ast_hash": "7daa5d5e469ce538185cd56ad08fcf09",
+    "semantic_hash": ""
+  },
+  "WebAPI/DTO/Input/RecordSearchDTO.cs": {
+    "mtime": 1791018186.859195,
+    "seen": 1791018914.8827088,
+    "ast_hash": "e1eee9815c563bea091307d2708742cb",
+    "semantic_hash": ""
+  },
+  "WebAPI/DTO/Output/RecentSearchDTO.cs": {
+    "mtime": 1791018187.1875184,
+    "seen": 1791018914.8827696,
+    "ast_hash": "67146056ac5306c5e44f812a4ec693ea",
+    "semantic_hash": ""
+  },
+  "Domain/Predictions/PredictionScoring.cs": {
+    "mtime": 1791980952.2134473,
+    "seen": 1791981462.1582851,
+    "ast_hash": "0bf0f8759d5fd4a0726a56789d90d56f",
+    "semantic_hash": ""
+  },
+  "MAUI/DTO/Input/PredictionStatsDTO.cs": {
+    "mtime": 1791983224.6469965,
+    "seen": 1791983564.9124825,
+    "ast_hash": "f0d5fa121b58ce854810e1e0ba6cb106",
+    "semantic_hash": ""
+  },
+  "MAUI/Views/Drawables/PredictionDonutDrawable.cs": {
+    "mtime": 1791981134.2555616,
+    "seen": 1791981462.159232,
+    "ast_hash": "b34c744fe89f8b07d9b0a95e33f58ed1",
+    "semantic_hash": ""
+  },
+  "WebAPI/DTO/Output/PredictionStatsDTO.cs": {
+    "mtime": 1791983224.6459973,
+    "seen": 1791983564.9135592,
+    "ast_hash": "98a6aa0204ae9682290e03ca1ca9d6aa",
+    "semantic_hash": ""
+  },
+  "MAUI/Helpers/ConfirmDialog.cs": {
+    "mtime": 1791989333.814629,
+    "seen": 1791989641.8953536,
+    "ast_hash": "480661b9ee8c9955bd8a62af699e563f",
+    "semantic_hash": ""
+  },
+  "MAUI/Views/ConfirmDialogPage.xaml": {
+    "mtime": 1791983273.1524825,
+    "seen": 1791983564.9130306,
+    "ast_hash": "2573274978772a7d722dce664f7f3eb7",
+    "semantic_hash": ""
+  },
+  "MAUI/Views/ConfirmDialogPage.xaml.cs": {
+    "mtime": 1791989333.8176262,
+    "seen": 1791989641.8959005,
+    "ast_hash": "947d78d7324df041768722f234ce5670",
+    "semantic_hash": ""
+  },
+  "DataAccess/Configurations/FriendshipConfiguration.cs": {
+    "mtime": 1791984662.4857807,
+    "seen": 1791985033.3991508,
+    "ast_hash": "cc155a2be675ef7e2feffd00edb23766",
+    "semantic_hash": ""
+  },
+  "DataAccess/Migrations/20261014133210_AddFriendship.Designer.cs": {
+    "mtime": 1791984730.8344777,
+    "seen": 1791985033.3994076,
+    "ast_hash": "c47afa8923b42f33606c21ce6d4ba413",
+    "semantic_hash": ""
+  },
+  "DataAccess/Migrations/20261014133210_AddFriendship.cs": {
+    "mtime": 1791984730.8314793,
+    "seen": 1791985033.399415,
+    "ast_hash": "bee4587e4005d5ae63bb016df85870ca",
+    "semantic_hash": ""
+  },
+  "Domain/Entities/Friendship.cs": {
+    "mtime": 1791984662.3382652,
+    "seen": 1791985033.3995218,
+    "ast_hash": "f66fa08929ced2c62606efdd9ea12e3e",
+    "semantic_hash": ""
+  },
+  "MAUI/DTO/Input/FriendDTO.cs": {
+    "mtime": 1791984795.593644,
+    "seen": 1791985033.4000995,
+    "ast_hash": "5629c43004ffabcf6129102d2e7fcb10",
+    "semantic_hash": ""
+  },
+  "MAUI/Services/FriendApiService.cs": {
+    "mtime": 1791986417.8381546,
+    "seen": 1791986995.6623526,
+    "ast_hash": "86211e463bdb37690f2f0f01c8df1f57",
+    "semantic_hash": ""
+  },
+  "MAUI/Services/Interfaces/IFriendApiService.cs": {
+    "mtime": 1791986409.0340612,
+    "seen": 1791986995.6623769,
+    "ast_hash": "d5452d45f75a8495d67970f5d2269cdb",
+    "semantic_hash": ""
+  },
+  "WebAPI/Controllers/FriendsController.cs": {
+    "mtime": 1791986365.932806,
+    "seen": 1791986995.662872,
+    "ast_hash": "c96084ae9b7c270e02f5366319b3b75b",
+    "semantic_hash": ""
+  },
+  "WebAPI/DTO/Output/FriendDTO.cs": {
+    "mtime": 1791984679.0137465,
+    "seen": 1791985033.4011931,
+    "ast_hash": "2179cfc38d9092d364bda367eeb8c187",
+    "semantic_hash": ""
+  },
+  "MAUI/DTO/Input/UserPageDTO.cs": {
+    "mtime": 1791986417.7423892,
+    "seen": 1791986995.6621788,
+    "ast_hash": "fffd4dce806aba253fa94dcb4be37d0a",
+    "semantic_hash": ""
+  },
+  "MAUI/ViewModel/PredictionsListModel.cs": {
+    "mtime": 1791986455.7828033,
+    "seen": 1791986995.6625865,
+    "ast_hash": "a4de2ab0c6b5d22b50b89bb2445cb785",
+    "semantic_hash": ""
+  },
+  "MAUI/ViewModel/UserViewModel.cs": {
+    "mtime": 1791989333.8186262,
+    "seen": 1791989641.8958907,
+    "ast_hash": "650db32b414d36c3a5daefb6daadc194",
+    "semantic_hash": ""
+  },
+  "MAUI/Views/Partials/PredictionsSection.xaml": {
+    "mtime": 1791986455.9736252,
+    "seen": 1791986995.6627748,
+    "ast_hash": "8def921160d9bc4040eda15575eaf4c4",
+    "semantic_hash": ""
+  },
+  "MAUI/Views/Partials/PredictionsSection.xaml.cs": {
+    "mtime": 1791986456.1065774,
+    "seen": 1791986995.6627793,
+    "ast_hash": "83a156d0650e23733c299f50b2211f67",
+    "semantic_hash": ""
+  },
+  "MAUI/Views/UserPage.xaml": {
+    "mtime": 1791986840.3168924,
+    "seen": 1791986995.6628406,
+    "ast_hash": "ce669468ffc3146272e204ea1f5dd5dc",
+    "semantic_hash": ""
+  },
+  "MAUI/Views/UserPage.xaml.cs": {
+    "mtime": 1791986840.4398205,
+    "seen": 1791986995.6628451,
+    "ast_hash": "5401eabf7480a521179553357226f34b",
+    "semantic_hash": ""
+  },
+  "WebAPI/DTO/Output/UserPageDTO.cs": {
+    "mtime": 1791986336.9800708,
+    "seen": 1791986995.663033,
+    "ast_hash": "d4b91775a6b64820fba0c5b2602a2634",
+    "semantic_hash": ""
+  },
+  "WebAPI/Helpers/FriendshipHelper.cs": {
+    "mtime": 1791986336.776956,
+    "seen": 1791986995.663048,
+    "ast_hash": "c6454bce99e27ab1caf53f8807bfbb7d",
+    "semantic_hash": ""
+  },
+  "MAUI/Helpers/FriendDialogs.cs": {
+    "mtime": 1791989333.3492312,
+    "seen": 1791989641.895371,
+    "ast_hash": "9115cdbe7af2f5ff9f2b631d74dc30df",
+    "semantic_hash": ""
+  }
+}

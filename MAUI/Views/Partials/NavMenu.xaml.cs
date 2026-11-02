@@ -90,6 +90,15 @@ public partial class NavMenu : ContentView
     }
 
 
+    // Visina SAME trake (bez padajucih menija) - HomePage po njoj postavlja gornju marginu sadrzaja, jer se NavMenu
+    // sa otvorenim menijem uvecava (da meni upadne u njegove granice i primi dodir), a sadrzaj ispod ne sme da se pomera.
+    private static readonly BindablePropertyKey BarHeightPropertyKey =
+        BindableProperty.CreateReadOnly(nameof(BarHeight), typeof(double), typeof(NavMenu), 0d);
+
+    public static readonly BindableProperty BarHeightProperty = BarHeightPropertyKey.BindableProperty;
+
+    public double BarHeight => (double)GetValue(BarHeightProperty);
+
     private static readonly BindablePropertyKey IsAnyMenuOpenPropertyKey =
         BindableProperty.CreateReadOnly(nameof(IsAnyMenuOpen), typeof(bool), typeof(NavMenu), false);
 
@@ -153,6 +162,7 @@ public partial class NavMenu : ContentView
     public NavMenu()
 	{
 		InitializeComponent();
+        BarGrid.SizeChanged += (_, _) => SetValue(BarHeightPropertyKey, BarGrid.Height);
         UpdateAccountIconVisibility();
     }
 
@@ -169,6 +179,30 @@ public partial class NavMenu : ContentView
         if (bindable is NavMenu menu)
         {
             menu.UpdateIsAnyMenuOpen();
+            menu.UpdateSearchIcon();
+        }
+    }
+
+    // Lupa -> X dok je padajuca lista pretrage (rezultati ili "Recent searches") otvorena.
+    private void UpdateSearchIcon()
+    {
+        SearchIconLabel.Text = IsSearchResultsVisible ? Icons.XIcon : Icons.SearchIcon;
+        SearchIconLabel.TextColor = IsSearchResultsVisible ? Color.FromArgb("#1A1A2E") : Color.FromArgb("#8A8A8A");
+    }
+
+    // X zatvara listu: skida fokus sa polja i brise ukucani tekst - ViewModel (preko dvosmernih SearchText /
+    // IsSearchFocused) tada sam sakriva rezultate i "Recent searches". Kad je lista zatvorena, tap na lupu fokusira polje.
+    private void OnSearchIconTapped(object? sender, TappedEventArgs e)
+    {
+        if (IsSearchResultsVisible)
+        {
+            IsSearchFocused = false;
+            SearchText = string.Empty;
+            SearchEntry.Unfocus();
+        }
+        else
+        {
+            SearchEntry.Focus();
         }
     }
 
@@ -223,6 +257,13 @@ public partial class NavMenu : ContentView
         UpdateIsAnyMenuOpen();
     }
 
+    private async void OnSettingsTapped(object? sender, TappedEventArgs e)
+    {
+        AccountMenuBorder.IsVisible = false;
+        UpdateIsAnyMenuOpen();
+        await Shell.Current.GoToAsync("settings");
+    }
+
     private async void OnProfileInfoTapped(object? sender, TappedEventArgs e)
     {
         AccountMenuBorder.IsVisible = false;
@@ -268,8 +309,23 @@ public partial class NavMenu : ContentView
         collectionView.SelectedItem = null;
     }
 
+    // Izbor sporta zatvara padajuci meni sportova i vraca X nazad u hamburger ikonicu.
+    private void CloseSportsMenu()
+    {
+        if (!_isSportsMenuOpen)
+            return;
+
+        _isSportsMenuOpen = false;
+        OverflowMenuBorder.IsVisible = false;
+        SportsMenuLabel.Text = Icons.HamburgerIcon;
+        SportsMenuLabel.Rotation = 0;
+        UpdateIsAnyMenuOpen();
+    }
+
     private void HandleSportSelected(SportMenuItem sport)
     {
+        CloseSportsMenu();
+
         System.Diagnostics.Debug.WriteLine($"Tapped sport: Id={sport.Id}, Name={sport.Name}");
 
         if (SportSelectedCommand is null)

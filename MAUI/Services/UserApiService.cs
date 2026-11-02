@@ -32,6 +32,24 @@ namespace MAUI.Services
             var result = await _httpClient.GetFromJsonAsync<List<FavoriteTeamDTO>>("users/me/favorite-teams", ct);
             return result ?? new List<FavoriteTeamDTO>();
         }
+
+        public async Task<List<UserSearchResultDTO>> SearchUsersAsync(string query, CancellationToken ct = default)
+        {
+            var result = await _httpClient.GetFromJsonAsync<List<UserSearchResultDTO>>($"users/search?query={Uri.EscapeDataString(query)}", ct);
+            return result ?? new List<UserSearchResultDTO>();
+        }
+
+        public async Task<UserPageDTO> GetUserAsync(long userId, CancellationToken ct = default)
+        {
+            var result = await _httpClient.GetFromJsonAsync<UserPageDTO>($"users/{userId}", ct);
+            return result ?? throw new InvalidOperationException("Server returned an empty response.");
+        }
+
+        public async Task<List<FavoriteTeamDTO>> GetUserFavoriteTeamsAsync(long userId, CancellationToken ct = default)
+        {
+            var result = await _httpClient.GetFromJsonAsync<List<FavoriteTeamDTO>>($"users/{userId}/favorite-teams", ct);
+            return result ?? new List<FavoriteTeamDTO>();
+        }
         #endregion
     }
 }

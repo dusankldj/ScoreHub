@@ -14,4 +14,9 @@ public partial class LoginPage : ContentPage
     {
         await Shell.Current.GoToAsync("register");
     }
+
+    private async void OnForgotPasswordLinkTapped(object? sender, TappedEventArgs e)
+    {
+        await Shell.Current.GoToAsync("forgotpassword");
+    }
 }

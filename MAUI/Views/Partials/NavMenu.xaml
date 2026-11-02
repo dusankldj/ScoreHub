@@ -8,8 +8,9 @@
 
     <Grid>
 
-        
-        <Grid RowDefinitions="Auto,Auto,Auto">
+                <!-- BarGrid: sama traka (logo + sportovi + pretraga). VerticalOptions=Start - da se NE razvlaci kad padajuci meniji
+             povecaju NavMenu; njena visina (BarHeight) govori stranici koliko mesta traka stvarno zauzima. -->
+        <Grid x:Name="BarGrid" RowDefinitions="Auto,Auto,Auto" VerticalOptions="Start">
 
             <!-- first track -->
             <Grid Grid.Row="0" Padding="0,4" BackgroundColor="#1A1A2E">
@@ -57,6 +58,7 @@
                     </HorizontalStackLayout>
 
                     <Label Grid.Column="1"
+                           x:Name="SportsMenuLabel"
                            Text="{x:Static helpers:Icons.HamburgerIcon}"
                            FontFamily="FA7Solid"
                            FontSize="20"
@@ -90,12 +92,21 @@
                             <RoundRectangle CornerRadius="20" />
                         </Border.StrokeShape>
                         <Grid ColumnDefinitions="Auto,*" ColumnSpacing="10">
+                            <!-- Lupa; dok je padajuca lista pretrage otvorena postaje X (vidi OnIsSearchResultsVisibleChanged)
+                                 i tap na nju zatvara listu (OnSearchIconTapped). -->
                             <Label Grid.Column="0"
+                                   x:Name="SearchIconLabel"
                                    Text="{x:Static helpers:Icons.SearchIcon}"
                                    FontFamily="FA7Solid"
                                    FontSize="14"
                                    TextColor="#8A8A8A"
-                                   VerticalOptions="Center" />
+                                   Padding="6,10"
+                                   Margin="-6,-10"
+                                   VerticalOptions="Center">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnSearchIconTapped" />
+                                </Label.GestureRecognizers>
+                            </Label>
                             <Entry Grid.Column="1"
                                    x:Name="SearchEntry"
                                    Placeholder="Search teams, leagues..."
@@ -138,7 +149,7 @@
                 Padding="0"
                 HorizontalOptions="Start"
                 VerticalOptions="Start"
-                TranslationY="133"
+                Margin="0,133,0,0"
                 WidthRequest="220"
                 ZIndex="10">
             
@@ -243,10 +254,18 @@
                                    VerticalOptions="Center"
                                    LineBreakMode="TailTruncation" />
                             <HorizontalStackLayout Grid.Column="2" Spacing="10" VerticalOptions="Center">
-                                <Label Text="{Binding KindLabel}"
-                                       FontSize="11"
-                                       TextColor="#8A8A8A"
-                                       VerticalOptions="Center" />
+                                <!-- Sport iznad, vrsta ispod, oba centrirana: "Basketball" / "Player". -->
+                                <VerticalStackLayout VerticalOptions="Center" Spacing="0">
+                                    <Label Text="{Binding SportName}"
+                                           IsVisible="{Binding HasSportName}"
+                                           FontSize="11"
+                                           TextColor="#8A8A8A"
+                                           HorizontalTextAlignment="Center" />
+                                    <Label Text="{Binding KindLabel}"
+                                           FontSize="11"
+                                           TextColor="#8A8A8A"
+                                           HorizontalTextAlignment="Center" />
+                                </VerticalStackLayout>
 
                                 <!-- X - samo uz stavke iz "Recent searches" (IsRecent); uklanja SAMO tu stavku.
                                      Padding je zbog vece povrsine za tap. -->
@@ -289,6 +308,15 @@
                        TextColor="#1A1A2E">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Tapped="OnProfileInfoTapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <BoxView HeightRequest="1" BackgroundColor="#1A1A2E" />
+                <Label Text="Settings"
+                       Padding="16,12"
+                       FontSize="15"
+                       TextColor="#1A1A2E">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnSettingsTapped" />
                     </Label.GestureRecognizers>
                 </Label>
                 <BoxView HeightRequest="1" BackgroundColor="#1A1A2E" />

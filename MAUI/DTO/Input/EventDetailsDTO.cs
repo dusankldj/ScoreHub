@@ -25,6 +25,12 @@ namespace MAUI.DTO.Input
         public string LeagueName { get; set; }
         public string? Round { get; set; }
 
+        // Sport meca (za stranicu sa pravilima bodovanja) i najveci dozvoljen broj u prognozi po timu
+        // (npr. odbojka 3; null = bez ogranicenja) - stize sa servera iz SportScoringRules.
+        public long SportId { get; set; }
+        public string? SportName { get; set; }
+        public int? MaxPredictedScore { get; set; }
+
         public List<EventLineupDTO> Players { get; set; } = new();
         public List<EventStatisticsDTO> Statistics { get; set; } = new();
         public List<EventBroadcastDTO> Broadcasts { get; set; } = new();

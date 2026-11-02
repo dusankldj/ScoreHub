@@ -30,6 +30,13 @@
                     Margin="0,10,0,0"
                     Command="{Binding LoginCommand}" />
 
+            <Label Text="{Binding InfoMessage}"
+                   TextColor="#2E7D32"
+                   FontSize="13"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center" />
+
             <Label Text="{Binding ErrorMessage}"
                    TextColor="Red"
                    FontSize="12"
@@ -43,6 +50,17 @@
                     <TapGestureRecognizer Tapped="OnRegisterLinkTapped" />
                 </VerticalStackLayout.GestureRecognizers>
                 <Label Text="Don't have an account? Register!"
+                       FontAttributes="Italic"
+                       TextColor="#1A1A2E" />
+                <BoxView HeightRequest="1" BackgroundColor="#1A1A2E" HorizontalOptions="Fill" />
+            </VerticalStackLayout>
+
+            <!-- Isti oblik linka (Label + tanak BoxView, Spacing=2) ispod prvog. -->
+            <VerticalStackLayout HorizontalOptions="Center" Spacing="2" Margin="0,14,0,0">
+                <VerticalStackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnForgotPasswordLinkTapped" />
+                </VerticalStackLayout.GestureRecognizers>
+                <Label Text="Forgot password?"
                        FontAttributes="Italic"
                        TextColor="#1A1A2E" />
                 <BoxView HeightRequest="1" BackgroundColor="#1A1A2E" HorizontalOptions="Fill" />

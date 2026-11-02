@@ -25,7 +25,9 @@
                           RemoveRecentCommand="{Binding RemoveRecentSearchCommand}"
                           ClearRecentsCommand="{Binding ClearRecentSearchesCommand}"/>
 
-        <Grid Grid.Row="1" RowDefinitions="Auto,*">
+        <!-- Sadrzaj se prostire kroz OBA reda (RowSpan) i ima gornju marginu = visina trake (HomePage.xaml.cs), pa ga NavMenu
+             koji se uvecava dok je padajuci meni otvoren ne gura nadole i ne pravi prazan prostor. -->
+        <Grid x:Name="ContentHost" Grid.Row="0" Grid.RowSpan="2" RowDefinitions="Auto,*">
             <Label Grid.Row="0"
                    Text="{Binding ErrorMessage}"
                    TextColor="Red"

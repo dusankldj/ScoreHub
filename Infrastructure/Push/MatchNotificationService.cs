@@ -1,5 +1,6 @@
 using DataAccess;
 using Domain.Entities;
+using Domain.Predictions;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Push
@@ -66,6 +67,10 @@ namespace Infrastructure.Push
             const string title = "Full time";
             var scoreLine = $"{match.HomeTeam.Name} {match.HomeTeamScore}-{match.AwayTeamScore} {match.AwayTeam.Name}";
 
+            // Bodovi zavise od sporta (SportScoringRules) - isto pravilo kao u listi prognoza i statistici.
+            var sportId = await _context.Matches.Where(m => m.Id == match.Id).Select(m => m.League.SportId).FirstAsync(ct);
+            var rule = (await _context.LoadScoringRulesAsync(ct)).For(sportId);
+
             var predictions = new List<Prediction>();
             if (match.HomeTeamScore is int finalHome && match.AwayTeamScore is int finalAway)
             {
@@ -89,14 +94,24 @@ namespace Infrastructure.Push
             }
 
             // Isti par (prognoza, pogodak) deli istu poruku - jedan poziv po grupi, ne po korisniku.
-            foreach (var group in predictions.GroupBy(p => (p.PredictedHomeScore, p.PredictedAwayScore, p.Hit)))
+            // (Ishod se racuna PredictionScoring-om - isti bodovi kao u statistici i listi prognoza.)
+            foreach (var group in predictions.GroupBy(p => (p.PredictedHomeScore, p.PredictedAwayScore,
+                         Outcome: PredictionScoring.Evaluate(match.Status, match.HomeTeamScore, match.AwayTeamScore, p.PredictedHomeScore, p.PredictedAwayScore, rule))))
             {
                 var tokens = await GetTokensForUsersAsync(group.Select(p => p.UserId).ToList(), ct);
                 if (tokens.Count == 0)
                     continue;
 
-                var (predictedHome, predictedAway, hit) = group.Key;
-                var verdict = hit ? "You hit!" : "You missed";
+                var (predictedHome, predictedAway, outcome) = group.Key;
+                var points = PredictionScoring.Points(outcome, rule);
+                var hit = points > 0;
+                var verdict = outcome switch
+                {
+                    PredictionOutcome.Exact => $"You hit! +{points}",
+                    PredictionOutcome.Close => $"So close! +{points}",
+                    PredictionOutcome.Winner => $"Right winner +{points}",
+                    _ => "You missed"
+                };
                 var predictionLine = $"Your prediction: {predictedHome}-{predictedAway}";
 
                 var data = new Dictionary<string, string>

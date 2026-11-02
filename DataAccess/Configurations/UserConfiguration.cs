@@ -17,6 +17,7 @@ namespace DataAccess.Configurations
             builder.HasIndex(indexExpression: x => x.Email).IsUnique();
             builder.Property(x => x.Password).IsRequired();
             builder.Property(x => x.TotalPoints).IsRequired(false);
+            builder.Property(x => x.IsDeleted).HasDefaultValue(false);
 
             /* User 1:N FavoriteTeam */
             builder.HasMany(x => x.FavoriteTeams)

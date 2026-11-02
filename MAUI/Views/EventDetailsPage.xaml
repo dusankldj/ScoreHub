@@ -66,18 +66,25 @@
                         <TapGestureRecognizer Command="{Binding TeamSelectedCommand}" CommandParameter="{Binding Details.HomeTeamId}" />
                     </VerticalStackLayout.GestureRecognizers>
                     <Image Source="{Binding Details.HomeTeamBadge}" HeightRequest="64" WidthRequest="64" />
-                    <HorizontalStackLayout HorizontalOptions="Center" Spacing="4">
-                        <Label Text="{x:Static helpers:Icons.CardIcon}"
+                    <!-- Grid umesto HorizontalStackLayout: stack daje deci NEOGRANICENU sirinu, pa dugacko ime
+                         (npr. "Virtus Pallacanestro Bologna") nije moglo da se prelomi i preklapalo se sa
+                         susednim timom/rezultatom. U Grid-u je ime ogranicano sirinom kolone i lomi se u novi red;
+                         kolona sa crvenim kartonom je Auto (0 kad kartona nema). -->
+                    <Grid ColumnDefinitions="Auto,*" ColumnSpacing="4" HorizontalOptions="Center">
+                        <Label Grid.Column="0"
+                               Text="{x:Static helpers:Icons.CardIcon}"
                                IsVisible="{Binding HasHomeRedCard}"
                                FontFamily="MDI"
                                Rotation="90"
                                TextColor="#D32F2F"
                                VerticalOptions="Center" />
-                        <Label Text="{Binding Details.HomeTeamName}"
+                        <Label Grid.Column="1"
+                               Text="{Binding Details.HomeTeamName}"
                                FontAttributes="Bold"
                                TextColor="#1A1A2E"
-                               HorizontalTextAlignment="Center" />
-                    </HorizontalStackLayout>
+                               HorizontalTextAlignment="Center"
+                               VerticalOptions="Center" />
+                    </Grid>
                 </VerticalStackLayout>
 
                 <HorizontalStackLayout Grid.Column="2" VerticalOptions="Center" Spacing="6">
@@ -100,18 +107,21 @@
                         <TapGestureRecognizer Command="{Binding TeamSelectedCommand}" CommandParameter="{Binding Details.AwayTeamId}" />
                     </VerticalStackLayout.GestureRecognizers>
                     <Image Source="{Binding Details.AwayTeamBadge}" HeightRequest="64" WidthRequest="64" />
-                    <HorizontalStackLayout HorizontalOptions="Center" Spacing="4">
-                        <Label Text="{Binding Details.AwayTeamName}"
+                    <Grid ColumnDefinitions="*,Auto" ColumnSpacing="4" HorizontalOptions="Center">
+                        <Label Grid.Column="0"
+                               Text="{Binding Details.AwayTeamName}"
                                FontAttributes="Bold"
                                TextColor="#1A1A2E"
-                               HorizontalTextAlignment="Center" />
-                        <Label Text="{x:Static helpers:Icons.CardIcon}"
+                               HorizontalTextAlignment="Center"
+                               VerticalOptions="Center" />
+                        <Label Grid.Column="1"
+                               Text="{x:Static helpers:Icons.CardIcon}"
                                IsVisible="{Binding HasAwayRedCard}"
                                FontFamily="MDI"
                                Rotation="90"
                                TextColor="#D32F2F"
                                VerticalOptions="Center" />
-                    </HorizontalStackLayout>
+                    </Grid>
                 </VerticalStackLayout>
 
                 <Grid Grid.Column="4" WidthRequest="34" HeightRequest="34" VerticalOptions="Center">
@@ -156,7 +166,7 @@
                 <HorizontalStackLayout Spacing="8" HorizontalOptions="Center" IsVisible="{Binding IsPredictionEditorOpen}">
                     <Entry Text="{Binding PredictionHomeInput}"
                            Keyboard="Numeric"
-                           MaxLength="3"
+                           MaxLength="{Binding PredictionMaxLength}"
                            WidthRequest="56"
                            HorizontalTextAlignment="Center"
                            TextColor="#1A1A2E" />
@@ -178,6 +188,25 @@
                        TextColor="{Binding PredictionColor}"
                        FontAttributes="Bold"
                        HorizontalOptions="Center" />
+
+                <!-- Kratak uput + link na stranicu sa detaljnim pravilima bodovanja (iz tabele SportScoringRules). -->
+                <VerticalStackLayout IsVisible="{Binding ShowPredictionHelp}" Spacing="2" Margin="24,10,24,0">
+                    <Label Text="Predict the final score - the closer you are, the more points you earn."
+                           FontSize="11"
+                           FontAttributes="Italic"
+                           TextColor="#8A8A8A"
+                           HorizontalTextAlignment="Center" />
+                    <Label Text="How are points scored?"
+                           FontSize="11"
+                           FontAttributes="Italic"
+                           TextDecorations="Underline"
+                           TextColor="#1A1A2E"
+                           HorizontalTextAlignment="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding OpenScoringRulesCommand}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </VerticalStackLayout>
             </VerticalStackLayout>
 
             <!-- Season / Liga / Round / Venue - svaki red se sakriva ako je vrednost null/prazna -->

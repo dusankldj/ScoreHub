@@ -24,7 +24,7 @@ namespace WebAPI.Controllers
                 .Include(m => m.HomeTeam)
                 .Include(m => m.AwayTeam)
                 .Include(m => m.Venue)
-                .Include(m => m.League)
+                .Include(m => m.League).ThenInclude(l => l.Sport)
                 .Include(m => m.Statistics)
                 .Include(m => m.Lineups).ThenInclude(l => l.Player)
                 .Include(m => m.TvBroadcasts).ThenInclude(t => t.Channel)
@@ -56,6 +56,9 @@ namespace WebAPI.Controllers
                 Season = match.Season,
                 LeagueName = match.League.Name,
                 Round = string.IsNullOrWhiteSpace(match.Round) ? null : match.Round,
+                SportId = match.League.SportId,
+                SportName = match.League.Sport.Name,
+                MaxPredictedScore = (await _context.LoadScoringRulesAsync(ct)).For(match.League.SportId).MaxScore,
                 Players = match.Lineups.Select(l => new EventLineupDTO
                 {
                     PlayerId = l.PlayerId,

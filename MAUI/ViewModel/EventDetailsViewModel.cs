@@ -171,21 +171,70 @@ namespace MAUI.ViewModel
 
         public bool HasPrediction => MyPrediction is not null;
 
-        public string PredictionDisplay => MyPrediction is null
-            ? string.Empty
-            : $"Your prediction: {MyPrediction.PredictedHomeScore}-{MyPrediction.PredictedAwayScore}";
-
-        public Color PredictionColor
+        // "Your prediction: 2-1" + osvojeni bodovi kad je mec zavrsen (ishod i bodove odredjuje server).
+        public string PredictionDisplay => MyPrediction switch
         {
-            get
-            {
-                if (MyPrediction is null || Details?.Status != "Finished"
-                    || Details.HomeTeamScore is not int home || Details.AwayTeamScore is not int away)
-                    return Color.FromArgb("#1A1A2E");
+            null => string.Empty,
+            { Outcome: "Void" } p => $"Your prediction: {p.PredictedHomeScore}-{p.PredictedAwayScore} (match cancelled - no points)",
+            { Points: > 0 } p => $"Your prediction: {p.PredictedHomeScore}-{p.PredictedAwayScore} (+{p.Points})",
+            var p => $"Your prediction: {p.PredictedHomeScore}-{p.PredictedAwayScore}"
+        };
 
-                var hit = MyPrediction.PredictedHomeScore == home && MyPrediction.PredictedAwayScore == away;
-                return Color.FromArgb(hit ? "#2E7D32" : "#D32F2F");
-            }
+        // Tacan rezultat zeleno, pobednik narandzasto, promasaj crveno; otkazan sivo; do ishoda neutralno.
+        public Color PredictionColor => MyPrediction?.Outcome switch
+        {
+            "Exact" => PredictionColors.Exact,
+            "Close" => PredictionColors.Close,
+            "Winner" => PredictionColors.Winner,
+            "Missed" => PredictionColors.Missed,
+            "Void" => PredictionColors.Neutral,
+            _ => Color.FromArgb("#1A1A2E")
+        };
+
+        // Pojasnjenje bodovanja ispod "Predict score" - vidi se dok se moze prognozirati ili vec postoji prognoza.
+        public bool ShowPredictionHelp => CanPredict || HasPrediction;
+
+        // Najvise cifara u polju za prognozu: 3 (0-999), a za sport sa ogranicenjem (odbojka 0-3) samo toliko cifara
+        // koliko ima najveci dozvoljen broj.
+        public int PredictionMaxLength => Details?.MaxPredictedScore is int max ? max.ToString().Length : 3;
+
+        // Polje prihvata SAMO cifre (nema minusa/tacke), a kod sporta sa ogranicenjem (odbojka) samo 0..MaxPredictedScore -
+        // nedozvoljen unos se odmah odbacuje. Server isto proverava (SavePrediction), ovo je samo udobnost.
+        private string SanitizeScore(string? value)
+        {
+            var digits = new string((value ?? string.Empty).Where(char.IsDigit).ToArray());
+
+            if (digits.Length == 0)
+                return digits;
+
+            if (digits.Length > PredictionMaxLength)
+                digits = digits[..PredictionMaxLength];
+
+            if (Details?.MaxPredictedScore is int max && int.Parse(digits) > max)
+                return string.Empty;
+
+            return digits;
+        }
+
+        partial void OnPredictionHomeInputChanged(string value)
+        {
+            var cleaned = SanitizeScore(value);
+            if (cleaned != value)
+                PredictionHomeInput = cleaned;
+        }
+
+        partial void OnPredictionAwayInputChanged(string value)
+        {
+            var cleaned = SanitizeScore(value);
+            if (cleaned != value)
+                PredictionAwayInput = cleaned;
+        }
+
+        // Link "How are points scored?" -> stranica sa pravilima (sport ovog meca je tamo istaknut).
+        [RelayCommand]
+        private async Task OpenScoringRulesAsync()
+        {
+            await Shell.Current.GoToAsync($"scoringrules?sportId={Details?.SportId ?? 0}");
         }
         #endregion
 
@@ -221,6 +270,8 @@ namespace MAUI.ViewModel
             OnPropertyChanged(nameof(HasHomeRedCard));
             OnPropertyChanged(nameof(HasAwayRedCard));
             OnPropertyChanged(nameof(CanPredict));
+            OnPropertyChanged(nameof(ShowPredictionHelp));
+            OnPropertyChanged(nameof(PredictionMaxLength));
             OnPropertyChanged(nameof(PredictionColor));
 
             // Ako nema postave (npr. mec jos nije poceo), a ima statistike - default tab mora
@@ -245,6 +296,7 @@ namespace MAUI.ViewModel
         partial void OnMyPredictionChanged(PredictionDTO? value)
         {
             OnPropertyChanged(nameof(HasPrediction));
+            OnPropertyChanged(nameof(ShowPredictionHelp));
             OnPropertyChanged(nameof(PredictionDisplay));
             OnPropertyChanged(nameof(PredictionColor));
         }
